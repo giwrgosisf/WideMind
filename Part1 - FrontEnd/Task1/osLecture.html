@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Page title -->
+
+  <head>
+    <title>CS350: Operating Systems, Fall 2021</title>
+    <meta
+      name="description"
+      content="Page for the CS350: Operating Systems, Fall 2021 lecture"
+    />
+    <meta
+      name="keywords"
+      content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses"
+    />
+    <meta name="author" content="WideMind Organization" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../Resources/website-icon.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+  </head>
+
+  <!-- Start of the main body -->
+
+  <body>
+    <header>
+      <img src="../Resources/widemind-logo.png" />
+      <form id="search-bar">
+        <input
+          name="search-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search for books or recordings..."
+        />
+        <button type="button">
+          <img src="../Resources/search-icon.svg" />
+        </button>
+      </form>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <a href="operatingSystems.html">
+        <p>Return to Operating Systems</p>
+      </a>
+
+      <h1>CS350: Operating Systems, Fall 2021</h1>
+
+      <p>Instructor: Ali Mashtizadeh</p>
+      <p>Published by: University of Waterloo, Canada</p>
+      <p>Year of publismnet: 2021</p>
+      <img src="../Resources/os-lecture2.png" />
+      <div class="stars-rating">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>☆</span>
+        <span>
+          <p><strong>4.2</strong></p>
+        </span>
+        <span>
+          <p>1,452 ratings</p>
+        </span>
+      </div>
+      <p>Number of lectures: 12</p>
+      <p>Total Duration: 9 hours, 17 minutes, 31 seconds</p>
+
+      <p>
+        Certainly! Here’s an enhanced description for a course on Operating
+        Systems: This course provides a comprehensive introduction to the core
+        principles and functionality of operating systems, focusing on their
+        design, structure, and implementation. Key topics covered include:
+      </p>
+      <ul>
+        <li>
+          <b>Concurrency and Synchronization:</b> Explore how operating systems
+          manage multiple tasks simultaneously, focusing on synchronization
+          techniques to ensure safe and efficient resource sharing.
+        </li>
+        <li>
+          <b>Processes and Threads:</b> Understand the concepts of processes and
+          threads, their lifecycle, and the role they play in multitasking
+          environments.
+        </li>
+        <li>
+          <b>Scheduling:</b> Learn about different scheduling algorithms that
+          allocate CPU time among processes, balancing efficiency and fairness
+          to optimize system performance.
+        </li>
+        <li>
+          <b>Memory Management:</b> Dive into memory hierarchy, allocation
+          strategies, and virtual memory to understand how operating systems
+          manage and optimize memory usage.
+        </li>
+        <li>
+          <b>File Systems:</b> Gain insight into file organization, storage
+          management, and access permissions, as well as the methods OS use to
+          support various file systems.
+        </li>
+        <li>
+          <b>Device Management:</b> Understand how operating systems interact
+          with hardware through device drivers, manage I/O operations, and
+          ensure smooth operation of peripheral devices.
+        </li>
+        <li>
+          <b>Security:</b> Examine the foundational security mechanisms employed
+          by operating systems, including access control, authentication, and
+          protection against various threats.
+        </li>
+      </ul>
+      <p>
+        Through this course, you will develop a deep understanding of how
+        operating systems work at both theoretical and practical levels,
+        preparing you for advanced studies in system architecture, programming,
+        and software engineering.
+      </p>
+
+      <h2 id="Table of contents">Table of contents</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th><b>Chapter</b></th>
+            <th><b>Title</b></th>
+          </tr>
+        </thead>
+        <tr>
+          <th align="left">1</th>
+          <th align="middle"><a href="#Introduction">Introduction</a></th>
+        </tr>
+        <tr>
+          <th align="left">2</th>
+          <th align="middle">
+            <a href="#Processes">Processes</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">3</th>
+          <th align="middle"><a href="#Threads">Threads</a></th>
+        </tr>
+        <tr>
+          <th align="left">4</th>
+          <th align="middle">
+            <a href="#Concurrency">Concurrency</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">5</th>
+          <th align="middle"><a href="#Synchronization">Synchronization</a></th>
+        </tr>
+        <tr>
+          <th align="left">6</th>
+          <th align="middle">
+            <a href="#System Calls and Interrupts"
+              >System Calls and Interrupts</a
+            >
+          </th>
+        </tr>
+        <tr>
+          <th align="left">7</th>
+          <th align="middle">
+            <a href="#Virtual Memory Hardware">Virtual Memory Hardware</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">8</th>
+          <th align="middle">
+            <a href="#Virtual Memory OS">Virtual Memory OS</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">9</th>
+          <th align="middle">
+            <a href="#Memory Allocation">Memory Allocation</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">10</th>
+          <th align="middle">
+            <a href="#Scheduling">Scheduling</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">11</th>
+          <th align="middle">
+            <a href="#I/O and Disks">I/O and Disks</a>
+          </th>
+        </tr>
+        <tr>
+          <th align="left">12</th>
+          <th align="middle">
+            <a href="#File Systems">File Systems</a>
+          </th>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <section id="Introduction">
+        <details>
+          <summary>CS350 Operating Systems - Lecture 1: Introduction</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/BAr-uB5qNbM?si=yWNW5ZVhuUXuON1Y"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            The first lecture of the CS350 Operating Systems course at the
+            University of Waterloo, taught by Assistant Professor Ali
+            Mashtizadeh, outlines the course structure, its relevance, and
+            fundamental concepts related to operating systems. Mashtizadeh
+            emphasizes the importance of understanding operating systems for
+            effective programming and resource management in software
+            applications. The lecture covers various topics, including the
+            functions of operating systems, protection mechanisms, multitasking,
+            and system calls, setting the foundation for further learning
+            throughout the term.
+          </p>
+
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Processes">
+        <details>
+          <summary>CS350 Operating Systems - Lecture 2: Processes</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Nwys05MsZIQ?si=00uLG3B2xgBB9EJ6"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture covers the process abstraction within operating
+            systems, emphasizing its role in managing instances of running
+            programs, creating, terminating, and scheduling processes, and
+            facilitating communication between them. It explains how operating
+            systems use processes to ensure isolation, security, and resource
+            utilization, delving into the operational details of process
+            creation, management, and execution, particularly in Unix-like
+            systems.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Threads">
+        <details>
+          <summary>CS350 Operating Systems - Lecture 3: Threads</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/UU4VJy8xdCo?si=Hi4EyD9kvYogNcvu"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            In Lecture 3 of CS350, Assistant Professor Ali Mashtizadeh discusses
+            threads in operating systems, explaining how they extend the process
+            abstraction to allow concurrent execution across multiple cores or
+            CPUs. The lecture covers the structure and advantages of threads,
+            their implementation in user and kernel space, as well as the
+            challenges and benefits of using threads in modern programming. The
+            key takeaways include understanding the basic thread API and the
+            overview of user-level threading exemplified by the Go programming
+            language.
+          </p>
+
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Concurrency">
+        <details>
+          <summary>CS350: Operating Systems - Lecture 4: Concurrency</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/onK8b_qF9XM?si=6GaOw-itLm6YVQOi"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture focuses on concurrency in operating systems,
+            specifically dealing with multi-core machines and the challenges
+            that arise from multiple threads accessing shared resources. It
+            covers the importance of synchronization techniques to prevent data
+            races and ensure atomic operations, discussing models like
+            sequential consistency, mutex locks, condition variables, and
+            semaphores as solutions to coordination problems between threads.
+            Professor Ali Mashtizadeh illustrates these concepts through
+            examples, emphasizing the significance of proper synchronization in
+            multi-threaded programming.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Synchronization">
+        <details>
+          <summary>
+            CS350: Operating Systems - Lecture 5: Synchronization
+          </summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Bp9jL_TFPPs?si=fhtHQ0nZq0hF6LvI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            In this lecture on synchronization in operating systems, Professor
+            Ali Mashtizadeh discusses concurrency issues that arise with
+            multiple threads, focusing on performance and correctness problems.
+            He explains important concepts such as Amdahl's Law, scalability,
+            locking mechanisms (mutexes, fine-grained vs coarse-grained
+            locking), atomic operations, and strategies to handle concurrency
+            effectively. The lecture also introduces deadlocks, their causes,
+            and techniques for their prevention. Finally, he details how
+            operating systems implement various synchronization primitives like
+            semaphores and mutexes, emphasizing the importance of thread safety
+            and proper memory management.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="System Calls and Interrupts">
+        <details>
+          <summary>
+            CS350: Operating Systems - Lecture 6: System Calls and Interrupts
+          </summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/AFve24ql7xU?si=kJeUOQqa9v1f32bl"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture from the CS350 Operating Systems course delves into
+            system calls, interrupts, and how the operating system handles
+            communication between applications and hardware. It explains the
+            different modes of operation (kernel and user modes), the concept of
+            system calls as APIs for applications, and the mechanisms for
+            entering kernel mode safely. The lecture also discusses specific
+            examples of system calls, the transition between user and kernel
+            modes, and how interrupts are handled by the operating system
+            including scheduling and context switching.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Virtual Memory Hardware">
+        <details>
+          <summary>
+            CS350 Operating Systems - Lecture 7: Virtual Memory Hardware
+          </summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/hGKWSODCR20?si=4rWU8Y-qP-q-RYT8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture from CS350 at the University of Waterloo, presented by
+            Assistant Professor Ali Mashtizadeh, delves into virtual memory
+            hardware in operating systems. It explains the evolution of virtual
+            memory including the segmentation and paging approaches, and
+            compares how different processors like x86 and MIPS present this to
+            operating systems. The lecture covers concepts like memory
+            management units (MMUs), address translation, protection mechanisms,
+            and the trade-offs between segmentation and paging. It illuminates
+            how these approaches aid in concurrent application execution and
+            resource management.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Virtual Memory OS">
+        <details>
+          <summary>
+            CS350 Operating Systems - Lecture 8: Virtual Memory OS
+          </summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Ce0NyxJISA8?si=6lFTGbWgVmEpc7OL"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture focuses on the operating system's role in virtual
+            memory management, specifically examining paging mechanisms, policy
+            decisions, and user-level interactions. Professor Ali Mashtizadeh
+            discusses how memory resources are managed through paging and the
+            implications of policy decisions regarding memory allocation and
+            eviction. The lecture concludes with a case study of the 4.4 BSD
+            virtual memory system, elaborating on its architecture and
+            underlying concepts.
+          </p>
+
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Memory Allocation">
+        <details>
+          <summary>
+            CS350 Operating Systems - Lecture 9: Memory Allocation
+          </summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/sn6Fu9uZ_DA?si=UL53dfZEZPtf1FGk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture discusses memory allocation in operating systems,
+            focusing on its importance for software performance. It covers the
+            trade-offs between fragmentation and performance in dynamic memory
+            allocation, as well as various allocation strategies like bump
+            allocation, best fit, first fit, and slab allocators. The impact of
+            allocation and freeing patterns on fragmentation is also examined,
+            as well as garbage collection techniques.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="Scheduling">
+        <details>
+          <summary>CS350 Operating Systems - Lecture 10: Scheduling</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/GHNpz12GdIo?si=6tJq_yZkoSCJo8pt"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture by Professor Ali Mashtizadeh covers CPU scheduling in
+            operating systems, focusing on various scheduling algorithms
+            including First Come First Serve, Shortest Job First, Round Robin,
+            and advanced techniques such as Multi-Level Feedback Queue and the
+            Lottery Scheduler. The lecture addresses the goals of scheduling,
+            the performance metrics used, and the trade-offs involved in
+            different scheduling strategies.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="I/O and Disks">
+        <details>
+          <summary>CS350 Operating Systems - Lecture 11: I/O and Disks</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/E4DEU9ohqRY?si=NKLG_Rwq2a4iZCob"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            This lecture from the CS350 Operating Systems course focuses on
+            input/output (I/O) devices, particularly disks. It covers how
+            systems communicate with I/O devices, the types of memory involved,
+            the functioning of buses, direct memory access (DMA), disk
+            architecture, and the differences between solid-state drives (SSDs)
+            and traditional hard disk drives (HDDs). The lecture provides
+            insights into device drivers, interrupt handling, and the
+            complexities of scheduling I/O operations to maximize performance.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+      <section id="File Systems">
+        <details>
+          <summary>CS350 Operating Systems - Lecture 12: File Systems</summary>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gNy2UdMQUJU?si=y0oBdXepCxDXrW_R"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p>
+            In this lecture on file systems, Professor Ali Mashtizadeh explores
+            the structure, performance, and technology behind file systems,
+            focusing on how data is organized on different storage types such as
+            spinning disks and SSDs. He discusses file system design challenges
+            including data persistence after crashes, the relatively slow speed
+            of disks compared to processors, and the larger storage capacity of
+            disks. The lecture also compares various file systems and their
+            methods for improving efficiency, address patterns, and optimization
+            techniques to enhance performance and reliability.
+          </p>
+          <a href="#Table of contents">Return to the table of contents</a>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <div id="upper-footer">
+        <h2>Catch up with WideMind community</h2>
+        <ul class="menu">
+          <li><a href="#">Github</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">X</a></li>
+        </ul>
+      </div>
+      <div id="middle-footer">
+        <h2>Contact Us</h2>
+        <ul class="menu">
+          <li>
+            <address>
+              Patision 76<br />
+              Zip-Code 104 34 Athens
+              <b><a href="#">Find in map</a></b>
+            </address>
+          </li>
+          <li>Tel: 210-8203315,316</li>
+          <li><a href="mailto:widemind@gmail.com">widemind@gmail.com</a></li>
+        </ul>
+      </div>
+      <div id="lower-footer">
+        <p>©Copyright 2024 WideMind Organization</p>
+      </div>
+    </footer>
+  </body>
+</html>
