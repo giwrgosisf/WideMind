@@ -189,7 +189,6 @@ body {
 }
 /*styling of the categories section container using flex layout*/
 #categories-section{
-
     display: flex;
     background-color: #F3F3E0;
     height: 700px;
@@ -266,14 +265,15 @@ footer {
     justify-content: space-between; 
     align-items: flex-start; 
     padding: 20px; 
-    background-color: #F3F3E0; 
-    border-top: 10px solid #8EACCD;
+    background-color: #8EACCD; 
+    border-top: 10px solid rgb(133, 117, 117);
 }
 
 footer h2 {
-    color: #608BC1; 
+    color: white; 
     font-size: 1.5em; 
-    margin-bottom:10px ; 
+    margin-bottom:10px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
 .menu {
@@ -287,10 +287,18 @@ footer h2 {
 }
 
 .menu a {
-    color: #8EACCD; 
+    color: white; 
     text-decoration: none; 
 }
 
+#middle-footer address , li{
+    color: white;
+}
+
+
+#lower-footer p{
+    color: white;
+}
 .menu a:hover {
     text-decoration: underline; 
 }
