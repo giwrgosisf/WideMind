@@ -20,7 +20,7 @@
     padding: 0;
     box-sizing: border-box;
     position: fixed;
-
+    border-bottom: 10px solid rgb(0, 0, 0);
  }
 
  /*menu container styling ,flex layout items are  centered*/
@@ -122,14 +122,15 @@ body {
 /*welcoming section using flex layout with rows*/
 #Welcome-section{
     display: flex;
-    background-color: #8EACCD;
+    background-color: #8eaccd;
     height: 700px;
     width:100%;
     box-sizing: border-box;
-    flex-direction: row;
-    margin-top:5em;
+    flex-direction: column;
+    margin-top:4em;
     padding: 10px;
     flex-wrap: wrap;
+    border-bottom: 10px solid rgb(0, 0, 0);
     
     
     
@@ -142,7 +143,7 @@ body {
     font-size: 5em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
-    align-self:flex-start;
+
     margin-left:10px;
 
 
@@ -162,23 +163,40 @@ body {
     margin-left:1em;
     line-height: 1.2;
     word-spacing: 5px;
+    margin-top:5em;
+    margin-bottom:2em;
+}
+#image-container{
+    text-align: center;
+    margin-left:3em;
+
 }
 
 
+
+#image-container ul{
+    margin-top: 3em;
+    text-align: left;
+    padding-left:3em;
+    
+}
+
 /*styling of the welcome section image*/
 #Welcome-section img{
-    width: 35em;
-    height: 20em;
+    width: 30em;
+    height: 30em;
     border-radius: 20px;
     align-self: flex-end;
-    margin-left: 50em;
+    margin-left: 5em;
+
     
     
 }
 /*styling of the welcome section list*/
 #Welcome-section ul{
-    margin-left: 70em;
-    margin-right:1em;
+    
+    margin-left: 2.5em;
+    
 
 }
 
@@ -245,12 +263,9 @@ body {
 
 
 #categories-section img{
-    margin-top:2em;
     width: 35em;
-    height: 20em;
+    height: 60em;
     margin-left :10em;
-    border-radius:20px;
-    margin-top:110px;
     margin-right:10em;
 
 }
@@ -266,7 +281,7 @@ footer {
     align-items: flex-start; 
     padding: 20px; 
     background-color: #8EACCD; 
-    border-top: 10px solid rgb(133, 117, 117);
+    border-top: 10px solid rgb(0, 0, 0);
 }
 
 footer h2 {
