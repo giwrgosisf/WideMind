@@ -159,8 +159,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 35em;
     text-align: left;
-    font-size: 1em;
-    margin-left:2em;
+    font-size: 1.5em;
+    margin-left:1em;
+    line-height: 1.2;
+    word-spacing: 5px;
 }
 
 
@@ -170,28 +172,28 @@ body {
     height: 20em;
     border-radius: 20px;
     align-self: flex-end;
-    margin-top:5em;
-    margin-left: 45em;
-    margin-bottom: 1em;
+    margin-left: 50em;
     
     
 }
 /*styling of the welcome section list*/
 #Welcome-section ul{
     margin-left: 70em;
-    margin-bottom:10em;
+    margin-right:1em;
+
 }
 
 #Welcome-section li  {
     color:white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
 }
 /*styling of the categories section container using flex layout*/
 #categories-section{
 
     display: flex;
     background-color: #F3F3E0;
-    height: 500px;
+    height: 700px;
     width:fill;
     margin: 0;
     box-sizing: border-box;
@@ -212,19 +214,19 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     align-self:center;
-    margin-right:1em;
+    margin-right:2.7em;
 }
 
 /*styling of the categories section main paragraph*/
 #categories-section #main{
     margin-top:5em;
     color: black;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    max-width:35em;
+    max-width:25em;
     text-align: left;
     align-self: flex-start;
-    margin-left:2em;
+    margin-left:1em;
 
 }
 
@@ -238,6 +240,7 @@ body {
     max-width:15em;
     text-align: center;
     margin-left:1em;
+    word-spacing: 10px;
    
 
 }
