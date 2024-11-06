@@ -1,115 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>WideMind</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Free e-learning website for computer science"
+    />
+    <meta
+      name="keywords"
+      content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses"
+    />
+    <meta name="author" content="WideMind Organization" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      href="../Resources/website-icon.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
 
-<head>
-  <title>WideMind</title>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Free e-learning website for computer science" />
-  <meta name="keywords"
-    content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses" />
-  <meta name="author" content="WideMind Organization" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="stylesheet.css">
-  <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png" />
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- social media icons library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
 
-<body>
-  <header>
-    <nav id="navBar">
-      <a href="index.html"><img id="logo" src="../Resources/widemind-logo.png" /></a>
-      <ul id="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Categories</a></li>
-        <li><a href="aboutUs.html">About Us</a></li>
-      </ul>
-      <div id="navSearch">
-        <form id="search-bar">
-          <input name="search-input" type="text" autocomplete="off" spellcheck="false"
-            placeholder="Search for books or recordings..." />
-          <button type="button">
-            <img src="../Resources/searchIcon.png" />
+  <body>
+    <header>
+      <div class="header">
+        <a href="index.html"
+          ><img id="logo" src="../Resources/widemind-logo.png" />
+        </a>
+        <div id="search-bar">
+          <input
+            name="search-input"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Search for books or recordings..."
+          />
+          <button class="search-button" type="button">
+            <img id="search-icon" src="../Resources/searchIcon.png" />
           </button>
-        </form>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section id="main-section">
-      <div id="Welcome-section">
-        <h2>Ready to <br>Evolve?</h2>
-        <p>
-          WideMind is a <b>free online</b> way to master your knowledge in
-          topics around <b>computer science</b>. Our mission is to attract the
-          intrest of more and more people regarding these topics, creating a
-          community where learning is fun and enjoyable. Whether you are a
-          <b>begginer taking your first steps</b> in the world of the computer
-          science or an <b>experienced in the field</b> looking to deepen your
-          expertise, you've come to the right place because we provide:
-        </p>
-        
-        <div id="image-container">
-          <img src="../Resources/openMind.png" />
-          <ul>
-            <li>
-              <strong>Accessibility:</strong> WideMind is free for everyone !
-            </li>
-            <li>
-              <strong>Flexible Learning:</strong> Learn at your own pace, in the
-              comfort of your home.
-            </li>
-            <li>
-              <strong>Resource variety:</strong> Benefit from the vast amount of
-              books and lectures.
-            </li>
-          </ul>
         </div>
+        <nav id="navBar">
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <div id="categories-section">
-        <h2>Sounds interesting?</h2>
+    <main>
+      <section id="main-section">
+        <div id="Welcome-section">
+          <h2>Ready to <br />Evolve?</h2>
+          <p>
+            WideMind is a <b>free online</b> way to master your knowledge in
+            topics around <b>computer science</b>. Our mission is to attract the
+            interest of more and more people regarding these topics, creating a
+            community where learning is fun and enjoyable. Whether you are a
+            <b>beginner taking your first steps</b> in the world of the computer
+            science or an <b>experienced in the field</b> looking to deepen your
+            expertise, you've come to the right place because we provide:
+          </p>
 
-        <p id="main">
-          Then don't hesitate to discover one of the many
-          <a href="categories.html">categories</a> we cover. Note that the
-          categories are further divided into subcategories, each one of them
-          containing free rescources that will assist you in this learning
-          journey. <br />
-        </p>
-        <p><b> Learn. Grow. Succeed!</b></p>
-        <img src="../Resources/rb_40503-modified.png" />
+          <div id="image-container">
+            <img src="../Resources/openMind.png" />
+            <ul>
+              <li>
+                <strong>Accessibility:</strong> WideMind is free for everyone !
+              </li>
+              <li>
+                <strong>Flexible Learning:</strong> Learn at your own pace, in
+                the comfort of your home.
+              </li>
+              <li>
+                <strong>Resource variety:</strong> Benefit from the vast amount
+                of books and lectures.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="categories-section">
+          <h2>Sounds interesting?</h2>
+
+          <p id="main">
+            Then don't hesitate to discover any of the many
+            <a href="categories.html">categories</a> we cover. Note that the
+            categories are further divided into subcategories, each one of them
+            containing free rescources that will assist you in this learning
+            journey. <br />
+          </p>
+          <p><b> Learn. Grow. Succeed!</b></p>
+          <img src="../Resources/rb_40503-modified.png" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="left-footer">
+        <h2>CONTACT</h2>
+        <ul class="menu">
+          <li>
+            <address>
+              Patision 76<br />
+              Zip-Code 104 34 Athens
+              <br /><a
+                href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
+                >Find in map</a
+              >
+            </address>
+          </li>
+          <li>
+            Tel:
+            <a href="tel:+2108203315"
+              >210-8203315,<a href="tel:2108203316">316</a></a
+            >
+          </li>
+          <li>
+            Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+          </li>
+        </ul>
       </div>
-    </section>
-  </main>
-
-
-  <footer>
-    <div id="upper-footer">
-      <h2>Catch up with WideMind community</h2>
-      <ul class="menu">
-        <li><a href="#">Github</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">X</a></li>
-      </ul>
-    </div>
-    <div id="middle-footer">
-      <h2>Contact Us</h2>
-      <ul class="menu">
-        <li>
-          <address>
-            Patision 76<br />
-            Zip-Code 104 34 Athens
-            <b><a href="#">Find in map</a></b>
-          </address>
-        </li>
-        <li>Tel: 210-8203315,316</li>
-        <li><a href="mailto:widemind@gmail.com">widemind@gmail.com</a></li>
-      </ul>
-    </div>
-    <div id="lower-footer">
-      <p>©Copyright 2024 WideMind Organization</p>
-    </div>
-  </footer>
-</body>
-
+      <div id="middle-footer">
+        <h2>INFORMATION</h2>
+        <ul class="information">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Manage Cookies</a></li>
+        </ul>
+      </div>
+      <div id="right-footer">
+        <h2>CONNECT WITH US</h2>
+        <ul class="social-media">
+          <li>
+            <a href="https://www.github.com" class="fa-brands fa-github"></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com"
+              class="fa-brands fa-linkedin-in"
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com"
+              class="fa-brands fa-facebook-f"
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="lower-footer">
+        <p>©Copyright 2024 WideMind Organization</p>
+      </div>
+    </footer>
+  </body>
 </html>
