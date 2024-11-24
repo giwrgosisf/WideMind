@@ -15,14 +15,19 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background: linear-gradient(145deg, var(--secondary-color) 30%, var(--primary-color) 80%);
 }
 
-body h1 {
-    font-family: 'Manjari', sans-serif;
-}
 
+ul {
+    list-style: none;
+    /* display: flex; */
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+
+}
 
 
 /* -------------------Header style ----------------------------------*/
@@ -83,14 +88,14 @@ body h1 {
     margin-right: 2rem;
 }
 
-#navBar>ul {
+/* #navBar>ul {
     list-style: none;
-    /* display: flex; */
+    display: flex;
     gap: 1rem;
     padding: 0;
     margin: 0;
 
-}
+} */
 
 #navBar li a {
     text-decoration: none;
@@ -115,7 +120,7 @@ body h1 {
 main {
     margin-top: 6rem;
     padding: 3rem 1.5rem;
-    
+
 }
 
 /* Main section layout */
@@ -193,7 +198,7 @@ main {
 /* ---------------- CATEGORIES CSS ----------------- */
 
 
-.categories-intro h1 {
+.intro h2 {
     font-size: 10rem;
     font-weight: 400;
     color: rgba(10, 10, 10, 0.6);
@@ -206,7 +211,7 @@ main {
 }
 
 
-.categories-intro h2 {
+.intro p {
     font-size: 1.5rem;
     color: #ffffff;
     font-family: "Libre Franklin", sans-serif;
@@ -215,7 +220,6 @@ main {
     margin-bottom: 1rem;
     max-width: 100%;
 }
-
 
 
 .category-card h2 {
@@ -228,8 +232,8 @@ main {
 }
 
 .category-card p {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
     line-height: 1.5;
     color: #ffffff;
     padding-top: 2rem;
@@ -241,14 +245,12 @@ main {
 .category-card {
     width: 26rem;
     height: 36rem;
-    border-radius: 10px;
     overflow: hidden;
-    cursor: pointer;
     position: relative;
     color: #f0f0f0;
     box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
     border-radius: 1.5rem;
-    margin: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -407,190 +409,191 @@ main {
 
 
 /*--------------OPERATING SYSTEMS CSS-----------*/
-#operating-main{
-    margin-top:6.8em;
-    padding-bottom:1em;
-    
+#operating-main {
+    margin-top: 6.8em;
+    padding-bottom: 1em;
+
 }
 
 
-#operating-main  .page-titles > h1,#operating-main .page-titles > h2{
+#operating-main .page-titles>h1, #operating-main .page-titles>h2 {
     color: white;
-    font-size:5em;
+    font-size: 5em;
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
-    margin-bottom:0.3em;
-    margin-left:0.7em;
+    margin-bottom: 0.3em;
+    margin-left: 0.7em;
 }
 
-#operating-main .page-titles > h2 {
-    font-size:2em;
-    margin-bottom:1em;
-    margin-left:2em;
+#operating-main .page-titles>h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-left: 2em;
 }
 
 
 
-#operating-main > p{
+#operating-main>p {
     color: white;
     font-size: 1.5em;
-    line-height:2em;
-    font-family:'roboto';
+    line-height: 2em;
+    font-family: 'Poppins';
     text-align: left;
-    margin-left:4rem;
-    margin-right:4rem;
-    padding:1em;
-    
-   margin-bottom:5em;
-    
-    
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 1em;
+
+    margin-bottom: 5em;
+
+
 }
 
-#operating-main .emphasize{
+#operating-main .emphasize {
     font-size: 2em;
     font-weight: 700;
-    line-height:3em;
-    
+    line-height: 3em;
+
 }
 
-#operating-main .emphasize-child{
-    line-height:1em;
-    font-size:1.2em;
-    font-weight:700px;
-    
-    
+#operating-main .emphasize-child {
+    line-height: 1em;
+    font-size: 1.2em;
+    font-weight: 700px;
+
+
 }
 
 
-#operating-main .keywords{
-    border-bottom:5px solid #F3F3E0;
+#operating-main .keywords {
+    border-bottom: 5px solid #F3F3E0;
     border-bottom-style: double;
-    padding:0.2em;
-    
+    padding: 0.2em;
+
 }
 
-#operating-main  > img{
+#operating-main>img {
     width: 200px;
     height: 200px;
-    padding-bottom:2em;
-    padding-right:2em;
-    margin-top:-12em;
-    float: right; 
+    padding-bottom: 2em;
+    padding-right: 2em;
+    margin-top: -12em;
+    float: right;
 
 }
-#book-section,#lecture-section{
+
+#book-section, #lecture-section {
     background-color: #ffffff;
     color: #333;
     border-radius: 4rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin: 3rem;
-    padding:2.5rem;
+    padding: 2.5rem;
     transform: translateY(-20px);
 }
 
 
 
-#book-section:hover,  #lecture-section:hover, #page-description:hover {
+#book-section:hover, #lecture-section:hover, #page-description:hover {
     transform: translateY(-30px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-#lecture-section{
-    margin-bottom:0em;
+#lecture-section {
+    margin-bottom: 0em;
 }
 
-#book-section h2 , #lecture-section h2{
+#book-section h2, #lecture-section h2 {
     text-align: center;
-    font-size:2em;
+    font-size: 2em;
     font-family: "Libre Franklin", sans-serif;
-    
+
 }
 
 
 
-.book, .lecture{
+.book, .lecture {
     box-sizing: border-box;
-    height:720px;
+    height: 720px;
     transition: box-shadow 0.2s ease;
     border: 1px solid transparent;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0);
-    padding:10px; 
-    
+    padding: 10px;
+
 }
 
-.lecture{
-    height:1000px;
+.lecture {
+    height: 1000px;
     margin-bottom: 5em;
-    
+
 }
 
-.book:hover,.lecture:hover{
+.book:hover, .lecture:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-    
+
 }
 
-.book header > h1 {
+.book header>h1 {
     margin-bottom: 1em;
 }
 
-.book header > h1 > a{
+.book header>h1>a {
     text-decoration: none;
-    color:black;
+    color: black;
 
 }
 
-.book cite:hover{
-    text-decoration:underline;
-    color:black;
+.book cite:hover {
+    text-decoration: underline;
+    color: black;
 }
 
 .book img {
-    margin-bottom:1em;
-    border:3px solid black;
+    margin-bottom: 1em;
+    border: 3px solid black;
 }
 
-.book > p{
+.book>p {
     margin-top: 0.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
     text-align: left;
 }
 
- .book  .author , .book .price ,.book .pages, .book .stars-rating , .lecture .university , .instructor, .number-of-lectures, .duration {
+.book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
     font-family: "Libre Franklin", sans-serif;
     font-size: 1em;
-    text-align:left;
+    text-align: left;
     height: 2em;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 
-.book.author{
-    margin-top:1em;  
+.book.author {
+    margin-top: 1em;
 }
 
-.book .price{
-    margin-top:0.5em;
+.book .price {
+    margin-top: 0.5em;
     text-align: end;
     display: block;
-    
+
 }
 
 
-#lecture-section > h2 , #book-section >h2 {
-    padding-top:2em;
+#lecture-section>h2, #book-section>h2 {
+    padding-top: 2em;
     text-align: center;
-    font-size:2em;
+    font-size: 2em;
     font-family: "Libre Franklin", sans-serif;
     background-color: #ffffff;
 
 }
 
 
- 
+
 .lecture {
-    padding-top:2em;
+    padding-top: 2em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #ffffff;
 
@@ -598,53 +601,54 @@ main {
 
 
 
-.lecture > img{
+.lecture>img {
     width: 650px;
     height: 400px;
-    margin-bottom:3em;
-    border:solid black 3px
+    margin-bottom: 3em;
+    border: solid black 3px
 }
 
-.lecture > header > h1{
-    margin-bottom:3em;
+.lecture>header>h1 {
+    margin-bottom: 3em;
     text-align: center;
     font-family: "Libre Franklin", sans-serif;
-    
+
 
 }
 
-.lecture > header > h1 > a{
-    text-decoration:none;
-    color:black;
-}
-
-.lecture > header > h1 > a:hover{
-    text-decoration:underline;
+.lecture>header>h1>a {
+    text-decoration: none;
     color: black;
-   
 }
 
-.lecture .university , .lecture .instructor, .lecture .number-of-lectures, .lecture .duration , .stars-rating {
-   
-    margin-left: 1em;;
+.lecture>header>h1>a:hover {
+    text-decoration: underline;
+    color: black;
+
+}
+
+.lecture .university, .lecture .instructor, .lecture .number-of-lectures, .lecture .duration, .stars-rating {
+
+    margin-left: 1em;
+    ;
 }
 
 .lecture .instructor {
-    margin-top:1em;
+    margin-top: 1em;
 }
 
-.lecture .duration , .lecture .stars-rating{
-    margin-bottom:1em;
+.lecture .duration, .lecture .stars-rating {
+    margin-bottom: 1em;
 }
 
- 
-.lecture .mini-description{
+
+.lecture .mini-description {
     font-size: 1em;
     text-align: left;
-    padding-right:5em;
-    height:2em;
-    margin-left:1em;
-    font-family:"roboto";
+    padding-right: 5em;
+    height: 2em;
+    margin-left: 1em;
+    font-family: "Poppins";
     font-weight: 200;
 
 }
@@ -652,97 +656,96 @@ main {
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
 
-#book-main > h1 {
+#book-main>h1 {
     text-align: left;
-    color:white;
+    color: white;
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
-    font-size:5em;
-    margin-left:1.5em;
+    font-size: 5em;
+    margin-left: 1.5em;
 
 }
 
 
-#book-analysis,#contents-container,#details, #side-books{
+#book-analysis, #contents-container, #details, #side-books {
     border-radius: 4rem;
     background-color: #EEEEEE;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    padding:4rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;      
+    padding: 4rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 }
 
-#book-analysis:hover,#contents-container:hover,#details:hover,#side-books:hover{
-        transform: translateY(-10px);
-        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+#book-analysis:hover, #contents-container:hover, #details:hover, #side-books:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-#book-analysis{
-    padding:5em;
+#book-analysis {
+    padding: 5em;
 }
 
-#contents-container{
+#contents-container {
     width: 450px;
     text-align: center;
 }
 
-.book-pages,.book-author,.book-year,.book-stars-rating{
-    font-size:1.2em;
-    margin-bottom:1em;
+.book-pages, .book-author, .book-year, .book-stars-rating {
+    font-size: 1.2em;
+    margin-bottom: 1em;
 
 }
 
-.ratings{
+.ratings {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.ratings > p{
-    margin-top:1em;
-    flex-basis:100%;
+.ratings>p {
+    margin-top: 1em;
+    flex-basis: 100%;
 }
 
-.book-stars-rating,.book-stars-end-rating,.book-stars-start-rating{
+.book-stars-rating, .book-stars-end-rating, .book-stars-start-rating {
     text-align: left;
     width: 30px;
     height: 30px;
     background: gold;
-    clip-path: polygon(
-      50% 0%, 
-      61% 35%, 
-      98% 35%, 
-      68% 57%, 
-      79% 91%, 
-      50% 70%, 
-      21% 91%, 
-      32% 57%, 
-      2% 35%, 
-      39% 35%
-    );
-    margin:10px;
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+    margin: 10px;
 
 }
-.book-stars-start-rating{
+
+.book-stars-start-rating {
     margin-left: 0px;
 }
 
-.book-stars-end-rating{
+.book-stars-end-rating {
     background: linear-gradient(to right, gold 25%, white 30%);
 }
 
 
-.book-price{
-    border-bottom:10px solid #608BC1;
+.book-price {
+    border-bottom: 10px solid #608BC1;
     text-align: right;
     padding: 1em;
     font-size: 1.5em;
 
 
-    
+
 }
 
- #book-analysis .book-details > h1 {
+#book-analysis .book-details>h1 {
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-size: 2.5em;
@@ -751,171 +754,177 @@ main {
 
 
 
-#book-analysis .book-description p{
-    font-size:1.3em;
-    font-family:'Roboto';
+#book-analysis .book-description p {
+    font-size: 1.3em;
+    font-family: 'Poppins';
 }
 
 
 
-#Table-of-contents th, td{
+#Table-of-contents th, td {
     text-align: center;
     border-bottom: 5px solid #8EACCD;
-    height:5em;
+    height: 5em;
 }
 
 
-#Table-of-contents  a{
+#Table-of-contents a {
     text-decoration: none;
     color: black;
-     
+
 }
 
-summary{
+summary {
     margin-bottom: 2em;
-    font-size:1.5em;
+    font-size: 1.5em;
     text-align: left;
-    font-family:"Libre Franklin", sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-weight: 600;
 }
 
-summary:hover{
+summary:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
 
 
-details[open] summary ~ * {
-    animation: sweep .5s ease-in-out forwards ;
+details[open] summary~* {
+    animation: sweep .5s ease-in-out forwards;
 }
 
 @keyframes sweep {
     from {
-        opacity: 0; margin-top: -10px;
+        opacity: 0;
+        margin-top: -10px;
     }
-    to{
-        opacity:1; margin-top: 0;
+
+    to {
+        opacity: 1;
+        margin-top: 0;
     }
 }
 
- details > p {
+details>p {
     text-align: left;
-    font-size:1.3em;
-    font-family:'Roboto';
+    font-size: 1.3em;
+    font-family: 'Poppins';
     padding: 5em;
-    padding-left:15em;
-    padding-right:15em;
+    padding-left: 15em;
+    padding-right: 15em;
 }
 
-details > a {
+details>a {
     text-decoration: none;
     font-style: italic;
-    color:black;
+    color: black;
 
-    &:hover{
+    &:hover {
         text-decoration: underline;
     }
 }
 
-#about-the-author{
-    padding:2em;
+#about-the-author {
+    padding: 2em;
     text-align: center;
-    font-size:1.1em;
+    font-size: 1.1em;
 }
 
-#about-the-author p{
+#about-the-author p {
     text-align: left;
 }
 
 
 
 
-#about-the-author > img{
-    width:200px;
-    height:200px;
-    margin:2em;
+#about-the-author>img {
+    width: 200px;
+    height: 200px;
+    margin: 2em;
 }
 
 #side-books {
     width: 550px;
     text-align: center;
-    overflow:auto;
+    overflow: auto;
     height: 1500px;
-    padding:0%;
-    
+    padding: 0%;
+
 }
 
-#side-books ul{
+#side-books ul {
     align-items: center;
-    padding-left:4rem;
-    padding-right:4rem;
-    padding-bottom:4rem;
-} 
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+}
 
-#side-books ul > li{
+#side-books ul>li {
     list-style: none;
     width: 400px;
-    margin-top:5em;
+    margin-top: 5em;
 
 }
-#side-books ul > li > .book > header >h1{
-    font-size:1em;
+
+#side-books ul>li>.book>header>h1 {
+    font-size: 1em;
 }
-#side-books ul > li > .book > .stars-rating{
+
+#side-books ul>li>.book>.stars-rating {
     text-align: center;
 }
-#side-books > header {
+
+#side-books>header {
     text-align: center;
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     z-index: 1;
     background-color: #EEEEEE;
-    padding-top:4rem;
+    padding-top: 4rem;
 }
 
-#side-books > header >h1 {
-    font-family:"Libre Franklin", sans-serif;
-    padding-top:1em;
+#side-books>header>h1 {
+    font-family: "Libre Franklin", sans-serif;
+    padding-top: 1em;
     text-align: center;
-    font-size:2em;
-    z-index:1;
+    font-size: 2em;
+    z-index: 1;
 
 }
 
 
 #side-books::-webkit-scrollbar {
- 
-    height: 12px; 
-    width:10px;
-  }
-  
-  
-  #side-books::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+
+    height: 12px;
+    width: 10px;
+}
+
+
+#side-books::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 10px;
     margin: 5em 0;
-    height: 20%; 
-  }
-  
-  
-  #side-books::-webkit-scrollbar-thumb {
-    background: #888; 
+    height: 20%;
+}
+
+
+#side-books::-webkit-scrollbar-thumb {
+    background: #888;
     border-radius: 10px;
-    height: 20%; 
-  }
-  
- 
-  #side-books::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-  
-  
-  #side-books::-webkit-scrollbar-corner {
+    height: 20%;
+}
+
+
+#side-books::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+#side-books::-webkit-scrollbar-corner {
     background: #f1f1f1;
-  }
-  
+}
+
 
 
 
@@ -979,14 +988,14 @@ footer ul {
 
 
 
-#right-footer .fa-brands {
+ul .fa-brands {
     font-size: 1.5rem;
     width: 2.5rem;
     height: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
     text-decoration: none;
-    margin: 0.5rem;
+    margin: 1rem 1rem 1rem 0.5rem;
     border-radius: 50%;
     background-color: #ffffff8f;
     color: #4b4b4b;
@@ -1009,89 +1018,178 @@ footer ul {
 }
 
 
-/* ------------------------------FOOTER CSS----------------------------------------------------- */
-/* Footer CSS */
-footer {
-    background-color: var(--footer-color);
-    color: #ffffff;
-    padding: 2rem;
-    /* align-items: center;
-    display: flex;
-    justify-content: space-around; */
+
+/* -------------------------------------- ABOUT US ----------------------------------------- */
+
+.profile-card {
+    height: 28rem;
+    width: 20rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: transform 0.4s ease-in;
+    margin-bottom: 1.5rem;
+}
+
+.profile-card .front {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 
+.profile-card .front>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    transition: all 0.4s ease;
 
-footer h2 {
-    color: #ffffff8f;
-    width: fit-content;
-    padding: 2rem 0rem 0.5rem 0.0rem;
-    font-size: 1.1rem;
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
+.profile-card .front .info>h1 {
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 1px 1px 4px #000000;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+}
+
+.profile-card .front .info>h2 {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 2.0rem;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 1px 1px 4px #000000;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+}
+
+.profile-card .front .info .arrowRight {
+    position: absolute;
+    bottom: 1.0rem;
+    left: 13rem;
+    color: #000000;
+    z-index: 2;
+}
+
+.profile-card:hover .front>img {
+    scale: 1.01;
+    opacity: 0.85;
+    filter: blur(1px);
+}
+
+/* Back Card Styling */
+.profile-card .back {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1rem 0 0 1rem;
+    border-radius: 2rem;
+    transform: translateY(150%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .back>h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
     margin: 0;
 }
 
-
-#left-footer li a, #middle-footer li a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.2s ease;
+.profile-card .back>h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+    margin: 0.2rem 0;
 }
 
-#left-footer li a {
-    font-weight: 700;
+.profile-card .back>p {
+    padding-right: 2rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+    font-family: "Poppins", sans-serif;
 }
 
-#left-footer address a {
-    font-size: smaller;
-}
-
-
-#middle-footer li {
-    padding: 0rem 0.0rem 1.0rem 0.0rem;
-}
-
-#left-footer a:hover, #middle-footer a:hover {
-    color: #69699d;
+.profile-card .back>hr {
+    width: 90%;
 }
 
 
-
-#right-footer ul {
-    display: flex;
+.follow .fa-brands {
+    float: left;
 }
 
 
 
-#right-footer .fa-brands {
-    font-size: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 0.5rem;
-    border-radius: 50%;
-    background-color: #ffffff8f;
-    color: #4b4b4b;
+
+input[type="checkbox"] {
+    display: none;
 }
 
-
-.fa-brands:hover {
-    /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 45%, rgba(142, 142, 144, 1) 100%); */
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 35%, rgba(142, 142, 144, 1) 100%);
+.profile-card .back .backBtn {
+    padding: 0.5rem 2rem;
+    background-color: black;
+    border-radius: 4px;
+    color: #f1f1f1;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-
-#lower-footer {
-    display: flex;
+/* checkbox Label */
+.arrowRight {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: x-small;
-    margin-top: 1.5rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrowRight:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+.arrowRight:hover i.fa {
+    padding-left: 0.4rem;
+    transition: padding-left 0.3s ease-in;
+}
+
+/* Active States for checkbox */
+.btnImitation:checked~.front {
+    opacity: 0;
+}
+
+.btnImitation:checked~.front .info {
+    visibility: hidden;
+}
+
+.btnImitation:checked~.back {
+    transform: translateY(0);
+    opacity: 1;
 }
