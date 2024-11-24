@@ -1,0 +1,878 @@
+:root {
+    /* color palette for website */
+    --primary-color: #F3F3E0;
+    --secondary-color: #8EACCD;
+    --footer-color: rgb(69, 69, 69);
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: linear-gradient(145deg, var(--secondary-color) 30%, var(--primary-color) 80%);
+}
+
+/* -------------------Header style ----------------------------------*/
+.header {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* border-radius: 0 0 1rem 1rem; */
+}
+
+/* Logo */
+#logo {
+    width: 15rem;
+    height: auto;
+    padding: 0.5rem 1rem;
+}
+
+/* Search bar */
+#search-bar {
+    position: relative;
+    min-width: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar>input {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    outline: none;
+}
+
+#search-bar>.search-button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+#search-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Navigation bar */
+#navBar {
+    margin-right: 2rem;
+}
+
+#navBar>ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+#navBar li a {
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+#navBar li a:hover {
+    color: white;
+
+}
+
+
+
+
+/* ------------------INDEX MAIN CSS---------------------------- */
+main {
+    margin-top: 6rem;
+    padding: 3rem 1.5rem;
+   
+}
+
+/* Main section layout */
+#main-section {
+    width: 100%;
+    height: auto;
+}
+
+/* Welcome section styling */
+#Welcome-section, #categories-section {
+    padding: 2.5rem;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 4rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* transform-style: preserve-3d; */
+    margin-bottom: 2rem;
+}
+
+#Welcome-section:hover, #categories-section:hover {
+    /* transform: translateZ(20px) scale(1.01); */
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+#Welcome-section>h2, #categories-section>h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #69699d;
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic;
+}
+
+#Welcome-section p, #categories-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#image-container img, #categories-section img {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem rgb(124, 124, 124));
+}
+
+#image-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#image-container ul>li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+#categories-section a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#categories-section a:hover {
+    color: #69699d;
+}
+
+
+
+/*--------------OPERATING SYSTEMS CSS-----------*/
+#operating-main{
+    margin-top:6.8em;
+    padding-bottom:1em;
+    
+}
+
+#operating-main .upper-Page{
+    height:400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    padding-left:3rem;
+    margin-bottom:13em;
+    
+    
+}
+
+
+#operating-main  .page-titles > h1,#operating-main .page-titles > h2{
+    color: white;
+    font-size:5em;
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic;
+    margin-bottom:0.3em;
+}
+
+#operating-main .page-titles > h2 {
+    font-size:2em;
+    margin-bottom:1em;
+}
+
+
+
+#operating-main  .upper-Page > p{
+    color: white;
+    font-size: 1.5em;
+    line-height:2em;
+    font-family:'roboto';
+    text-align: left;
+    padding:1em;
+    margin-bottom:5em;
+    
+    
+}
+
+#operating-main .emphasize{
+    font-size: 2em;
+    font-weight: 700;
+    line-height:3em;
+    
+}
+
+#operating-main .emphasize-child{
+    line-height:1em;
+    font-size:1.2em;
+    font-weight:700px;
+    
+    
+}
+
+
+#operating-main .keywords{
+    border-bottom:5px solid #F3F3E0;
+    border-bottom-style: double;
+    padding:0.2em;
+    
+}
+
+#operating-main .upper-Page img{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    padding-bottom:2em;
+    padding-right:2em;
+    
+}
+
+
+
+#book-section,#lecture-section{
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 4rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 3rem;
+    margin-top:3rem;
+    padding:2.5rem;
+}
+
+#book-section:hover, #lecture-section:hover,#operating-main{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+#lecture-section{
+    margin-bottom:0em;
+}
+
+
+
+
+#book-grid{
+    padding-top:5em;
+    padding-bottom:5em;
+    display: grid;
+    grid-gap: 5em;
+    justify-items: center;
+    align-items: center;
+    justify-content:center;
+    align-content: center;
+    grid-template-rows:700px 700px;
+    grid-template-columns:400px 400px 400px
+
+}
+
+.book,.lecture{
+    height:720px;
+    transition: box-shadow 0.2s ease;
+    border: 1px solid transparent;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+    padding:10px; 
+    text-align: center;
+    border-bottom: 10px solid #608BC1;
+}
+
+.lecture{
+    height:1100px;
+    
+}
+
+.book:hover,.lecture:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    
+}
+
+.book header > h1 {
+    margin-bottom: 1em;
+}
+
+.book header > h1 > a{
+    text-decoration: none;
+    color:black;
+
+}
+
+.book cite:hover{
+    text-decoration:underline;
+    color:black;
+}
+
+.book img {
+    margin-bottom:1em;
+    border:3px solid black;
+}
+
+.book > p{
+    margin-top: 0.5em;
+    font-family: "roboto";
+    font-weight: 200;
+    text-align: left;
+}
+
+ .book  .author , .book .price ,.book .pages, .book .stars-rating , .lecture .university , .instructor, .number-of-lectures, .duration {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1em;
+    text-align:left;
+    height: 2em;
+    font-weight:bold;
+}
+
+.book .stars-rating{
+    text-align: center;
+}
+
+
+.book.author{
+    margin-top:1em;  
+}
+
+.book .price{
+    margin-top:0.5em;
+    text-align: end;
+    display: block;
+    
+}
+
+
+
+
+
+ 
+#lecture-section > h2 , #book-section >h2 {
+    padding-top:2em;
+    text-align: center;
+    font-size:2em;
+    font-family: "Libre Franklin", sans-serif;
+    background-color: #ffffff;
+
+}
+
+#lecture-grid{
+    padding-top:15em;
+    padding-bottom:15em;
+    display: grid;
+    grid-gap: 25em;
+    justify-items: center;
+    align-items: center;
+    justify-content:center;
+    align-content: center;
+    margin-bottom:2rem;
+    grid-template-rows:700px 700px;
+    grid-template-columns:500px 500px 
+}
+
+.lecture:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.lecture > img{
+    width: 650px;
+    height: 400px;
+    margin-bottom:3em;
+    border:solid black 3px
+}
+
+.lecture > header > h1{
+    margin-bottom:3em;
+    text-align: center;
+    font-family: "Libre Franklin", sans-serif;
+    
+
+}
+
+.lecture > header > h1 > a{
+    text-decoration:none;
+    color:black;
+}
+
+.lecture > header > h1 > a:hover{
+    text-decoration:underline;
+    color: black;
+   
+}
+
+
+.lecture .university , .instructor, .number-of-lectures, .duration {
+   
+    margin-left: 2em;;
+}
+
+.lecture .instructor {
+    margin-top:1em;
+}
+
+.lecture .duration , .lecture .stars-rating{
+    margin-bottom:1em;
+}
+
+.lecture .mini-description{
+    font-size:1em;
+    text-align: left;
+    height:2em;
+    margin-left:2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+
+}
+
+.lecture .stars-rating{
+    margin-bottom:2em;
+
+}
+
+
+/* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
+
+#book-body{
+   
+    display:grid;
+    grid-gap:2.5rem;
+    justify-content: center;
+    grid-template-columns:1fr 1000px 1fr;
+    grid-template-rows:100px 1300px 1fr 550px;  
+}
+
+header{
+   grid-row:1/2;
+   grid-column:1/-1;
+
+}
+
+footer{
+    grid-row:4/-1;
+    grid-column:1/-1;
+}
+
+#book-main{
+    grid-row:2/4;
+    grid-column:2/3;
+    margin:0;
+    padding:0;
+
+}
+
+#book-main > h1 {
+    text-align: left;
+    color:white;
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic;
+    font-size:5em;
+    margin-left:1.5em;
+
+}
+
+
+#book-analysis,#contents-container,#details,#side-books{
+    border-radius: 4rem;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding:4rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+}
+
+#book-analysis:hover,#contents-container:hover,#details:hover,#side-books:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+#book-analysis{
+    width:1000px;
+    height: 1300px;;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 500px) ;
+    padding:5em;
+    overflow: hidden;
+}
+
+#book-analysis > img {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2;    
+}
+
+.book-pages,.book-author,.book-year,.book-stars-rating{
+    font-size:1.2em;
+    margin-bottom:1em;
+
+}
+
+.ratings{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ratings > p{
+    margin-top:1em;
+    flex-basis:100%;
+}
+
+.book-stars-rating,.book-stars-end-rating,.book-stars-start-rating{
+    text-align: left;
+    width: 30px;
+    height: 30px;
+    background: gold;
+    clip-path: polygon(
+      50% 0%, 
+      61% 35%, 
+      98% 35%, 
+      68% 57%, 
+      79% 91%, 
+      50% 70%, 
+      21% 91%, 
+      32% 57%, 
+      2% 35%, 
+      39% 35%
+    );
+    margin:10px;
+
+}
+.book-stars-start-rating{
+    margin-left: 0px;
+}
+
+.book-stars-end-rating{
+    background: linear-gradient(to right, gold 25%, white 30%);
+}
+
+
+.book-price{
+border-bottom:10px solid #608BC1;
+text-align: right;
+padding: 1em;
+font-size: 1.5em;
+font-weight: 900;
+
+
+    
+}
+
+ #book-analysis .book-details > h1 {
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+
+
+#book-analysis .book-description{
+    grid-row:2/-1;
+    grid-column:1/-1;
+}
+
+#book-analysis .book-description p{
+    font-size:1.3em;
+    font-family:'Roboto';
+    text-align: left;
+}
+
+
+#Table-of-contents th, td{
+    text-align: center;
+    border-bottom: 5px solid #8EACCD;
+    
+    height:5em;
+}
+
+#Table-of-contents  a{
+    text-decoration: none;
+    color: black;
+     
+}
+
+
+#contents-container{
+    padding: 2em;
+    text-align: center;
+    grid-row:2/3;
+    grid-column:1/2;
+    width:98%;
+    margin-left:0.7em;
+    
+   
+
+    
+
+}
+
+#details{
+    width:98% ;
+    text-align: center;
+    grid-row:3/4; 
+    grid-column:1/-1;
+    margin-left:1em;
+}
+
+summary{
+    margin-bottom: 2em;
+    font-size:1.5em;
+    text-align: left;
+    font-family:"Libre Franklin", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+summary:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out forwards ;
+}
+
+@keyframes sweep {
+    from {
+        opacity: 0; margin-top: -10px;
+    }
+    to{
+        opacity:1; margin-top: 0;
+    }
+}
+
+ details > p {
+    text-align: left;
+    font-size:1.3em;
+    font-family:'Roboto';
+    padding: 5em;
+    padding-left:15em;
+    padding-right:15em;
+}
+
+details > a {
+    text-decoration: none;
+    font-style: italic;
+    color:black;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+
+#about-the-author p{
+    text-align: left;
+}
+
+
+
+
+#about-the-author > img{
+    width:200px;
+    height:200px;
+    float: center;
+    margin:2em;
+}
+
+#side-books {
+    
+    grid-row:2/3;
+    grid-column:3/3;
+    width: 97%;
+    text-align: center;
+    overflow:auto;
+    height: 1300px;
+    margin-right:5em;
+    padding:0%;
+    
+}
+
+#side-books ul{
+    align-items: center;
+    padding-left:2em;
+    padding-right:1em;
+    
+} 
+
+#side-books ul > li{
+    list-style: none;
+    margin-top:1em;
+
+}
+#side-books ul > li > .book > header >h1{
+    font-size:0.9em;
+}
+
+#side-books ul > li > .book > .stars-rating{
+    text-align: center;
+}
+
+#side-books > header {
+    text-align: center;
+    position:sticky;
+    top:0;
+    z-index: 1;
+    background-color: #ffffff;
+    
+}
+
+#side-books > header >h1 {
+    font-family:"Libre Franklin", sans-serif;
+    padding-top:1em;
+    text-align: center;
+    font-size:2em;
+    z-index:1;
+
+}
+
+
+#side-books::-webkit-scrollbar {
+    height:0px; 
+    width:10px;
+  }
+  
+  
+  #side-books::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+    margin: 5em 0;
+    height: 20%; 
+  }
+  
+  
+  #side-books::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+    height: 20%; 
+  }
+  
+  #side-books::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+ 
+  #side-books::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+  }
+  
+
+
+
+/* ------------------------------FOOTER CSS----------------------------------------------------- */
+/* Footer CSS */
+footer {
+    background-color: var(--footer-color);
+    color: #ffffff;
+    padding: 2rem;
+    /* align-items: center;
+    display: flex;
+    justify-content: space-around; */
+}
+
+
+
+footer h2 {
+    color: #ffffff8f;
+    width: fit-content;
+    padding: 2rem 0rem 0.5rem 0.0rem;
+    font-size: 1.1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#left-footer li a, #middle-footer li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s ease;
+}
+
+#left-footer li a {
+    font-weight: 700;
+}
+
+#left-footer address a {
+    font-size: smaller;
+}
+
+
+#middle-footer li {
+    padding: 0rem 0.0rem 1.0rem 0.0rem;
+}
+
+#left-footer a:hover, #middle-footer a:hover {
+    color: #69699d;
+}
+
+
+
+#right-footer ul {
+    display: flex;
+}
+
+
+
+#right-footer .fa-brands {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: #ffffff8f;
+    color: #4b4b4b;
+}
+
+
+.fa-brands:hover {
+    /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 45%, rgba(142, 142, 144, 1) 100%); */
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 35%, rgba(142, 142, 144, 1) 100%);
+}
+
+
+
+#lower-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    margin-top: 1.5rem;
+}
