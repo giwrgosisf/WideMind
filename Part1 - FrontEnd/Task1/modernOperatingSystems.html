@@ -4,47 +4,41 @@
 
   <head>
     <title>Modern Operating Systems</title>
-    <meta
-      name="description"
-      content="Page describing the creators and the vision of widemind"
-    />
-    <meta
-      name="keywords"
-      content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses"
-    />
+    <meta name="description" content="Page describing the book called modern operating systems" />
+    <meta name="keywords"
+      content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses" />
     <meta name="author" content="WideMind Organization" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="../Resources/website-icon.png"
-      rel="shortcut icon"
-      type="image/png"
-    />
+    <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
   <!-- Start of the main body -->
 
   <body>
     <header>
-      <img src="../Resources/widemind-logo.png" />
-      <form id="search-bar">
-        <input
-          name="search-input"
-          type="text"
-          autocomplete="off"
-          spellcheck="false"
-          placeholder="Search for books or recordings..."
-        />
-        <button type="button">
-          <img src="../Resources/search-icon.svg" />
-        </button>
-      </form>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="categories.html">Categories</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-        </ul>
-      </nav>
+      <div class="header">
+        <a href="index.html"><img id="logo" src="../Resources/widemind-logo.png" />
+        </a>
+        <div id="search-bar">
+          <input name="search-input" type="text" autocomplete="off" spellcheck="false"
+            placeholder="Search for books or recordings..." />
+          <button class="search-button" type="button">
+            <img id="search-icon" src="../Resources/searchIcon.png" />
+          </button>
+        </div>
+        <nav id="navBar">
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <a href="operatingSystems.html">
@@ -825,26 +819,51 @@
     </main>
 
     <footer>
-      <div id="upper-footer">
-        <h2>Catch up with WideMind community</h2>
-        <ul class="menu">
-          <li><a href="#">Github</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">X</a></li>
-        </ul>
-      </div>
-      <div id="middle-footer">
-        <h2>Contact Us</h2>
+      <div id="left-footer">
+        <h2>CONTACT</h2>
         <ul class="menu">
           <li>
             <address>
               Patision 76<br />
               Zip-Code 104 34 Athens
-              <b><a href="#">Find in map</a></b>
+              <br /><a
+                href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
+                in map</a>
             </address>
           </li>
-          <li>Tel: 210-8203315,316</li>
-          <li><a href="mailto:widemind@gmail.com">widemind@gmail.com</a></li>
+          <li>
+            Tel:
+            <a href="tel:+2108203315">210-8203315,<a href="tel:2108203316">316</a></a>
+          </li>
+          <li>
+            Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div id="middle-footer">
+        <h2>INFORMATION</h2>
+        <ul class="information">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Manage Cookies</a></li>
+        </ul>
+      </div>
+      <div id="right-footer">
+        <h2>CONNECT WITH US</h2>
+        <ul class="social-media">
+          <li>
+            <a href="https://www.github.com" class="fa-brands fa-github"></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
+          </li>
+          <li>
+            <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
+          </li>
         </ul>
       </div>
       <div id="lower-footer">
@@ -852,4 +871,4 @@
       </div>
     </footer>
   </body>
-</html>
+  </html>
