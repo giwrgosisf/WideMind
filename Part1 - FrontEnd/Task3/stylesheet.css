@@ -657,16 +657,16 @@ footer{
     grid-template-rows: 100px 1300px 1fr 550px;
 }
 
-header {
+/* header {
     grid-row: 1/2;
     grid-column: 1/-1;
 
-}
+} */
 
-footer {
+/* footer {
     grid-row: 4/-1;
     grid-column: 1/-1;
-}
+} */
 
 #book-main {
     grid-row: 2/4;
