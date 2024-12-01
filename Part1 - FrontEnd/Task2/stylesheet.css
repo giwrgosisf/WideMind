@@ -409,11 +409,10 @@ main {
 
 
 /*--------------OPERATING SYSTEMS CSS-----------*/
-#operating-main {
+/* #operating-main {
     margin-top: 6.8em;
     padding-bottom: 1em;
-
-}
+} */
 
 
 #operating-main .page-titles>h1, #operating-main .page-titles>h2 {
@@ -458,7 +457,7 @@ main {
 #operating-main .emphasize-child {
     line-height: 1em;
     font-size: 1.2em;
-    font-weight: 700px;
+    font-weight: 700;
 
 
 }
@@ -490,6 +489,8 @@ main {
     margin: 3rem;
     padding: 2.5rem;
     transform: translateY(-20px);
+    width: 55%;
+    box-sizing: border-box;
 }
 
 
@@ -587,6 +588,7 @@ main {
     font-size: 2em;
     font-family: "Libre Franklin", sans-serif;
     background-color: #ffffff;
+    border-radius: 4rem;
 
 }
 
@@ -652,6 +654,153 @@ main {
     font-weight: 200;
 
 }
+
+
+
+
+.filters, .key-terms {
+    width: 20%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.key-terms{
+    width: 25%;
+    padding-bottom: 2rem;
+}
+
+
+.filters>details, .key-terms>details {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1rem 1rem 1rem 1.5rem;
+    width: 100%;
+}
+
+.key-terms > details {
+    font-size: 1rem;
+    margin: 1rem auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background: var(--primary-color);
+    border-radius: 2rem;
+    max-width: 90%;
+}
+
+.filters>details:last-of-type, .key-terms>details {
+    border-bottom: 0px;
+}
+
+
+.filters>details>summary {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filters summary, .key-terms summary {
+    list-style-type: none;
+}
+
+
+.key-terms > details > summary {
+    padding: 1em;
+    font-size: large;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.filters summary::after, .key-terms summary::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    margin-left: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+
+}
+
+.key-terms summary::after{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.filters summary:hover::after, .filters details[open]>summary:hover::after, .key-terms summary:hover::after, .key-terms details[open]>summary:hover::after {
+
+    opacity: 1;
+}
+
+
+.filters>details[open]>summary::after, .key-terms>details[open]>summary::after {
+    content: "\f077";
+    font-family: "Font Awesome 6 Free";
+    margin-left: 1rem;
+    opacity: 0.7;
+}
+
+
+
+.key-terms > h3{
+    text-align: center;
+    padding-top: 1rem;
+    font-style: italic;
+    font-size: larger;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+
+.key-terms details p {
+    border-top: 1px solid #cfcfcf;
+    cursor: default;
+    padding: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #232323;
+}
+
+
+
+.filters>details input[type="checkbox"] {
+    accent-color: var(--secondary-color);
+}
+
+.filters>details label {
+    cursor: pointer;
+
+    margin-left: 0.3rem;
+}
+
+
+
+.price-range {
+    width: 90%;
+    accent-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.price-range:hover {
+    opacity: 1;
+
+}
+
+.max-price-label {
+    position: relative;
+    left: 11rem;
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
@@ -774,7 +923,7 @@ main {
 
 }
 
-summary {
+#details summary {
     margin-bottom: 2em;
     font-size: 1.5em;
     text-align: left;
@@ -783,14 +932,14 @@ summary {
     font-weight: 600;
 }
 
-summary:hover {
+#details summary:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
 
 
-details[open] summary~* {
+#deitails details[open] summary~* {
     animation: sweep .5s ease-in-out forwards;
 }
 
@@ -806,7 +955,7 @@ details[open] summary~* {
     }
 }
 
-details>p {
+#details>p {
     text-align: left;
     font-size: 1.3em;
     font-family: 'Poppins';
@@ -815,14 +964,15 @@ details>p {
     padding-right: 15em;
 }
 
-details>a {
+#details>a {
     text-decoration: none;
     font-style: italic;
     color: black;
 
-    &:hover {
-        text-decoration: underline;
-    }
+}
+
+#details>a:hover {
+    text-decoration: underline;
 }
 
 #about-the-author {
@@ -1083,7 +1233,7 @@ ul .fa-brands {
 }
 
 .profile-card:hover .front>img {
-    scale: 1.01;
+    transform: scale(1.01);
     opacity: 0.85;
     filter: blur(1px);
 }
@@ -1138,7 +1288,7 @@ ul .fa-brands {
 
 
 
-input[type="checkbox"] {
+.btnImitation {
     display: none;
 }
 

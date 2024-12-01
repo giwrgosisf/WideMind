@@ -16,7 +16,7 @@
 }
 
 
-body{
+body {
     background: linear-gradient(145deg, var(--secondary-color) 30%, var(--primary-color) 80%);
 }
 
@@ -107,7 +107,7 @@ body{
 main {
     margin-top: 6rem;
     padding: 3rem 1.5rem;
-   
+
 }
 
 /* Main section layout */
@@ -181,411 +181,600 @@ main {
 
 
 /*--------------OPERATING SYSTEMS CSS-----------*/
-#operating-main{
-    margin-top:6.8em;
-    padding-bottom:1em;
-    
+.wrapper-three-col {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    row-gap: 8rem;
+    min-height: 100vh;
+    column-gap: 4rem;
+    grid-template-areas:
+        'header header header'
+        'filters books key-terms'
+        'filters lectures key-terms'
+        'footer footer footer'
+    ;
 }
 
-#operating-main .upper-Page{
-    height:400px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:100%;
-    padding-left:3rem;
-    margin-bottom:13em;
-    
-    
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+#book-section {
+    grid-area: books;
+}
+
+#lecture-section {
+    grid-area: lectures;
+}
+
+.filters {
+    grid-area: filters;
+}
+
+.key-terms {
+    grid-area: key-terms;
 }
 
 
-#operating-main  .page-titles > h1,#operating-main .page-titles > h2{
+/* #operating-main .page-titles>h1, #operating-main .page-titles>h2 {
     color: white;
-    font-size:5em;
+    font-size: 5em;
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
-    margin-bottom:0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0.7em;
 }
 
-#operating-main .page-titles > h2 {
-    font-size:2em;
-    margin-bottom:1em;
+#operating-main .page-titles>h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-left: 2em;
 }
 
 
 
-#operating-main  .upper-Page > p{
+#operating-main>p {
     color: white;
     font-size: 1.5em;
-    line-height:2em;
-    font-family:'roboto';
+    line-height: 2em;
+    font-family: 'Poppins';
     text-align: left;
-    padding:1em;
-    margin-bottom:5em;
-    
-    
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 1em;
+
+    margin-bottom: 5em;
+
+
 }
 
-#operating-main .emphasize{
+#operating-main .emphasize {
     font-size: 2em;
     font-weight: 700;
-    line-height:3em;
-    
+    line-height: 3em;
+
 }
 
-#operating-main .emphasize-child{
-    line-height:1em;
-    font-size:1.2em;
-    font-weight:700px;
-    
-    
+#operating-main .emphasize-child {
+    line-height: 1em;
+    font-size: 1.2em;
+    font-weight: 700;
+
+
 }
 
 
-#operating-main .keywords{
-    border-bottom:5px solid #F3F3E0;
+#operating-main .keywords {
+    border-bottom: 5px solid #F3F3E0;
     border-bottom-style: double;
-    padding:0.2em;
-    
+    padding: 0.2em;
+
 }
 
-#operating-main .upper-Page img{
+#operating-main>img {
     width: 200px;
     height: 200px;
-    margin-left: auto;
-    padding-bottom:2em;
-    padding-right:2em;
-    
+    padding-bottom: 2em;
+    padding-right: 2em;
+    margin-top: -12em;
+    float: right;
+
+} */
+
+#operating-main {
+    margin: 0;
+    padding: 0;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 
 
-#book-section,#lecture-section{
+#book-section, #lecture-section {
     background-color: #ffffff;
     color: #333;
     border-radius: 4rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin: 3rem;
-    margin-top:3rem;
-    padding:2.5rem;
+    /* margin: 3rem; */
+    padding: 2.5rem;
+    /* transform: translateY(-20px); */
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    row-gap: 20px;
 }
 
-#book-section:hover, #lecture-section:hover,#operating-main{
+
+
+#book-section:hover, #lecture-section:hover, #page-description:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-#lecture-section{
-    margin-bottom:0em;
+#lecture-section {
+    margin-bottom: 0em;
+}
+
+#book-section h2, #lecture-section h2 {
+    text-align: center;
+    font-size: 2em;
+    font-family: "Libre Franklin", sans-serif;
+
 }
 
 
 
-
-#book-grid{
-    padding-top:5em;
-    padding-bottom:5em;
-    display: grid;
-    grid-gap: 5em;
-    justify-items: center;
-    align-items: center;
-    justify-content:center;
-    align-content: center;
-    grid-template-rows:700px 700px;
-    grid-template-columns:400px 400px 400px
-
-}
-
-.book,.lecture{
-    height:720px;
+.book, .lecture {
+    box-sizing: border-box;
+    height: fit-content;
     transition: box-shadow 0.2s ease;
     border: 1px solid transparent;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0);
-    padding:10px; 
-    text-align: center;
-    border-bottom: 10px solid #608BC1;
+    padding: 20px;
+    border-radius: 2rem;
+
 }
 
-.lecture{
-    height:1100px;
-    
-}
+/* .lecture {
+    height: 1000px;
+    margin-bottom: 5em;
 
-.book:hover,.lecture:hover{
+} */
+
+.book:hover, .lecture:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-    
+
 }
 
-.book header > h1 {
+.book header>h1 {
     margin-bottom: 1em;
 }
 
-.book header > h1 > a{
+.book header>h1>a {
     text-decoration: none;
-    color:black;
+    color: black;
 
 }
 
-.book cite:hover{
-    text-decoration:underline;
-    color:black;
+.book cite:hover {
+    text-decoration: underline;
+    color: black;
 }
 
 .book img {
-    margin-bottom:1em;
-    border:3px solid black;
+    margin: 1em;
+    border: 3px solid black;
+    float: right;
+    height: 20rem;
+    width: auto;
 }
 
-.book > p{
-    margin-top: 0.5em;
-    font-family: "roboto";
-    font-weight: 200;
+.book>p {
+    /* margin-top: 1rem; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
     text-align: left;
 }
 
- .book  .author , .book .price ,.book .pages, .book .stars-rating , .lecture .university , .instructor, .number-of-lectures, .duration {
+.book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
     font-family: "Libre Franklin", sans-serif;
     font-size: 1em;
-    text-align:left;
+    text-align: left;
     height: 2em;
-    font-weight:bold;
-}
-
-.book .stars-rating{
-    text-align: center;
+    font-weight: bold;
 }
 
 
-.book.author{
-    margin-top:1em;  
+.book.author {
+    margin-top: 1em;
 }
 
-.book .price{
-    margin-top:0.5em;
+.book .price {
+    margin-top: 0.5em;
     text-align: end;
     display: block;
-    
+
+}
+
+
+#lecture-section>h2, #book-section>h2 {
+    /* padding-top: 2em; */
+    text-align: center;
+    font-size: 2em;
+    font-family: "Libre Franklin", sans-serif;
+    background-color: #ffffff;
+    border-radius: 4rem;
+
 }
 
 
 
-
-
- 
-#lecture-section > h2 , #book-section >h2 {
-    padding-top:2em;
-    text-align: center;
-    font-size:2em;
-    font-family: "Libre Franklin", sans-serif;
+.lecture {
+    padding: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #ffffff;
 
 }
 
-#lecture-grid{
-    padding-top:15em;
-    padding-bottom:15em;
-    display: grid;
-    grid-gap: 25em;
-    justify-items: center;
-    align-items: center;
-    justify-content:center;
-    align-content: center;
-    margin-bottom:2rem;
-    grid-template-rows:700px 700px;
-    grid-template-columns:500px 500px 
+
+
+.lecture>img {
+    width: 20rem;
+    height: auto;
+    margin: 1rem;
+    border: solid black 3px;
+    float: right;
 }
 
-.lecture:hover{
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-}
-
-.lecture > img{
-    width: 650px;
-    height: 400px;
-    margin-bottom:3em;
-    border:solid black 3px
-}
-
-.lecture > header > h1{
-    margin-bottom:3em;
+.lecture>header>h1 {
+    margin-bottom: 3em;
     text-align: center;
     font-family: "Libre Franklin", sans-serif;
-    
+
 
 }
 
-.lecture > header > h1 > a{
-    text-decoration:none;
-    color:black;
-}
-
-.lecture > header > h1 > a:hover{
-    text-decoration:underline;
+.lecture>header>h1>a {
+    text-decoration: none;
     color: black;
-   
 }
 
+.lecture>header>h1>a:hover {
+    text-decoration: underline;
+    color: black;
 
-.lecture .university , .instructor, .number-of-lectures, .duration {
-   
-    margin-left: 2em;;
+}
+
+.lecture .university, .lecture .instructor, .lecture .number-of-lectures, .lecture .duration, .stars-rating {
+
+    margin-left: 1em;
 }
 
 .lecture .instructor {
-    margin-top:1em;
+    margin-top: 1em;
 }
 
-.lecture .duration , .lecture .stars-rating{
-    margin-bottom:1em;
+.lecture .duration, .lecture .stars-rating {
+    margin-bottom: 1em;
 }
 
-.lecture .mini-description{
-    font-size:1em;
+
+.lecture .mini-description {
+    font-size: 1em;
     text-align: left;
-    height:2em;
-    margin-left:2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
+    padding-right: 5em;
+    /* height: 2em; */
+    margin-left: 1em;
+    font-family: "Poppins";
+    font-weight: 300;
 
 }
 
-.lecture .stars-rating{
-    margin-bottom:2em;
+
+
+
+.filters, .key-terms {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.filters {
+    margin-left: 0.5rem;
+}
+
+.key-terms {
+    margin-right: 0.5rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-label-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1px;
+    align-items: normal;
+
 
 }
+
+.price-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filters>details, .key-terms>details {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1rem 1rem 1rem 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.key-terms>details {
+    font-size: 1rem;
+    margin: 1rem auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background: var(--primary-color);
+    border-radius: 2rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters>details:last-of-type, .key-terms>details {
+    border-bottom: 0px;
+}
+
+
+.filters>details>summary {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filters summary, .key-terms summary {
+    list-style-type: none;
+}
+
+
+.key-terms>details>summary {
+    padding: 1em;
+    font-size: large;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.filters summary::after, .key-terms summary::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    margin-left: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+
+}
+
+.key-terms summary::after {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.filters summary:hover::after, .filters details[open]>summary:hover::after, .key-terms summary:hover::after, .key-terms details[open]>summary:hover::after {
+
+    opacity: 1;
+}
+
+
+.filters>details[open]>summary::after, .key-terms>details[open]>summary::after {
+    content: "\f077";
+    font-family: "Font Awesome 6 Free";
+    margin-left: 1rem;
+    opacity: 0.7;
+}
+
+
+
+.key-terms>h3 {
+    text-align: center;
+    padding-top: 1rem;
+    font-style: italic;
+    font-size: larger;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+
+.key-terms details p {
+    border-top: 1px solid #cfcfcf;
+    cursor: default;
+    padding: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #232323;
+}
+
+
+
+.filters>details input[type="checkbox"] {
+    accent-color: var(--secondary-color);
+}
+
+.filters>details label {
+    cursor: pointer;
+
+    margin-left: 0.3rem;
+}
+
+
+
+.price-range {
+    width: 90%;
+    accent-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.price-range:hover {
+    opacity: 1;
+
+}
+
+
 
 
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
-#book-body{
-   
-    display:grid;
-    grid-gap:2.5rem;
+#book-body {
+
+    display: grid;
+    grid-gap: 2.5rem;
     justify-content: center;
-    grid-template-columns:1fr 1000px 1fr;
-    grid-template-rows:100px 1300px 1fr 550px;  
+    grid-template-columns: 1fr 1000px 1fr;
+    grid-template-rows: 100px 1300px 1fr 550px;
 }
 
-header{
-   grid-row:1/2;
-   grid-column:1/-1;
-
-}
-
-footer{
-    grid-row:4/-1;
-    grid-column:1/-1;
-}
-
-#book-main{
-    grid-row:2/4;
-    grid-column:2/3;
-    margin:0;
-    padding:0;
+header {
+    grid-row: 1/2;
+    grid-column: 1/-1;
 
 }
 
-#book-main > h1 {
+footer {
+    grid-row: 4/-1;
+    grid-column: 1/-1;
+}
+
+#book-main {
+    grid-row: 2/4;
+    grid-column: 2/3;
+    margin: 0;
+    padding: 0;
+
+}
+
+#book-main>h1 {
     text-align: left;
-    color:white;
+    color: white;
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
-    font-size:5em;
-    margin-left:1.5em;
+    font-size: 5em;
+    margin-left: 1.5em;
 
 }
 
 
-#book-analysis,#contents-container,#details,#side-books{
+#book-analysis, #contents-container, #details, #side-books {
     border-radius: 4rem;
     background-color: #ffffff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    padding:4rem;
+    padding: 4rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
+
 }
 
-#book-analysis:hover,#contents-container:hover,#details:hover,#side-books:hover{
+#book-analysis:hover, #contents-container:hover, #details:hover, #side-books:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 
 }
 
-#book-analysis{
-    width:1000px;
-    height: 1300px;;
+#book-analysis {
+    width: 1000px;
+    height: 1300px;
+    ;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 500px) ;
-    padding:5em;
+    grid-template-rows: repeat(2, 500px);
+    padding: 5em;
     overflow: hidden;
 }
 
-#book-analysis > img {
-    grid-column: 1 / 2; 
-    grid-row: 1 / 2;    
+#book-analysis>img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
-.book-pages,.book-author,.book-year,.book-stars-rating{
-    font-size:1.2em;
-    margin-bottom:1em;
+.book-pages, .book-author, .book-year, .book-stars-rating {
+    font-size: 1.2em;
+    margin-bottom: 1em;
 
 }
 
-.ratings{
+.ratings {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.ratings > p{
-    margin-top:1em;
-    flex-basis:100%;
+.ratings>p {
+    margin-top: 1em;
+    flex-basis: 100%;
 }
 
-.book-stars-rating,.book-stars-end-rating,.book-stars-start-rating{
+.book-stars-rating, .book-stars-end-rating, .book-stars-start-rating {
     text-align: left;
     width: 30px;
     height: 30px;
     background: gold;
-    clip-path: polygon(
-      50% 0%, 
-      61% 35%, 
-      98% 35%, 
-      68% 57%, 
-      79% 91%, 
-      50% 70%, 
-      21% 91%, 
-      32% 57%, 
-      2% 35%, 
-      39% 35%
-    );
-    margin:10px;
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+    margin: 10px;
 
 }
-.book-stars-start-rating{
+
+.book-stars-start-rating {
     margin-left: 0px;
 }
 
-.book-stars-end-rating{
+.book-stars-end-rating {
     background: linear-gradient(to right, gold 25%, white 30%);
 }
 
 
-.book-price{
-border-bottom:10px solid #608BC1;
-text-align: right;
-padding: 1em;
-font-size: 1.5em;
-font-weight: 900;
+.book-price {
+    border-bottom: 10px solid #608BC1;
+    text-align: right;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: 900;
 
 
-    
+
 }
 
- #book-analysis .book-details > h1 {
+#book-analysis .book-details>h1 {
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-size: 2.5em;
@@ -594,199 +783,220 @@ font-weight: 900;
 
 
 
-#book-analysis .book-description{
-    grid-row:2/-1;
-    grid-column:1/-1;
+#book-analysis .book-description {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
 }
 
-#book-analysis .book-description p{
-    font-size:1.3em;
-    font-family:'Roboto';
+#book-analysis .book-description p {
+    font-size: 1.3em;
+    font-family: 'Roboto';
     text-align: left;
 }
 
 
-#Table-of-contents th, td{
+#Table-of-contents th, td {
     text-align: center;
     border-bottom: 5px solid #8EACCD;
-    
-    height:5em;
+
+    height: 5em;
 }
 
-#Table-of-contents  a{
+#Table-of-contents a {
     text-decoration: none;
     color: black;
-     
+
 }
 
 
-#contents-container{
+#contents-container {
     padding: 2em;
     text-align: center;
-    grid-row:2/3;
-    grid-column:1/2;
-    width:98%;
-    margin-left:0.7em;
-    
-   
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 98%;
+    margin-left: 0.7em;
 
-    
+
+
+
 
 }
 
-#details{
-    width:98% ;
+#details {
+    width: 98%;
     text-align: center;
-    grid-row:3/4; 
-    grid-column:1/-1;
-    margin-left:1em;
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    margin-left: 1em;
 }
 
-summary{
+#details summary {
     margin-bottom: 2em;
-    font-size:1.5em;
+    font-size: 1.5em;
     text-align: left;
-    font-family:"Libre Franklin", sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-weight: 600;
 }
 
-summary:hover{
+#details summary:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
 
 
-details[open] summary ~ * {
-    animation: sweep .5s ease-in-out forwards ;
+#details details[open] summary~* {
+    animation: sweep .5s ease-in-out forwards;
 }
 
 @keyframes sweep {
     from {
-        opacity: 0; margin-top: -10px;
+        opacity: 0;
+        margin-top: -10px;
     }
-    to{
-        opacity:1; margin-top: 0;
+
+    to {
+        opacity: 1;
+        margin-top: 0;
     }
 }
 
- details > p {
+#details>p {
     text-align: left;
-    font-size:1.3em;
-    font-family:'Roboto';
+    font-size: 1.3em;
+    font-family: 'Roboto';
     padding: 5em;
-    padding-left:15em;
-    padding-right:15em;
+    padding-left: 15em;
+    padding-right: 15em;
 }
 
-details > a {
+#details>a {
     text-decoration: none;
     font-style: italic;
-    color:black;
+    color: black;
+}
 
-    &:hover{
-        text-decoration: underline;
-    }
+#details>a:hover {
+    text-decoration: underline;
+}
+
+#details figure {
+    float: right;
+    margin: 0rem 0rem 1.5rem 2rem;
+    max-width: 70%;
+
+}
+
+#details figure figcaption {
+    font-size: small;
+    position: relative;
+    left: 2rem;
+    color: #2b2b2b;
+    max-width: 80%;
 }
 
 
 
-#about-the-author p{
+
+
+#about-the-author p {
     text-align: left;
 }
 
 
 
 
-#about-the-author > img{
-    width:200px;
-    height:200px;
+#about-the-author>img {
+    width: 200px;
+    height: 200px;
     float: center;
-    margin:2em;
+    margin: 2em;
 }
 
 #side-books {
-    
-    grid-row:2/3;
-    grid-column:3/3;
+
+    grid-row: 2/3;
+    grid-column: 3/3;
     width: 97%;
     text-align: center;
-    overflow:auto;
+    overflow: auto;
     height: 1300px;
-    margin-right:5em;
-    padding:0%;
-    
+    margin-right: 5em;
+    padding: 0%;
+
 }
 
-#side-books ul{
+#side-books ul {
     align-items: center;
-    padding-left:2em;
-    padding-right:1em;
-    
-} 
+    padding-left: 2em;
+    padding-right: 1em;
 
-#side-books ul > li{
+}
+
+#side-books ul>li {
     list-style: none;
-    margin-top:1em;
+    margin-top: 1em;
 
 }
-#side-books ul > li > .book > header >h1{
-    font-size:0.9em;
+
+#side-books ul>li>.book>header>h1 {
+    font-size: 0.9em;
 }
 
-#side-books ul > li > .book > .stars-rating{
+#side-books ul>li>.book>.stars-rating {
     text-align: center;
 }
 
-#side-books > header {
+#side-books>header {
     text-align: center;
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     z-index: 1;
     background-color: #ffffff;
-    
+
 }
 
-#side-books > header >h1 {
-    font-family:"Libre Franklin", sans-serif;
-    padding-top:1em;
+#side-books>header>h1 {
+    font-family: "Libre Franklin", sans-serif;
+    padding-top: 1em;
     text-align: center;
-    font-size:2em;
-    z-index:1;
+    font-size: 2em;
+    z-index: 1;
 
 }
 
 
 #side-books::-webkit-scrollbar {
-    height:0px; 
-    width:10px;
-  }
-  
-  
-  #side-books::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    height: 0px;
+    width: 10px;
+}
+
+
+#side-books::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 10px;
     margin: 5em 0;
-    height: 20%; 
-  }
-  
-  
-  #side-books::-webkit-scrollbar-thumb {
-    background: #888; 
+    height: 20%;
+}
+
+
+#side-books::-webkit-scrollbar-thumb {
+    background: #888;
     border-radius: 10px;
-    height: 20%; 
-  }
-  
-  #side-books::-webkit-scrollbar-thumb:hover {
+    height: 20%;
+}
+
+#side-books::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
-  
- 
-  #side-books::-webkit-scrollbar-corner {
+}
+
+
+#side-books::-webkit-scrollbar-corner {
     background: #f1f1f1;
-  }
-  
+}
+
 
 
 

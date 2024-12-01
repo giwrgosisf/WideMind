@@ -1,278 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Categories</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="A page that shows the categories offered."
-    />
-    <meta
-      name="keywords"
-      content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses"
-    />
-    <meta name="author" content="WideMind Organization" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link
-      href="../Resources/website-icon.png"
-      rel="shortcut icon"
-      type="image/png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!-- social media icons library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
+<head>
+  <title>Categories</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="A page that shows the categories offered." />
+  <meta name="keywords"
+    content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses" />
+  <meta name="author" content="WideMind Organization" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <header>
-      <div class="header">
-        <a href="index.html"
-          ><img id="logo" src="../Resources/widemind-logo.png" />
-        </a>
-        <div id="search-bar">
-          <input
-            name="search-input"
-            type="text"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="Search for books or recordings..."
-          />
-          <button class="search-button" type="button">
-            <img id="search-icon" src="../Resources/searchIcon.png" />
-          </button>
-        </div>
-        <nav id="navBar">
-          <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-          </ul>
-        </nav>
+  <!-- social media icons library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <a href="index.html"><img id="logo" src="../Resources/widemind-logo.png" />
+      </a>
+      <div id="search-bar">
+        <input name="search-input" type="text" autocomplete="off" spellcheck="false"
+          placeholder="Search for books or recordings..." />
+        <button class="search-button" type="button">
+          <img id="search-icon" src="../Resources/searchIcon.png" />
+        </button>
       </div>
-    </header>
+      <nav id="navBar">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="categories">
-        <div class="intro">
-          <h2>Categories</h2>
+  <main>
+    <section class="categories">
+      <div class="intro">
+        <h2>Categories</h2>
+        <p>
+          From Artificial Intelligence to Software Engineering and beyond,
+          each category offers carefully curated resources to help you dive
+          into your chosen field. Start exploring today!
+        </p>
+      </div>
+      <div class="category-card">
+        <img src="../Resources/ai-background.png" />
+        <div class="category-card-container">
+          <h2>Artificial Intelligence</h2>
           <p>
-            From Artificial Intelligence to Software Engineering and beyond,
-            each category offers carefully curated resources to help you dive
-            into your chosen field. Start exploring today!
+            <strong>Artificial Intelligence (AI)</strong> focuses on the
+            development of algorithms and systems that enable computers
+            perform tasks that normally would require human intelligence. Some
+            areas included are:
           </p>
+          <ul>
+            <li>
+              <a href="machineLearning.html"><span>Machine Learning (ML)</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Natural Language Processing (NLP)</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Computer Vision</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Deep Learning</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Neural Networks</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Robotics</span></a>
+            </li>
+          </ul>
         </div>
-        <div class="category-card">
-          <img src="../Resources/ai-background.png" />
-          <div class="category-card-container">
-            <h2>Artificial Intelligence</h2>
-            <p>
-              <strong>Artificial Intelligence (AI)</strong> focuses on the
-              development of algorithms and systems that enable computers
-              perform tasks that normally would require human intelligence. Some
-              areas included are:
-            </p>
-            <ul>
-              <li>
-                <a href="machineLearning.html"
-                  ><span>Machine Learning (ML)</span></a
-                >
-              </li>
-              <li>
-                <a href="#"><span>Natural Language Processing (NLP)</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Computer Vision</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Deep Learning</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Neural Networks</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Robotics</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="category-card">
-          <img src="../Resources/soft-eng-background.png" />
-
-          <div class="category-card-container">
-            <h2>Software Engineering</h2>
-            <p>
-              <strong>Software Engineering</strong> is the branch of computer
-              science that deals with the design, development, testing, and
-              maintenance of software applications. Software engineers apply
-              engineering principles and knowledge of programming languages to
-              build software solutions for end users. Some areas included are:
-            </p>
-            <ul>
-              <li>
-                <a href="#"><span>Front-End Engineering</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Back-End Engineering</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Full-Stack Engineering</span></a>
-              </li>
-              <li>
-                <a href="#"><span>DevOps Engineering</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Testing and Quality Assurance</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Software Maintenance</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="category-card">
-          <img src="../Resources/systems-organization-background.png" />
-          <div class="category-card-container">
-            <h2>Computer Systems Organization</h2>
-            <p>
-              <strong>Computer Systems Organization</strong> focuses on the
-              design and structure of computer systems, bridging hardware and
-              software to ensure efficient operation. Dive into topics that
-              reveal how computers process, store, and transmit data, providing
-              the foundation for all modern computing applications.Some areas
-              included are:
-            </p>
-            <ul>
-              <li>
-                <a href="operatingSystems.html"
-                  ><span>Operating Systems</span></a
-                >
-              </li>
-              <li>
-                <a href="#"><span>Computer Architecture</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Embedded Systems</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Parallel Computing</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Network and Communication</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Storage Systems</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="category-card">
-          <img src="../Resources/databases-background.png" />
-          <div class="category-card-container">
-            <h2>Databases</h2>
-            <p>
-              <strong>Database</strong> is an organized collection of structured
-              information, or data, typically stored electronically in a
-              computer system. A database is usually controlled by a database
-              management system (DBMS). Together, the data and the DBMS, along
-              with the applications that are associated with them, are referred
-              to as a database system, often shortened to just database. Some
-              areas included are:
-            </p>
-            <ul>
-              <li>
-                <a href="#"><span>Relational databases</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Object-oriented databases</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Distributed databases</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Data warehouses</span></a>
-              </li>
-              <li>
-                <a href="#"><span>NoSQL databases</span></a>
-              </li>
-              <li>
-                <a href="#"><span>Cloud databases</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div id="left-footer">
-        <h2>CONTACT</h2>
-        <ul class="menu">
-          <li>
-            <address>
-              Patision 76<br />
-              Zip-Code 104 34 Athens
-              <br /><a
-                href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
-                >Find in map</a
-              >
-            </address>
-          </li>
-          <li>
-            Tel:
-            <a href="tel:+2108203315"
-              >210-8203315,<a href="tel:2108203316">316</a></a
-            >
-          </li>
-          <li>
-            Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
-          </li>
-        </ul>
       </div>
-      <div id="middle-footer">
-        <h2>INFORMATION</h2>
-        <ul class="information">
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Security</a></li>
-          <li><a href="#">Manage Cookies</a></li>
-        </ul>
+
+      <div class="category-card">
+        <img src="../Resources/soft-eng-background.png" />
+
+        <div class="category-card-container">
+          <h2>Software Engineering</h2>
+          <p>
+            <strong>Software Engineering</strong> is the branch of computer
+            science that deals with the design, development, testing, and
+            maintenance of software applications. Software engineers apply
+            engineering principles and knowledge of programming languages to
+            build software solutions for end users. Some areas included are:
+          </p>
+          <ul>
+            <li>
+              <a href="#"><span>Front-End Engineering</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Back-End Engineering</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Full-Stack Engineering</span></a>
+            </li>
+            <li>
+              <a href="#"><span>DevOps Engineering</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Testing and Quality Assurance</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Software Maintenance</span></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="right-footer">
-        <h2>CONNECT WITH US</h2>
-        <ul class="social-media">
-          <li>
-            <a href="https://www.github.com" class="fa-brands fa-github"></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com"
-              class="fa-brands fa-linkedin-in"
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com"
-              class="fa-brands fa-facebook-f"
-            ></a>
-          </li>
-        </ul>
+
+      <div class="category-card">
+        <img src="../Resources/systems-organization-background.png" />
+        <div class="category-card-container">
+          <h2>Computer Systems Organization</h2>
+          <p>
+            <strong>Computer Systems Organization</strong> focuses on the
+            design and structure of computer systems, bridging hardware and
+            software to ensure efficient operation. Dive into topics that
+            reveal how computers process, store, and transmit data, providing
+            the foundation for all modern computing applications.Some areas
+            included are:
+          </p>
+          <ul>
+            <li>
+              <a href="operatingSystems.html"><span>Operating Systems</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Computer Architecture</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Embedded Systems</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Parallel Computing</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Network and Communication</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Storage Systems</span></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="lower-footer">
-        <p>©Copyright 2024 WideMind Organization</p>
+
+      <div class="category-card">
+        <img src="../Resources/databases-background.png" />
+        <div class="category-card-container">
+          <h2>Databases</h2>
+          <p>
+            <strong>Database</strong> is an organized collection of structured
+            information, or data, typically stored electronically in a
+            computer system. A database is usually controlled by a database
+            management system (DBMS). Together, the data and the DBMS, along
+            with the applications that are associated with them, are referred
+            to as a database system, often shortened to just database. Some
+            areas included are:
+          </p>
+          <ul>
+            <li>
+              <a href="#"><span>Relational databases</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Object-oriented databases</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Distributed databases</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Data warehouses</span></a>
+            </li>
+            <li>
+              <a href="#"><span>NoSQL databases</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Cloud databases</span></a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <footer>
+    <div id="left-footer">
+      <h2>CONTACT</h2>
+      <ul class="menu">
+        <li>
+          <address>
+            Patision 76<br />
+            Zip-Code 104 34 Athens
+            <br /><a
+              href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
+              in map</a>
+          </address>
+        </li>
+        <li>
+          Tel:
+          <a href="tel:+2108203315">210-8203315,<a href="tel:2108203316">316</a></a>
+        </li>
+        <li>
+          Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+    <div id="middle-footer">
+      <h2>INFORMATION</h2>
+      <ul class="information">
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Manage Cookies</a></li>
+      </ul>
+    </div>
+    <div id="right-footer">
+      <h2>CONNECT WITH US</h2>
+      <ul class="social-media">
+        <li>
+          <a href="https://www.github.com" class="fa-brands fa-github"></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
+        </li>
+        <li>
+          <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
+        </li>
+      </ul>
+    </div>
+    <div id="lower-footer">
+      <p>©Copyright 2024 WideMind Organization</p>
+    </div>
+  </footer>
+</body>
+
 </html>
