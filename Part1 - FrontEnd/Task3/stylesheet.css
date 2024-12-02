@@ -8,6 +8,23 @@
 }
 
 
+.wrapper-three-col{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    row-gap: 8rem;
+    min-height: 100vh;
+    column-gap: 4rem;
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +32,17 @@
     box-sizing: border-box;
 }
 
-
 body {
     background: linear-gradient(145deg, var(--secondary-color) 30%, var(--primary-color) 80%);
+}
+
+p {
+    font-family:"Poppins", sans-serif;
+}
+
+h1 , h2{
+
+    font-family: "Libre Franklin", sans-serif;
 }
 
 /* -------------------Header style ----------------------------------*/
@@ -105,19 +130,40 @@ body {
 
 /* ------------------INDEX MAIN CSS---------------------------- */
 main {
-    margin-top: 6rem;
+    margin-top: 2rem;
     padding: 3rem 1.5rem;
 
+}
+
+.wrapper-three-col{
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
 }
 
 /* Main section layout */
 #main-section {
     width: 100%;
-    height: auto;
+    grid-area:main;
+    grid-gap:2em;
+    display: grid;
+    grid-row:1/2;
+    grid-column:1/-1;
+    grid-template-columns:1fr 1fr;
+}
+
+#index-main{
+    padding:2rem;
+    grid-column:1/-1;
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    
 }
 
 /* Welcome section styling */
-#Welcome-section, #categories-section {
+#Welcome-section, #categories-section, #member-section{
     padding: 2.5rem;
     background-color: #ffffff;
     color: #333;
@@ -126,30 +172,30 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     /* transform-style: preserve-3d; */
     margin-bottom: 2rem;
+    overflow: hidden;
 }
-
-#Welcome-section:hover, #categories-section:hover {
+#Welcome-section:hover, #categories-section:hover, #member-section:hover{
     /* transform: translateZ(20px) scale(1.01); */
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 
-#Welcome-section>h2, #categories-section>h2 {
-    font-size: 2.5rem;
+#content>h2, #categories-section>h2 {
+    font-size: 5em;
     margin-bottom: 1.5rem;
-    color: #69699d;
-    font-family: "Libre Franklin", sans-serif;
+    color: #ffffff;
     font-style: italic;
 }
 
 #Welcome-section p, #categories-section p {
-    font-size: 1.1rem;
+    font-size: 1.5em;
     line-height: 1.8;
-    color: #555;
+    color: #ffffff;
 }
 
 #image-container img, #categories-section img {
+    float: left;
     width: 150px;
     height: auto;
     filter: drop-shadow(0 0 0.75rem rgb(124, 124, 124));
@@ -158,18 +204,19 @@ main {
 #image-container ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 
-#image-container ul>li {
-    font-size: 1rem;
-    color: #555;
+#Welcome-section ul>li {
+    font-size: 1.2em;
     margin-bottom: 0.75rem;
+    color: #ffffff;
+
 }
 
 #categories-section a {
     text-decoration: none;
-    color: #333;
+    color: #b9b9b9;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -179,20 +226,116 @@ main {
 }
 
 
+#member-section{
+   background-color:#021526;
+    grid-row:2/-1;
+    grid-column:1/2;
+}
+
+#member-section>h2{
+    font-size: 5em;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    
+    
+}
+
+#member-section p{
+    font-size:2em;
+    color:#ffffff;
+    float:left;
+    width:17em;
+    line-height:1.5em;
+}
+
+#paragraph-button{
+    display: grid;
+    grid-template-rows:1fr;
+    float:left;
+    text-align: center;
+    margin-right:10em;
+    margin-bottom:10em;
+    grid-gap:5em;
+}
+
+#paragraph-button{
+    text-align: left;
+}
+
+#paragraph-button .login-or-signup{
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius:4rem;
+    border:5px white;
+    width:70%;
+    height:3em;
+    margin-left:1.5em;
+    font-size:1.5em;
+}
+
+#member-section > img{
+    float: right;
+    width: 500px;
+    height: 500px;
+    margin-right:10em;
+    margin-bottom:5em;
+   
+}
+
+
+#Welcome-section{
+    padding-top:0%;
+    overflow: hidden;
+    grid-column:1/2;
+    grid-row:1/2;
+    position: relative;
+    z-index:1;
+}
+
+.back-video{
+    position:absolute;
+    left: 0;
+    right:0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
+#content>h2{
+    margin-top:0.5em;
+}
+
+#Welcome-section p{
+    border-radius:4rem;
+    margin-bottom:5em;
+
+}
+#categories-section{
+    grid-column:2/-1;
+    grid-row:1/2;
+    background-image: url("../Resources/intersting-img.png");
+}
+
+
+
 
 /*--------------OPERATING SYSTEMS CSS-----------*/
 .wrapper-three-col {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    row-gap: 8rem;
+    row-gap: 4rem;
     min-height: 100vh;
     column-gap: 4rem;
     grid-template-areas:
         'header header header'
+        'upper-page upper-page upper-page'
         'filters books key-terms'
         'filters lectures key-terms'
-        'footer footer footer'
-    ;
+        'footer footer footer';
 }
 
 header{
@@ -220,70 +363,61 @@ footer{
 }
 
 
-/* #operating-main .page-titles>h1, #operating-main .page-titles>h2 {
+  .upper-page>h1,  .upper-page>h2 {
     color: white;
     font-size: 5em;
-    font-family: "Libre Franklin", sans-serif;
     font-style: italic;
-    margin-bottom: 0.3em;
-    margin-left: 0.7em;
+    margin-bottom: 0.1em;
+    margin-left: 0.3em;
 }
 
-#operating-main .page-titles>h2 {
+.upper-page>h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
+.upper-page{
+    margin-top:4rem;
+    grid-area:upper-page;
+}
 
-
-#operating-main>p {
+.upper-page > p {
     color: white;
-    font-size: 1.5em;
-    line-height: 2em;
-    font-family: 'Poppins';
+    line-height: 1.5em;
     text-align: left;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    padding: 1em;
-
-    margin-bottom: 5em;
-
-
+    padding: 0.5em;
+    margin-left:0.6em;
 }
 
-#operating-main .emphasize {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 3em;
-
-}
-
-#operating-main .emphasize-child {
-    line-height: 1em;
-    font-size: 1.2em;
-    font-weight: 700;
-
-
-}
-
-
-#operating-main .keywords {
+ .keywords {
     border-bottom: 5px solid #F3F3E0;
     border-bottom-style: double;
     padding: 0.2em;
 
 }
 
-#operating-main>img {
-    width: 200px;
-    height: 200px;
+ .emphasize , .emphasize-child {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.emphasize-child{
+    margin: 0;
+    font-size: 1.7em;
+}
+
+
+
+.upper-page > img {
+    width:250px;
+    height: 250px;
     padding-bottom: 2em;
     padding-right: 2em;
-    margin-top: -12em;
+    margin-top: -10em;
     float: right;
 
-} */
+} 
 
 #operating-main {
     margin: 0;
@@ -330,7 +464,6 @@ footer{
 #book-section h2, #lecture-section h2 {
     text-align: center;
     font-size: 2em;
-    font-family: "Libre Franklin", sans-serif;
 
 }
 
@@ -383,13 +516,11 @@ footer{
 
 .book>p {
     /* margin-top: 1rem; */
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
     text-align: left;
 }
 
 .book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
-    font-family: "Libre Franklin", sans-serif;
     font-size: 1em;
     text-align: left;
     height: 2em;
@@ -413,7 +544,6 @@ footer{
     /* padding-top: 2em; */
     text-align: center;
     font-size: 2em;
-    font-family: "Libre Franklin", sans-serif;
     background-color: #ffffff;
     border-radius: 4rem;
 
@@ -423,7 +553,6 @@ footer{
 
 .lecture {
     padding: 2em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #ffffff;
 
 }
@@ -441,7 +570,6 @@ footer{
 .lecture>header>h1 {
     margin-bottom: 3em;
     text-align: center;
-    font-family: "Libre Franklin", sans-serif;
 
 
 }
@@ -477,7 +605,6 @@ footer{
     padding-right: 5em;
     /* height: 2em; */
     margin-left: 1em;
-    font-family: "Poppins";
     font-weight: 300;
 
 }
@@ -648,44 +775,62 @@ footer{
 
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
-#book-body {
-
+.wrapper-three-col-book-lecture{
     display: grid;
     grid-gap: 2.5rem;
-    justify-content: center;
-    grid-template-columns: 1fr 1000px 1fr;
-    grid-template-rows: 100px 1300px 1fr 550px;
+    grid-row-gap:11em;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
 }
 
-/* header {
-    grid-row: 1/2;
-    grid-column: 1/-1;
 
-} */
 
-/* footer {
-    grid-row: 4/-1;
-    grid-column: 1/-1;
-} */
-
-#book-main {
-    grid-row: 2/4;
-    grid-column: 2/3;
+.book-lecture-main {
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
     margin: 0;
     padding: 0;
+    grid-column:1/-1;
+    
+
 
 }
 
-#book-main>h1 {
+.book-lecture-main > h1 {
     text-align: left;
     color: white;
-    font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-size: 5em;
     margin-left: 1.5em;
-
+    
 }
 
+#back-button{
+    display: grid;
+    
+}
+
+#back-button .back-button{
+    padding: 14px 28px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius:4rem;
+    width:50%;
+    height:2.5em;
+    margin-left:2.1em;
+    font-size:1.5em;
+    
+
+}
+#back-button .back-button:hover{
+    background-color: #608BC1;
+    color: white;
+
+}
 
 #book-analysis, #contents-container, #details, #side-books {
     border-radius: 4rem;
@@ -703,14 +848,18 @@ footer{
 }
 
 #book-analysis {
-    width: 1000px;
-    height: 1300px;
-    ;
+    margin-left:0.7em;
+    align-self: center;
+    height: 1400px;
+    width:52%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 500px);
+    grid-row-gap:5em;
     padding: 5em;
     overflow: hidden;
+    margin-bottom:4em;
+
 }
 
 #book-analysis>img {
@@ -775,7 +924,6 @@ footer{
 }
 
 #book-analysis .book-details>h1 {
-    font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-size: 2.5em;
     margin-bottom: 1em;
@@ -789,8 +937,7 @@ footer{
 }
 
 #book-analysis .book-description p {
-    font-size: 1.3em;
-    font-family: 'Roboto';
+    font-size: 1.15em;
     text-align: left;
 }
 
@@ -798,7 +945,6 @@ footer{
 #Table-of-contents th, td {
     text-align: center;
     border-bottom: 5px solid #8EACCD;
-
     height: 5em;
 }
 
@@ -810,25 +956,19 @@ footer{
 
 
 #contents-container {
+    height: 1400px;
     padding: 2em;
     text-align: center;
-    grid-row: 2/3;
-    grid-column: 1/2;
+    grid-area:nav;
     width: 98%;
-    margin-left: 0.7em;
-
-
-
-
+    margin-left:1em;
 
 }
 
 #details {
     width: 98%;
-    text-align: center;
-    grid-row: 3/4;
-    grid-column: 1/-1;
     margin-left: 1em;
+    text-align: center;
 }
 
 #details summary {
@@ -863,33 +1003,33 @@ footer{
     }
 }
 
-#details>p {
+details > p {
     text-align: left;
-    font-size: 1.3em;
-    font-family: 'Roboto';
-    padding: 5em;
-    padding-left: 15em;
-    padding-right: 15em;
+    font-size: 1.2em;
+    padding: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
 }
 
-#details>a {
+details > a {
     text-decoration: none;
     font-style: italic;
     color: black;
+    
 }
 
-#details>a:hover {
+details > a:hover {
     text-decoration: underline;
 }
 
-#details figure {
+details > figure {
     float: right;
     margin: 0rem 0rem 1.5rem 2rem;
     max-width: 70%;
 
 }
 
-#details figure figcaption {
+details > figure> figcaption {
     font-size: small;
     position: relative;
     left: 2rem;
@@ -916,15 +1056,12 @@ footer{
 }
 
 #side-books {
-
-    grid-row: 2/3;
-    grid-column: 3/3;
-    width: 97%;
+    padding: 0%;
+    grid-area:aside ;
     text-align: center;
     overflow: auto;
-    height: 1300px;
-    margin-right: 5em;
-    padding: 0%;
+    height: 1400px;
+    width:98%;
 
 }
 
@@ -937,13 +1074,27 @@ footer{
 
 #side-books ul>li {
     list-style: none;
-    margin-top: 1em;
+    margin-top: 3em;
 
 }
 
 #side-books ul>li>.book>header>h1 {
     font-size: 0.9em;
 }
+
+#side-books ul>li>.book {
+   text-align: center;
+   height: 800px;
+   border-radius:2rem;
+}
+
+#side-books ul>li>.book > .author {
+    line-height: 1em;
+ }
+
+ #side-books ul>li>.book > img {
+    float:none;
+ }
 
 #side-books ul>li>.book>.stars-rating {
     text-align: center;
@@ -959,7 +1110,7 @@ footer{
 }
 
 #side-books>header>h1 {
-    font-family: "Libre Franklin", sans-serif;
+    
     padding-top: 1em;
     text-align: center;
     font-size: 2em;
@@ -996,8 +1147,6 @@ footer{
 #side-books::-webkit-scrollbar-corner {
     background: #f1f1f1;
 }
-
-
 
 
 /* ------------------------------FOOTER CSS----------------------------------------------------- */
