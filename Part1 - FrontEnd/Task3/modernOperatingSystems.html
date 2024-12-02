@@ -13,13 +13,17 @@
   <link rel="stylesheet" href="stylesheet.css">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <!-- Start of the main body -->
 
-<body id="book-body">
+<body>
+  <div class="wrapper-three-col-book-lecture">
   <header>
     <div class="header">
       <a href="index.html"><img id="logo" src="../Resources/widemind-logo.png" />
@@ -40,9 +44,16 @@
       </nav>
     </div>
   </header>
-  <main id="book-main">
+  <main class="book-lecture-main">
     <section id="book-analysis">
-      <img src="../Resources/Modern Operating Systems.jpg" width="318" height="409" />
+      <div id="back-button">
+        <img src="../Resources/Modern Operating Systems.jpg" width="318" height="409" />
+        <a href="operatingSystems.html">
+        <button class="back-button" type="button">
+          Go back
+        </button>
+      </a>
+      </div>
       <div class="book-details">
         <h1>Modern Operating Systems</h1>
 
@@ -96,10 +107,7 @@
         </p>
       </div>
     </section>
-
-    
-  </main>
-  <aside id="details">
+  <section id="details">
     <section id="INTRODUCTION">
       <details>
         <summary>INTRODUCTION</summary>
@@ -693,7 +701,8 @@ resource. (c) Deadlock.
         <a href="#Table-of-contents">  Return to the table of contents</a>
       </details>
     </section>
-  </aside>
+  </section>
+  </main>
     <nav id="contents-container">
       <h2>Table of contents</h2>
       <table id="Table-of-contents">
@@ -921,6 +930,7 @@ resource. (c) Deadlock.
       <p>©Copyright 2024 WideMind Organization</p>
     </div>
   </footer>
+  </div>
 </body>
 
 </html>
