@@ -8,7 +8,10 @@
 }
 
 
-.wrapper-three-col{
+
+
+
+.wrapper-three-col {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     row-gap: 8rem;
@@ -16,11 +19,11 @@
     column-gap: 4rem;
 }
 
-header{
+header {
     grid-area: header;
 }
 
-footer{
+footer {
     grid-area: footer;
 }
 
@@ -37,10 +40,10 @@ body {
 }
 
 p {
-    font-family:"Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-h1 , h2{
+h1, h2, h3 {
 
     font-family: "Libre Franklin", sans-serif;
 }
@@ -116,12 +119,13 @@ h1 , h2{
     padding: 0.8rem;
     border-radius: 1rem;
     color: var(--tertiary-color);
-    background-color: var(--primary-color);
     transition: background-color 0.3s;
 }
 
 #navBar li a:hover {
-    color: white;
+    /* color: rgb(177, 177, 177); */
+    color: var(--secondary-color);
+    box-shadow:0px 4px 6px rgba(0, 0, 0, 0.1);;
 
 }
 
@@ -135,35 +139,35 @@ main {
 
 }
 
-.wrapper-three-col{
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
+.wrapper-three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
 }
 
 /* Main section layout */
 #main-section {
     width: 100%;
-    grid-area:main;
-    grid-gap:2em;
+    grid-area: main;
+    grid-gap: 2em;
     display: grid;
-    grid-row:1/2;
-    grid-column:1/-1;
-    grid-template-columns:1fr 1fr;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
 }
 
-#index-main{
-    padding:2rem;
-    grid-column:1/-1;
-    display:grid;
+#index-main {
+    padding: 2rem;
+    grid-column: 1/-1;
+    display: grid;
     grid-template-rows: 1fr 1fr;
-    
+
 }
 
 /* Welcome section styling */
-#Welcome-section, #categories-section, #member-section{
+#Welcome-section, #categories-section, #member-section {
     padding: 2.5rem;
     background-color: #ffffff;
     color: #333;
@@ -174,7 +178,8 @@ main {
     margin-bottom: 2rem;
     overflow: hidden;
 }
-#Welcome-section:hover, #categories-section:hover, #member-section:hover{
+
+#Welcome-section:hover, #categories-section:hover, #member-section:hover {
     /* transform: translateZ(20px) scale(1.01); */
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
@@ -192,6 +197,8 @@ main {
     font-size: 1.5em;
     line-height: 1.8;
     color: #ffffff;
+    margin-bottom: 5em;
+
 }
 
 #image-container img, #categories-section img {
@@ -204,11 +211,13 @@ main {
 #image-container ul {
     list-style: none;
     padding: 0;
-    margin: 0;    
+    margin: 0;
 }
 
 #Welcome-section ul>li {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
     margin-bottom: 0.75rem;
     color: #ffffff;
 
@@ -222,82 +231,82 @@ main {
 }
 
 #categories-section a:hover {
-    color: #69699d;
+    color: var(--secondary-color);
 }
 
 
-#member-section{
-   background-color:#021526;
-    grid-row:2/-1;
-    grid-column:1/2;
+#member-section {
+    background-color: #021526;
+    grid-row: 2/-1;
+    grid-column: 1/2;
 }
 
-#member-section>h2{
+#member-section>h2 {
     font-size: 5em;
     margin-bottom: 1.5rem;
     color: #ffffff;
-    
-    
+
+
 }
 
-#member-section p{
-    font-size:2em;
-    color:#ffffff;
-    float:left;
-    width:17em;
-    line-height:1.5em;
+#member-section p {
+    font-size: 2em;
+    color: #ffffff;
+    float: left;
+    width: 17em;
+    line-height: 1.5em;
 }
 
-#paragraph-button{
+#paragraph-button {
     display: grid;
-    grid-template-rows:1fr;
-    float:left;
+    grid-template-rows: 1fr;
+    float: left;
     text-align: center;
-    margin-right:10em;
-    margin-bottom:10em;
-    grid-gap:5em;
+    margin-right: 10em;
+    margin-bottom: 10em;
+    grid-gap: 5em;
 }
 
-#paragraph-button{
+#paragraph-button {
     text-align: left;
 }
 
-#paragraph-button .login-or-signup{
+#paragraph-button .login-or-signup {
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
-    border-radius:4rem;
-    border:5px white;
-    width:70%;
-    height:3em;
-    margin-left:1.5em;
-    font-size:1.5em;
+    border-radius: 4rem;
+    border: 5px white;
+    width: 70%;
+    height: 3em;
+    margin-left: 1.5em;
+    font-size: 1.5em;
 }
 
-#member-section > img{
+#member-section>img {
     float: right;
     width: 500px;
     height: 500px;
-    margin-right:10em;
-    margin-bottom:5em;
-   
+    margin-right: 10em;
+    margin-bottom: 5em;
+
 }
 
 
-#Welcome-section{
-    padding-top:0%;
+#Welcome-section {
+    padding-top: 0%;
     overflow: hidden;
-    grid-column:1/2;
-    grid-row:1/2;
+    grid-column: 1/2;
+    grid-row: 1/2;
     position: relative;
-    z-index:1;
+    z-index: 1;
 }
 
-.back-video{
-    position:absolute;
+.back-video {
+    position: absolute;
     left: 0;
-    right:0;
+    right: 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -305,18 +314,14 @@ main {
 
 }
 
-#content>h2{
-    margin-top:0.5em;
+#content>h2 {
+    margin-top: 0.5em;
 }
 
-#Welcome-section p{
-    border-radius:4rem;
-    margin-bottom:5em;
 
-}
-#categories-section{
-    grid-column:2/-1;
-    grid-row:1/2;
+#categories-section {
+    grid-column: 2/-1;
+    grid-row: 1/2;
     background-image: url("../Resources/intersting-img.png");
 }
 
@@ -337,11 +342,11 @@ main {
         'footer footer footer';
 }
 
-header{
+header {
     grid-area: header;
 }
 
-footer{
+footer {
     grid-area: footer;
 }
 
@@ -362,7 +367,7 @@ footer{
 }
 
 
-  #upper-page>h2,  #upper-page>h3 {
+#upper-page>h2, #upper-page>h3 {
     color: white;
     font-size: 5em;
     font-style: italic;
@@ -376,47 +381,47 @@ footer{
     margin-left: 1em;
 }
 
-#upper-page{
-    margin-top:4rem;
-    grid-area:upper-page;
+#upper-page {
+    margin-top: 4rem;
+    grid-area: upper-page;
 }
 
-#upper-page > p {
+#upper-page>p {
     color: white;
     line-height: 1.5em;
     text-align: left;
     padding: 0.5em;
-    margin-left:0.6em;
+    margin-left: 0.6em;
 }
 
- .keywords {
+.keywords {
     border-bottom: 5px solid #F3F3E0;
     border-bottom-style: double;
     padding: 0.2em;
 
 }
 
- .emphasize , .emphasize-child {
+.emphasize, .emphasize-child {
     font-size: 1.5em;
     font-weight: 400;
 }
 
-.emphasize-child{
+.emphasize-child {
     margin: 0;
     font-size: 1.7em;
 }
 
 
 
-#upper-page > img {
-    width:250px;
+#upper-page>img {
+    width: 250px;
     height: 250px;
     padding-bottom: 2em;
     padding-right: 2em;
     margin-top: -10em;
     float: right;
 
-} 
+}
 
 #subcat-main {
     margin: 0;
@@ -624,7 +629,7 @@ footer{
 
 .filters {
     margin-left: 0.5rem;
-    gap:14px
+    gap: 14px
 }
 
 .key-terms {
@@ -775,15 +780,15 @@ footer{
 
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
-.wrapper-three-col-book-lecture{
+.wrapper-three-col-book-lecture {
     display: grid;
     grid-gap: 2.5rem;
-    grid-row-gap:11em;
+    grid-row-gap: 11em;
     grid-template-columns: 1fr 2.5fr 1fr;
     grid-template-areas:
-    "header header header"
-    "nav main aside"
-    "footer footer footer";
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
 }
 
 
@@ -794,39 +799,40 @@ footer{
     grid-area: main;
     margin: 0;
     padding: 0;
-    grid-column:1/-1;
-    
+    grid-column: 1/-1;
+
 
 
 }
 
-.book-lecture-main > h1 {
+.book-lecture-main>h1 {
     text-align: left;
     color: white;
     font-style: italic;
     font-size: 5em;
     margin-left: 1.5em;
-    
+
 }
 
-#back-button{
+#back-button {
     display: grid;
-    
+
 }
 
-#back-button .back-button{
+#back-button .back-button {
     padding: 14px 28px;
     font-size: 10px;
     cursor: pointer;
-    border-radius:4rem;
-    width:50%;
-    height:2.5em;
-    margin-left:2.1em;
-    font-size:1.5em;
-    
+    border-radius: 4rem;
+    width: 50%;
+    height: 2.5em;
+    margin-left: 2.1em;
+    font-size: 1.5em;
+
 
 }
-#back-button .back-button:hover{
+
+#back-button .back-button:hover {
     background-color: #608BC1;
     color: white;
 
@@ -848,17 +854,17 @@ footer{
 }
 
 #book-analysis {
-    margin-left:0.7em;
+    margin-left: 0.7em;
     align-self: center;
     height: 1400px;
-    width:52%;
+    width: 52%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 500px);
-    grid-row-gap:5em;
+    grid-row-gap: 5em;
     padding: 5em;
     overflow: hidden;
-    margin-bottom:4em;
+    margin-bottom: 4em;
 
 }
 
@@ -959,9 +965,9 @@ footer{
     height: 1400px;
     padding: 2em;
     text-align: center;
-    grid-area:nav;
+    grid-area: nav;
     width: 98%;
-    margin-left:1em;
+    margin-left: 1em;
 
 }
 
@@ -1003,7 +1009,7 @@ footer{
     }
 }
 
-details > p {
+details>p {
     text-align: left;
     font-size: 1.2em;
     padding: 2em;
@@ -1011,25 +1017,25 @@ details > p {
     padding-right: 5em;
 }
 
-details > a {
+details>a {
     text-decoration: none;
     font-style: italic;
     color: black;
-    
+
 }
 
-details > a:hover {
+details>a:hover {
     text-decoration: underline;
 }
 
-details > figure {
+details>figure {
     float: right;
     margin: 0rem 0rem 1.5rem 2rem;
     max-width: 70%;
 
 }
 
-details > figure> figcaption {
+details>figure>figcaption {
     font-size: small;
     position: relative;
     left: 2rem;
@@ -1057,11 +1063,11 @@ details > figure> figcaption {
 
 #side-books {
     padding: 0%;
-    grid-area:aside ;
+    grid-area: aside;
     text-align: center;
     overflow: auto;
     height: 1400px;
-    width:98%;
+    width: 98%;
 
 }
 
@@ -1083,18 +1089,18 @@ details > figure> figcaption {
 }
 
 #side-books ul>li>.book {
-   text-align: center;
-   height: 800px;
-   border-radius:2rem;
+    text-align: center;
+    height: 800px;
+    border-radius: 2rem;
 }
 
-#side-books ul>li>.book > .author {
+#side-books ul>li>.book>.author {
     line-height: 1em;
- }
+}
 
- #side-books ul>li>.book > img {
-    float:none;
- }
+#side-books ul>li>.book>img {
+    float: none;
+}
 
 #side-books ul>li>.book>.stars-rating {
     text-align: center;
@@ -1110,7 +1116,7 @@ details > figure> figcaption {
 }
 
 #side-books>header>h1 {
-    
+
     padding-top: 1em;
     text-align: center;
     font-size: 2em;
