@@ -6,10 +6,15 @@
 
 
 }
+iframe{
+    width: 560px;
+    height: 315px;
+    margin-bottom:1em;
+ }
 
-
-
-
+html {
+    scroll-padding-top: 10rem;
+  }
 
 .wrapper-three-col {
     display: grid;
@@ -216,7 +221,6 @@ main {
 
 #Welcome-section ul>li {
     font-size: 1.5em;
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
     margin-bottom: 0.75rem;
     color: #ffffff;
@@ -780,15 +784,15 @@ footer {
 
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
-.wrapper-three-col-book-lecture {
+.wrapper-three-col-book-lecture{
     display: grid;
     grid-gap: 2.5rem;
-    grid-row-gap: 11em;
+    grid-row-gap:11em;
     grid-template-columns: 1fr 2.5fr 1fr;
     grid-template-areas:
-        "header header header"
-        "nav main aside"
-        "footer footer footer";
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
 }
 
 
@@ -799,46 +803,50 @@ footer {
     grid-area: main;
     margin: 0;
     padding: 0;
-    grid-column: 1/-1;
-
 
 
 }
 
-.book-lecture-main>h1 {
+.book-lecture-main > h1 {
     text-align: left;
     color: white;
     font-style: italic;
     font-size: 5em;
     margin-left: 1.5em;
-
+    
 }
 
-#back-button {
-    display: grid;
-
+.book-lecture-main > a{
+    align-items: flex-start;
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+    width: 318px;
+    text-decoration: none;
+    margin-bottom:1em;
+    margin-top: -4em;
+    margin-left:2em;
 }
 
-#back-button .back-button {
+.back-button{
     padding: 14px 28px;
     font-size: 10px;
     cursor: pointer;
-    border-radius: 4rem;
-    width: 50%;
-    height: 2.5em;
-    margin-left: 2.1em;
-    font-size: 1.5em;
-
+    border-radius:4rem;
+    height:2.5em;
+    font-size:1.5em;
+    
 
 }
 
-#back-button .back-button:hover {
+
+.back-button:hover{
     background-color: #608BC1;
     color: white;
 
 }
 
-#book-analysis, #contents-container, #details, #side-books {
+#content-analysis, #contents-container, #details, #side-content {
     border-radius: 4rem;
     background-color: #ffffff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -847,33 +855,35 @@ footer {
 
 }
 
-#book-analysis:hover, #contents-container:hover, #details:hover, #side-books:hover {
+#content-analysis:hover, #contents-container:hover, #details:hover, #side-content:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 
 }
 
-#book-analysis {
-    margin-left: 0.7em;
+#content-analysis {
     align-self: center;
-    height: 1400px;
-    width: 52%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 500px);
-    grid-row-gap: 5em;
-    padding: 5em;
-    overflow: hidden;
-    margin-bottom: 4em;
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    gap:3em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem;
+    margin-bottom:4em;
+
 
 }
 
-#book-analysis>img {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+.product-details {
+    float: right;
+    flex: 1;
+    width:fit-content;
 }
 
-.book-pages, .book-author, .book-year, .book-stars-rating {
+
+
+.book-pages , .product-author , .product-year, .product-stars-rating, .lecture-uni, .total-lectures {
     font-size: 1.2em;
     margin-bottom: 1em;
 
@@ -890,7 +900,7 @@ footer {
     flex-basis: 100%;
 }
 
-.book-stars-rating, .book-stars-end-rating, .book-stars-start-rating {
+.product-stars-rating, .product-stars-end-rating, .product-stars-start-rating {
     text-align: left;
     width: 30px;
     height: 30px;
@@ -909,16 +919,16 @@ footer {
 
 }
 
-.book-stars-start-rating {
+.product-stars-start-rating {
     margin-left: 0px;
 }
 
-.book-stars-end-rating {
+.product-stars-end-rating {
     background: linear-gradient(to right, gold 25%, white 30%);
 }
 
 
-.book-price {
+.product-price {
     border-bottom: 10px solid #608BC1;
     text-align: right;
     padding: 1em;
@@ -929,7 +939,7 @@ footer {
 
 }
 
-#book-analysis .book-details>h1 {
+#content-analysis .product-details>h1 {
     font-style: italic;
     font-size: 2.5em;
     margin-bottom: 1em;
@@ -937,12 +947,18 @@ footer {
 
 
 
-#book-analysis .book-description {
-    grid-row: 2/-1;
-    grid-column: 1/-1;
+#content-analysis img{
+    width:auto;
+    max-width:97%;
+    height: 30rem;
+
 }
 
-#book-analysis .book-description p {
+
+
+#content-analysis .product-description > p , #content-analysis .product-description > ul > li  {
+    overflow-wrap: break-word;
+    margin-top:1rem;
     font-size: 1.15em;
     text-align: left;
 }
@@ -954,6 +970,10 @@ footer {
     height: 5em;
 }
 
+#Table-of-contents{
+    scroll-padding-top: 1000em; 
+    width:100%;
+}
 #Table-of-contents a {
     text-decoration: none;
     color: black;
@@ -962,12 +982,18 @@ footer {
 
 
 #contents-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 1400px;
     padding: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     text-align: center;
-    grid-area: nav;
-    width: 98%;
-    margin-left: 1em;
+    grid-area:nav;
+    width: 400px;
+    margin-left:1rem;
+   
 
 }
 
@@ -981,7 +1007,6 @@ footer {
     margin-bottom: 2em;
     font-size: 1.5em;
     text-align: left;
-    font-family: "Libre Franklin", sans-serif;
     font-style: italic;
     font-weight: 600;
 }
@@ -1009,33 +1034,32 @@ footer {
     }
 }
 
-details>p {
+details > p {
     text-align: left;
     font-size: 1.2em;
-    padding: 2em;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding: 0em;
+    margin-bottom:2em;
 }
 
-details>a {
+details > a {
     text-decoration: none;
     font-style: italic;
     color: black;
-
+    margin-bottom:2em;
 }
 
-details>a:hover {
+details > a:hover {
     text-decoration: underline;
 }
 
-details>figure {
+details > figure {
     float: right;
     margin: 0rem 0rem 1.5rem 2rem;
     max-width: 70%;
 
 }
 
-details>figure>figcaption {
+details > figure> figcaption {
     font-size: small;
     position: relative;
     left: 2rem;
@@ -1046,77 +1070,88 @@ details>figure>figcaption {
 
 
 
-
-#about-the-author p {
-    text-align: left;
-}
-
-
-
-
-#about-the-author>img {
-    width: 200px;
-    height: 200px;
-    float: center;
-    margin: 2em;
-}
-
-#side-books {
-    padding: 0%;
-    grid-area: aside;
-    text-align: center;
-    overflow: auto;
-    height: 1400px;
-    width: 98%;
-
-}
-
-#side-books ul {
+#side-content {
+    display: flex;
     align-items: center;
-    padding-left: 2em;
-    padding-right: 1em;
+    flex-direction: column;
+    padding: 0%;
+    grid-area:aside ;
+    text-align: center;
+    overflow-y: auto;
+    width: 400px;
+    margin-right:10px;
+    height: 1400px;
+    padding-bottom:2em;
 
 }
 
-#side-books ul>li {
+#side-content ul {
+    align-items: center;
+    width:90%;
+   
+
+}
+
+#side-content ul>li {
+    display:flex;
+    flex-direction: column;
+    padding-left: 1em;
+    align-items: center;
     list-style: none;
     margin-top: 3em;
+   
 
 }
 
-#side-books ul>li>.book>header>h1 {
+#side-content ul>li>.book>header>h1 {
     font-size: 0.9em;
 }
 
-#side-books ul>li>.book {
-    text-align: center;
-    height: 800px;
-    border-radius: 2rem;
+#side-content ul>li>.book, #side-content ul>li>.lecture {
+   display:flex;
+   flex-direction: column;
+   text-align: center;
+   border-radius:2rem;
+   align-items: center;
+   height: fit-content;
+   
+   
+   
+   
+   
 }
 
-#side-books ul>li>.book>.author {
+#side-content ul>li>.lecture > .mini-description{
+    padding-right:0;
+}
+
+
+#side-content ul>li>.book > .author{
     line-height: 1em;
-}
+ }
 
-#side-books ul>li>.book>img {
-    float: none;
-}
 
-#side-books ul>li>.book>.stars-rating {
+ #side-content ul>li>.book > img ,  #side-content ul>li>.lecture > img {
+    float:none;
+    max-width:97%;
+    
+}
+#side-content ul>li>.book>.stars-rating {
     text-align: center;
 }
 
-#side-books>header {
+#side-content>header {
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1;
+    width:100%;
     background-color: #ffffff;
 
 }
 
-#side-books>header>h1 {
-
+#side-content>header>h1 {
+    
     padding-top: 1em;
     text-align: center;
     font-size: 2em;
@@ -1125,13 +1160,13 @@ details>figure>figcaption {
 }
 
 
-#side-books::-webkit-scrollbar {
+#side-content::-webkit-scrollbar {
     height: 0px;
     width: 10px;
 }
 
 
-#side-books::-webkit-scrollbar-track {
+#side-content::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
     margin: 5em 0;
@@ -1139,20 +1174,22 @@ details>figure>figcaption {
 }
 
 
-#side-books::-webkit-scrollbar-thumb {
+#side-content::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
     height: 20%;
 }
 
-#side-books::-webkit-scrollbar-thumb:hover {
+#side-content::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
 
-#side-books::-webkit-scrollbar-corner {
+#side-content::-webkit-scrollbar-corner {
     background: #f1f1f1;
 }
+
+
 
 
 /* ------------------------------FOOTER CSS----------------------------------------------------- */

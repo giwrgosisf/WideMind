@@ -11,9 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png" />
   <link rel="stylesheet" href="stylesheet.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -41,30 +43,36 @@
       </nav>
     </div>
   </header>
-  <main id="book-main">
-    <section id="book-analysis">
-      <img src="../Resources/Modern Operating Systems.jpg" width="318" height="409" />
-      <div class="book-details">
-        <h1>Modern Operating Systems</h1>
+  <main class="book-lecture-main">
+      <a href="operatingSystems.html">
+      <button class="back-button" type="button">
+        Go back
+      </button>
+    </a>
+    <section id="content-analysis">
+      <img src="../Resources/Modern-Operating-Systems.jpg"  />
+      
+      <div class="product-details">
+        <h1>Modern Operating<br> Systems</h1>
 
-        <p class="book-author">Author: Andrew S. Tanenbaum</p>
-        <p class="book-year">Year of publismnet: 2009</p>
+        <p class="product-author">Author: Andrew S. Tanenbaum</p>
+        <p class="product-year">Year of publismnet: 2009</p>
         <p class="book-pages">Pages: 1072</p>
         <div class="ratings">
-          <div class="book-stars-start-rating"></div>
-          <div class="book-stars-rating"></div>
-          <div class="book-stars-rating"></div>
-          <div class="book-stars-rating"></div>
-          <div class="book-stars-end-rating"></div>
+          <span class="product-stars-start-rating"></span>
+          <span class="product-stars-rating"></span>
+          <span class="product-stars-rating"></span>
+          <span class="product-stars-rating"></span>
+          <span class="product-stars-end-rating"></span>
         
         
           <p><strong>4.14</strong> <br>2,111 ratings</p>
         </div>
 
 
-        <p class="book-price">Price: 87.74€</p>
+        <p class="product-price">Price: 87.74€</p>
       </div>
-      <div class="book-description">
+      <div class="product-description">
         <p>
           For Introductory Courses in Operating Systems in Computer Science,
           Computer Engineering, and Electrical Engineering programs. The widely
@@ -97,597 +105,604 @@
         </p>
       </div>
     </section>
-    <div id="details">
-      <section id="INTRODUCTION">
-        <details>
-          <summary>INTRODUCTION</summary>
-          <p>
-            A modern computer system consists of one or more processors, some
-            main memory, disks, printers, a keyboard, a display, network
-            interfaces, and other input/output devices. All in all, a complex
-            system. Writing programs that keep track of all these components and
-            use them correctly, let alone optimally, is an extremely difficult
-            job. For this reason, computers are equipped with a layer of
-            software called the operating system, whose job is to manage all
-            these devices and provide user programs with a simpler interface to
-            the hardware. These systems are the subject of this book. <br><br> The
-            placement of the operating system is shown in Fig. 1-1. At the
-            bottom is the hardware, which, in many cases, is itself composed of
-            two or more levels (or layers). The lowest level contains physical
-            devices, consisting of integrated circuit chips, wires, power
-            supplies, cathode ray tubes, and similar physical devices. How these
-            are constructed and how they work are the provinces of the
-            electrical engineer. Next comes the microarchitecture level, in
-            which the physical devices are grouped together to form functional
-            units.<br><br> Typically this level contains some registers internal to the
-            CPU (Central Processing Unit) and a data path containing an
-            arithmetic logic unit. In each clock cycle, one or two operands are
-            fetched from the registers and combined in the arithmetic logic unit
-            (for example, by addition or Boolean AND). The result is stored in
-            one or more registers. On some machines, the operation of the data
-            path is controlled by software, called the microprogram. On other
-            machines, it is controlled directly by hardware circuits. Figure
-            1-1. A computer system consists of hardware, system programs, and
-            application programs.</p>
+  <section id="details">
+    <section id="INTRODUCTION">
+      <details>
+        <summary>INTRODUCTION</summary>
+        <p>
+          A modern computer system consists of one or more processors, some
+          main memory, disks, printers, a keyboard, a display, network
+          interfaces, and other input/output devices. All in all, a complex
+          system. Writing programs that keep track of all these components and
+          use them correctly, let alone optimally, is an extremely difficult
+          job. For this reason, computers are equipped with a layer of
+          software called the operating system, whose job is to manage all
+          these devices and provide user programs with a simpler interface to
+          the hardware. These systems are the subject of this book. <br><br> The
+          placement of the operating system is shown in Fig. 1-1. At the
+          bottom is the hardware, which, in many cases, is itself composed of
+          two or more levels (or layers). The lowest level contains physical
+          devices, consisting of integrated circuit chips, wires, power
+          supplies, cathode ray tubes, and similar physical devices. How these
+          are constructed and how they work are the provinces of the
+          electrical engineer. Next comes the microarchitecture level, in
+          which the physical devices are grouped together to form functional
+          units.<br><br> Typically this level contains some registers internal to the
+          CPU (Central Processing Unit) and a data path containing an
+          arithmetic logic unit. In each clock cycle, one or two operands are
+          fetched from the registers and combined in the arithmetic logic unit
+          (for example, by addition or Boolean AND). The result is stored in
+          one or more registers. On some machines, the operation of the data
+          path is controlled by software, called the microprogram. On other
+          machines, it is controlled directly by hardware circuits. Figure
+          1-1. A computer system consists of hardware, system programs, and
+          application programs.</p>
 
+        <figure>
+          <img src="../Resources/Modern Operating Systems figure 1-1.png" />
+          <figcaption>
+            Figure 1-1. A computer system consists of hardware, system
+            programs, and application programs.
+          </figcaption>
+        </figure>
+
+        <p>The purpose of the data path is to execute some set of instructions.
+          Some of these can be carried out in one data path cycle; others may
+          require multiple data path cycles. These instructions may use
+          registers or other hardware facilities. Together, the hardware and
+          instructions visible to an assembly language programmer form the ISA
+          (Instruction Set Architecture) level. <br><br>This level is often called
+          machine language. The machine language typically has between 50 and
+          300 instructions, mostly for moving data around the machine, doing
+          arithmetic, and comparing values.In this level, the input/output
+          devices are controlled by loading values into special device
+          registers. For example, a disk can be commanded to read by loading
+          the values of the disk address, main memory address, byte count, and
+          direction (read or write) into its registers. In practice, many more
+          parameters are needed, and the status returned by the drive after an
+          operation is highly complex.<br><br> Furthermore, for many I/O
+          (Input/Output) devices, timing plays an important role in the
+          programming. To hide this complexity, an operating system is
+          provided. It consists of a layer of software that (partially) hides
+          the hardware and gives the programmer a more convenient set of
+          instructions to work with. For example, read block from file is
+          conceptually simpler than having to worry about the details of
+          moving disk heads, waiting for them to settle down, and so on. On
+          top of the operating system is the rest of the system software. Here
+          we find the command interpreter (shell), window systems, compilers,
+          editors, and similar applicationindependent programs. It is
+          important to realize that these programs are definitely not part of
+          the operating system, even though they are typically supplied by the
+          computer manufacturer. <br><br>This is a crucial, but subtle, point. The
+          operating system is (usually) that portion of the software that runs
+          in kernel mode or supervisor mode. It is protected from user
+          tampering by the hardware (ignoring for the moment some older or
+          low-end microprocessors that do not have hardware protection at
+          all). Compilers and editors run in user mode. If a user does not
+          like a particular compiler, he[*] is free to write his own if he so
+          chooses: he is not free to write his own clock interrupt handler,
+          which is part of the operating system and is normally protected by
+          hardware against attempts by users to modify it. This distinction,
+          however, is sometimes blurred in embedded systems (which may not
+          have kernel mode) or interpreted systems (such as Java-based
+          operating systems that use interpretation, not hardware, to separate
+          the components). Still, for traditional computers, the operating
+          system is what runs in kernel mode.<br><br> That said, in many systems there
+          are programs that run in user mode but which help the operating
+          system or perform privileged functions. For example, there is often
+          a program that allows users to change their passwords. This program
+          is not part of the operating system and does not run in kernel mode,
+          but it clearly carries out a sensitive function and has to be
+          protected in a special way. In some systems, this idea is carried to
+          an extreme form, and pieces of what is traditionally considered to
+          be the operating system (such as the file system) run in user space.
+          In such systems, it is difficult to draw a clear boundary.
+          Everything running in kernel mode is clearly part of the operating
+          system, but some programs running outside it are arguably also part
+          of it, or at least closely associated with it. <br><br>Finally, above the
+          system programs come the application programs. These programs are
+          purchased or written by the users to solve their particular
+          problems, such as word processing, spreadsheets, engineering
+          calculations, or storing information in a database.
+        </p>
+
+        <a href="#Table-of-contents ">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="PROCESSES-AND-THREADS">
+      <details>
+        <summary>PROCESSES AND THREADS</summary>
+        <p>
+          We are now about to embark on a detailed study of how operating
+          systems are designed and constructed. The most central concept in
+          any operating system is the process : an abstraction of a running
+          program. Everything else hinges on this concept, and it is important
+          that the operating system designer (and student) have a thorough
+          understanding of what a process is as early as possible.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="DEADLOCKS">
+      <details>
+        <summary>DEADLOCKS</summary>
+        <p>
+          Computer systems are full of resources that can only be used by one
+          process at a time. Common examples include printers, tape drives,
+          and slots in the system’s internal tables. Having two processes
+          simultaneously writing to the printer leads to gibberish. Having two
+          processes using the same file system table slot will invariably lead
+          to a corrupted file system.<br><br> Consequently, all operating systems have
+          the ability to (temporarily) grant a process exclusive access to
+          certain resources. For many applications, a process needs exclusive
+          access to not one resource, but several. Suppose, for example, two
+          processes each want to record a scanned document on a CD. Process A
+          requests permission to use the scanner and is granted it. Process B
+          is programmed differently and requests the CD recorder first and is
+          also granted it. Now A asks for the CD recorder, but the request is
+          denied until B releases it.<br><br> Unfortunately, instead of releasing the
+          CD recorder B asks for the scanner. At this point both processes are
+          blocked and will remain so forever. This situation is called a
+          deadlock. Deadlocks can also occur across machines. For example,
+          many offices have a local area network with many computers connected
+          to it. Often devices such as scanners, CD recorders, printers, and
+          tape drives are connected to the network as shared resources,
+          available to any user on any machine. If these devices can be
+          reserved remotely (i.e., from the user’s home machine), the same
+          kind of deadlocks can occur as described above.</p> 
           <figure>
-            <img src="../Resources/Modern Operating Systems figure 1-1.png" />
+            <img src="../Resources/fig3.png" />
             <figcaption>
-              Figure 1-1. A computer system consists of hardware, system
-              programs, and application programs.
+              Figure 3-3. Resource allocation graphs. (a) Holding a resource. (b) Requesting a
+resource. (c) Deadlock.
             </figcaption>
           </figure>
+          <p>More complicated
+          situations can cause deadlocks involving three, four, or more
+          devices and users. Deadlocks can occur in a variety of situations
+          besides requesting dedicated I/O devices. In a database system, for
+          example, a program may have to lock several records it is using, to
+          avoid race conditions. If process A locks record R1 and process B
+          locks record R2, and then each process tries to lock the other one’s
+          record, we also have a deadlock. Thus deadlocks can occur on
+          hardware resources or on software resources. In this chapter, we
+          will look at deadlocks more closely, see how they arise, and study
+          some ways of preventing or avoiding them. <br><br> Although this material is
+          about deadlocks in the context of operating systems, they also occur
+          in database systems and many other contexts in computer science, so
+          this material is actually applicable to a wide variety of
+          multiprocess systems. A great deal has been written about deadlocks.
+          Two bibliographies on the subject have appeared in Operating Systems
+          Review and should be consulted for references (Newton, 1979; and
+          Zobel, 1983). Although these bibliographies are old, most of the
+          work on deadlocks was done well before 1980, so they are still
+          useful.
+        </p>
 
-          <p>The purpose of the data path is to execute some set of instructions.
-            Some of these can be carried out in one data path cycle; others may
-            require multiple data path cycles. These instructions may use
-            registers or other hardware facilities. Together, the hardware and
-            instructions visible to an assembly language programmer form the ISA
-            (Instruction Set Architecture) level. <br><br>This level is often called
-            machine language. The machine language typically has between 50 and
-            300 instructions, mostly for moving data around the machine, doing
-            arithmetic, and comparing values.In this level, the input/output
-            devices are controlled by loading values into special device
-            registers. For example, a disk can be commanded to read by loading
-            the values of the disk address, main memory address, byte count, and
-            direction (read or write) into its registers. In practice, many more
-            parameters are needed, and the status returned by the drive after an
-            operation is highly complex.<br><br> Furthermore, for many I/O
-            (Input/Output) devices, timing plays an important role in the
-            programming. To hide this complexity, an operating system is
-            provided. It consists of a layer of software that (partially) hides
-            the hardware and gives the programmer a more convenient set of
-            instructions to work with. For example, read block from file is
-            conceptually simpler than having to worry about the details of
-            moving disk heads, waiting for them to settle down, and so on. On
-            top of the operating system is the rest of the system software. Here
-            we find the command interpreter (shell), window systems, compilers,
-            editors, and similar applicationindependent programs. It is
-            important to realize that these programs are definitely not part of
-            the operating system, even though they are typically supplied by the
-            computer manufacturer. <br><br>This is a crucial, but subtle, point. The
-            operating system is (usually) that portion of the software that runs
-            in kernel mode or supervisor mode. It is protected from user
-            tampering by the hardware (ignoring for the moment some older or
-            low-end microprocessors that do not have hardware protection at
-            all). Compilers and editors run in user mode. If a user does not
-            like a particular compiler, he[*] is free to write his own if he so
-            chooses: he is not free to write his own clock interrupt handler,
-            which is part of the operating system and is normally protected by
-            hardware against attempts by users to modify it. This distinction,
-            however, is sometimes blurred in embedded systems (which may not
-            have kernel mode) or interpreted systems (such as Java-based
-            operating systems that use interpretation, not hardware, to separate
-            the components). Still, for traditional computers, the operating
-            system is what runs in kernel mode.<br><br> That said, in many systems there
-            are programs that run in user mode but which help the operating
-            system or perform privileged functions. For example, there is often
-            a program that allows users to change their passwords. This program
-            is not part of the operating system and does not run in kernel mode,
-            but it clearly carries out a sensitive function and has to be
-            protected in a special way. In some systems, this idea is carried to
-            an extreme form, and pieces of what is traditionally considered to
-            be the operating system (such as the file system) run in user space.
-            In such systems, it is difficult to draw a clear boundary.
-            Everything running in kernel mode is clearly part of the operating
-            system, but some programs running outside it are arguably also part
-            of it, or at least closely associated with it. <br><br>Finally, above the
-            system programs come the application programs. These programs are
-            purchased or written by the users to solve their particular
-            problems, such as word processing, spreadsheets, engineering
-            calculations, or storing information in a database.
-          </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="MEMORY MANAGEMENT">
+      <details>
+        <summary>MEMORY MANAGEMENT</summary>
+        <p>
+          Memory is an important resource that must be carefully managed.
+          While the average home computer nowadays has a thousand times as
+          much memory as the IBM 7094, the largest computer in the world in
+          the early 1960s, programs are getting bigger faster than memories.<br><br>
+          To paraphrase Parkinson’s law, “Programs expand to fill the memory
+          available to hold them.” In this chapter we will study how operating
+          systems manage memory. Ideally, what every programmer would like is
+          an infinitely large, infinitely fast memory that is also
+          nonvolatile, that is, does not lose its contents when the electric
+          power fails. While we are at it, why not also ask for it to be
+          inexpensive, too? Unfortunately technology does not provide such
+          memories.<br><br> Consequently, most computers have a memory hierarchy, with
+          a small amount of very fast, expensive, volatile cache memory, tens
+          of megabytes of medium-speed, medium-price, volatile main memory
+          (RAM), and tens or hundreds of gigabytes of slow, cheap, nonvolatile
+          disk storage. It is the job of the operating system to coordinate
+          how these memories are used. The part of the operating system that
+          manages the memory hierarchy is called the memory manager. Its job
+          is to keep track of which parts of memory are in use and which parts
+          are not in use, to allocate memory to processes when they need it
+          and deallocate it when they are done, and to manage swapping between
+          main memory and disk when main memory is too small to hold all the
+          processes. <br><br>In this chapter we will investigate a number of different
+          memory management schemes, ranging from very simple to highly
+          sophisticated. We will start at the beginning and look first at the
+          simplest possible memory management system and then gradually
+          progress to more and more elaborate ones. As we pointed out in Chap.
+          1, history tends to repeat itself in the computer world. While the
+          simplest memory management schemes are no longer used on desktop
+          computers, they are still used in some palmtop, embedded, and smart
+          card systems. For this reason, they are still worth studying.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="INPUT/OUTPUT">
+      <details>
+        <summary>INPUT/OUTPUT</summary>
+        <p>
+          One of the main functions of an operating system is to control all
+          the computer’s I/O (Input/Output) devices. It must issue commands to
+          the devices, catch interrupts, and handle errors. It should also
+          provide an interface between the devices and the rest of the system
+          that is simple and easy to use. To the extent possible, the
+          interface should be the same for all devices (device independence).
+          <br><br>The I/O code represents a significant fraction of the total
+          operating system. How the operating system manages I/O is the
+          subject of this chapter. This chapter is organized as follows. First
+          we will look at some of the principles of I/O hardware, and then we
+          will look at I/O software in general. I/O software can be structured
+          in layers, with each layer having a well-defined task to perform. We
+          will look at these layers to see what they do and how they fit
+          together.<br><br> Following that introduction, we will look, at several I/O
+          devices in detail: disks, clocks, keyboards, and displays. For each
+          device we will look at its hardware and software. Finally, we will
+          consider power management.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="FILE SYSTEMS">
+      <details>
+        <summary>FILE SYSTEMS</summary>
+        <p>
+          All computer applications need to store and retrieve information.
+          While a process is running, it can store a limited amount of
+          information within its own address space. However the storage
+          capacity is restricted to the size of the virtual address space. For
+          some applications this size is adequate, but for others, such as
+          airline reservations, banking, or corporate record keeping, it is
+          far too small.<br><br> A second problem with keeping information within a
+          process’ address space is that when the process terminates, the
+          information is lost. For many applications, (e.g., for databases),
+          the information must be retained for weeks, months, or even forever.
+          Having it vanish when the process using it terminates is
+          unacceptable. Furthermore, it must not go away when a computer crash
+          kills the process.<br><br> A third problem is that it is frequently
+          necessary for multiple processes to access (parts of) the
+          information at the same time. If we have an online telephone
+          directory stored inside the address space of a single process, only
+          that process can access it. The way to solve this problem is to make
+          the information itself independent of any one process. Thus we have
+          three essential requirements for long-term information storage: 1.
+          It must be possible to store a very large amount of information. 2.
+          The information must survive the termination of the process using
+          it. 3. Multiple processes must be able to access the information
+          concurrently.<br><br> The usual solution to all these problems is to store
+          information on disks and other external media in units called files
+          . Processes can then read them and write new ones if need be.
+          Information stored in files must be persistent , that is, not be
+          affected by process creation and termination. A file should only
+          disappear when its owner explicitly removes it. Files are managed by
+          the operating system. How they are structured, named, accessed,
+          used, protected, and implemented are major topics in operating
+          system design. As a whole, that part of the operating system dealing
+          with files is known as the file system and is the subject of this
+          chapter. From the users’ standpoint, the most important aspect of a
+          file system is how it appears to them, that is, what constitutes a
+          file, how files are named and protected, what operations are allowed
+          on files, and so on. <br><br>The details of whether linked lists or bitmaps
+          are used to keep track of free storage and how many sectors there
+          are in a logical block are of less interest, although they are of
+          great importance to the designers of the file system. For this
+          reason, we have structured the chapter as several sections. The
+          first two are concerned with the user interface to files and
+          directories, respectively. Then comes a detailed discussion of how
+          the file system is implemented. Finally, we give some examples of
+          real file systems.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="MULTIMEDIA OPERATING SYSTEMS">
+      <details>
+        <summary>MULTIMEDIA OPERATING SYSTEMS</summary>
+        <p>
+          Digital movies, video clips, and music are becoming an increasingly
+          common way to present information and entertainment using a
+          computer. Audio and video files can be stored on a disk and played
+          back on demand. However, their characteristics are very different
+          from the traditional text files that current file systems were
+          designed for. As a consequence, new kinds of file systems are needed
+          to handle them. Stronger yet, storing and playing back audio and
+          video puts new demands on the scheduler and other parts of the
+          operating system as well.<br><br> In the sections that follow, we will study
+          many of these issues and their implications for operating systems
+          that are designed to handle multimedia. Usually, digital movies go
+          under the name multimedia, which literally means more than one
+          medium. Under this definition, this book is a multimedia work. After
+          all, it contains two media: text and images (the figures). However,
+          most people use the term “multimedia” to mean a document containing
+          two or more continuous media, that is media that must be played back
+          over some time interval. In this book, we will use the term
+          multimedia in this sense.<br><br> Another term that is somewhat ambiguous is
+          “video.” In a technical sense, it is just the image portion of a
+          movie (as opposed to the sound portion). In fact, camcorders and
+          televisions often have two connectors, one labeled “video” and one
+          labeled “audio,” since the signals are separate. However, the term
+          “digital video” normally refers to the complete product, with both
+          image and sound. Below we will use the term “movie” to refer to the
+          complete product.<br><br> Note that a movie in this sense need not be a
+          two-hour long film produced by a Hollywood studio at a cost
+          exceeding that of a Boeing 747. A 30-sec news clip downloaded from
+          CNN’s home page over the Internet is also a movie under our
+          definition. We will also call these “video clips” when we are
+          referring to very short movies.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="MULTIPLE PROCESSOR SYSTEMS">
+      <details>
+        <summary>MULTIPLE PROCESSOR SYSTEMS</summary>
+        <p>
+          Since its inception, the computer industry has been driven by an
+          endless quest for more and more computing power. The ENIAC could
+          perform 300 operations per second, easily 1000 times faster than any
+          calculator before it, yet people were not satisfied. We now have
+          machines a million times faster than the ENIAC and still there is a
+          demand for yet more horsepower. Astronomers are trying to make sense
+          of the universe, biologists are trying to understand the
+          implications of the human genome, and aeronautical engineers are
+          interested in building safer and more efficient aircraft, and all
+          want more CPU cycles. However much computing power there is, it is
+          never enough. In the past, the solution was always to make the clock
+          run faster.<br><br> Unfortunately, we are beginning to hit some fundamental
+          limits on clock speed. According to Einstein’s special theory of
+          relativity, no electrical signal can propagate faster than the speed
+          of light, which is about 30 cm/nsec in vacuum and about 20 cm/nsec
+          in copper wire or optical fiber. This means that in a computer with
+          a 10-GHz clock, the signals cannot travel more than 2 cm in total.
+          For a 100-GHz computer the total path length is at most 2 mm. A
+          1-THz (1000 GHz) computer will have to be smaller than 100 microns,
+          just to let the signal get from one end to the other and back once
+          with a single clock cycle. Making computers this small may be
+          possible, but then we hit another fundamental problem: heat
+          dissipation. The faster runs the computer, the more heat it
+          generates, and the smaller the computer, the harder it is to get rid
+          of this heat. Already on high-end Pentium systems, the CPU cooler is
+          bigger than the CPU itself.<br><br> All in all, going from 1 MHz to 1 GHz
+          simply required incrementally better engineering of the chip
+          manufacturing process. Going from 1 GHz to 1 THz is going to require
+          a radically different approach. One approach to greater speed is
+          through massively parallel computers. These machines consist of many
+          CPUs, each of which runs at “normal” speed (whatever that may mean
+          in a given year), but which collectively have far more computing
+          power than a single CPU. Systems with 1000 CPUs are now commercially
+          available. Systems with 1 million CPUs are likely to be built in the
+          coming decade. While there are other potential approaches to greater
+          speed, such as biological computers, in this chapter we will focus
+          on systems with multiple conventional CPUs. Highly parallel
+          computers are often used for heavy number crunching. Problems such
+          as predicting the weather, modeling airflow around an aircraft wing,
+          simulating the world economy, or understanding drug-receptor
+          interactions in the brain are all computationally intensive. Their
+          solutions require long runs on many CPUs at once. The multiple
+          processor systems discussed in this chapter are widely-used for
+          these and similar problems in science and engineering, among other
+          areas.<br><br> Another relevant development is the incredibly rapid growth
+          of the Internet. It was originally designed as a prototype for a
+          fault-tolerant military control system, then became popular among
+          academic computer scientists, and has recently acquired many new
+          uses. One of these is linking up thousands of computers all over the
+          world to work together on large scientific problems. In a sense, a
+          system consisting of 1000 computers spread all over the world is no
+          different than one consisting of 1000 computers in a single room,
+          although the delay and other technical characteristics are
+          different. We will also consider these systems in this chapter.
+          Putting 1 million unrelated computers in a room is easy to do
+          provided that you have enough money and a sufficiently large room.
+          Spreading 1 million unrelated computers around the world is even
+          easier since it finesses the second problem. <br><br>The trouble comes in
+          when you want them to communicate with one another to work together
+          on a single problem. As a consequence, a great deal of work has been
+          done on the interconnection technology, and different interconnect
+          technologies have led to qualitatively different kinds of systems
+          and different software organizations. All communication between
+          electronic (or optical) components ultimately comes down to sending
+          messages—well-defined bit strings—between them. The differences are
+          in the time scale, distance scale, and logical organization
+          involved. At one extreme are the sharedmemory multiprocessors,
+          systems in which somewhere between two and about 1000 CPUs
+          communicate via a shared memory. In this model, every CPU has equal
+          access to the entire physical memory, and can read and write
+          individual words using LOAD and STORE instructions. Accessing a
+          memory word usually takes 10-50 nsec. While this model, illustrated
+          in Fig. 8-1(a), sounds simple, actually implementing it is far from
+          simple and usually involves considerable message passing under the
+          covers, as we will explain shortly.</p>
 
-          <a href="#Table-of-contents ">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="PROCESSES AND THREADS">
-        <details>
-          <summary>PROCESSES AND THREADS</summary>
-          <p>
-            We are now about to embark on a detailed study of how operating
-            systems are designed and constructed. The most central concept in
-            any operating system is the process : an abstraction of a running
-            program. Everything else hinges on this concept, and it is important
-            that the operating system designer (and student) have a thorough
-            understanding of what a process is as early as possible.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="DEADLOCKS">
-        <details>
-          <summary>DEADLOCKS</summary>
-          <p>
-            Computer systems are full of resources that can only be used by one
-            process at a time. Common examples include printers, tape drives,
-            and slots in the system’s internal tables. Having two processes
-            simultaneously writing to the printer leads to gibberish. Having two
-            processes using the same file system table slot will invariably lead
-            to a corrupted file system.<br><br> Consequently, all operating systems have
-            the ability to (temporarily) grant a process exclusive access to
-            certain resources. For many applications, a process needs exclusive
-            access to not one resource, but several. Suppose, for example, two
-            processes each want to record a scanned document on a CD. Process A
-            requests permission to use the scanner and is granted it. Process B
-            is programmed differently and requests the CD recorder first and is
-            also granted it. Now A asks for the CD recorder, but the request is
-            denied until B releases it.<br><br> Unfortunately, instead of releasing the
-            CD recorder B asks for the scanner. At this point both processes are
-            blocked and will remain so forever. This situation is called a
-            deadlock. Deadlocks can also occur across machines. For example,
-            many offices have a local area network with many computers connected
-            to it. Often devices such as scanners, CD recorders, printers, and
-            tape drives are connected to the network as shared resources,
-            available to any user on any machine. If these devices can be
-            reserved remotely (i.e., from the user’s home machine), the same
-            kind of deadlocks can occur as described above. <br><br>More complicated
-            situations can cause deadlocks involving three, four, or more
-            devices and users. Deadlocks can occur in a variety of situations
-            besides requesting dedicated I/O devices. In a database system, for
-            example, a program may have to lock several records it is using, to
-            avoid race conditions. If process A locks record R1 and process B
-            locks record R2, and then each process tries to lock the other one’s
-            record, we also have a deadlock. Thus deadlocks can occur on
-            hardware resources or on software resources. In this chapter, we
-            will look at deadlocks more closely, see how they arise, and study
-            some ways of preventing or avoiding them. <br><br> Although this material is
-            about deadlocks in the context of operating systems, they also occur
-            in database systems and many other contexts in computer science, so
-            this material is actually applicable to a wide variety of
-            multiprocess systems. A great deal has been written about deadlocks.
-            Two bibliographies on the subject have appeared in Operating Systems
-            Review and should be consulted for references (Newton, 1979; and
-            Zobel, 1983). Although these bibliographies are old, most of the
-            work on deadlocks was done well before 1980, so they are still
-            useful.
-          </p>
+        <figure>
+          <img src="../Resources/Modern Operating Systems figure 8-1.png" />
+          <figcaption>
+            Figure 8-1. (a) A shared-memory multiprocessor. (b) A
+            message-passing multicomputer. (c) A -wide area distributed
+            system.
+          </figcaption>
+        </figure>
+        <p>
+          Next comes the system of Fig. 8-1(b) in which a number of CPU-memory
+          pairs are connected by some kind of high-speed interconnect. This
+          kind of system is called a messagepassing multicomputer. Each memory
+          is local to a single CPU and can be accessed only by that CPU. The
+          machines communicate by sending multiword messages over the
+          interconnect. With a good interconnect, a short message can be sent
+          in 10–50 sec, but still far longer than the memory access time of
+          Fig. 8-1 (a). There is no shared global memory in this design.
+          Multicomputers (i.e., message-passing systems) are much easier to
+          build than (shared-memory) multiprocessors but they are harder to
+          program. Thus each genre has its fans. <br><br>The third model, illustrated
+          in Fig. 8-1(c), connects complete computer systems over a wide area
+          network, such as the Internet, to form a distributed system . Each
+          of these has its own memory, of course, and the systems communicate
+          by message passing. <br><br>The only real difference between Fig. 8-1(c) and
+          Fig. 8-1(b) is that in the former, complete computers are used and
+          message times are often 10-50 msec. This long delay forces these
+          loosely-coupled systems to be used in different ways than the
+          tightly-coupled systems of Fig. 8-1(b).<br><br> The three types of systems
+          differ in their delays by something like three orders of magnitude.
+          That is the difference between a day and three years. This chapter
+          has three major sections, corresponding to the three models of Fig.
+          8-1. In each one, we start out with a brief introduction to the
+          relevant hardware. Then we move on to the software, especially the
+          operating system issues for that type of system. As we will see, in
+          each case different issues are present.
+        </p>
 
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="MEMORY MANAGEMENT">
-        <details>
-          <summary>MEMORY MANAGEMENT</summary>
-          <p>
-            Memory is an important resource that must be carefully managed.
-            While the average home computer nowadays has a thousand times as
-            much memory as the IBM 7094, the largest computer in the world in
-            the early 1960s, programs are getting bigger faster than memories.<br><br>
-            To paraphrase Parkinson’s law, “Programs expand to fill the memory
-            available to hold them.” In this chapter we will study how operating
-            systems manage memory. Ideally, what every programmer would like is
-            an infinitely large, infinitely fast memory that is also
-            nonvolatile, that is, does not lose its contents when the electric
-            power fails. While we are at it, why not also ask for it to be
-            inexpensive, too? Unfortunately technology does not provide such
-            memories.<br><br> Consequently, most computers have a memory hierarchy, with
-            a small amount of very fast, expensive, volatile cache memory, tens
-            of megabytes of medium-speed, medium-price, volatile main memory
-            (RAM), and tens or hundreds of gigabytes of slow, cheap, nonvolatile
-            disk storage. It is the job of the operating system to coordinate
-            how these memories are used. The part of the operating system that
-            manages the memory hierarchy is called the memory manager. Its job
-            is to keep track of which parts of memory are in use and which parts
-            are not in use, to allocate memory to processes when they need it
-            and deallocate it when they are done, and to manage swapping between
-            main memory and disk when main memory is too small to hold all the
-            processes. <br><br>In this chapter we will investigate a number of different
-            memory management schemes, ranging from very simple to highly
-            sophisticated. We will start at the beginning and look first at the
-            simplest possible memory management system and then gradually
-            progress to more and more elaborate ones. As we pointed out in Chap.
-            1, history tends to repeat itself in the computer world. While the
-            simplest memory management schemes are no longer used on desktop
-            computers, they are still used in some palmtop, embedded, and smart
-            card systems. For this reason, they are still worth studying.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="INPUT/OUTPUT">
-        <details>
-          <summary>INPUT/OUTPUT</summary>
-          <p>
-            One of the main functions of an operating system is to control all
-            the computer’s I/O (Input/Output) devices. It must issue commands to
-            the devices, catch interrupts, and handle errors. It should also
-            provide an interface between the devices and the rest of the system
-            that is simple and easy to use. To the extent possible, the
-            interface should be the same for all devices (device independence).
-            <br><br>The I/O code represents a significant fraction of the total
-            operating system. How the operating system manages I/O is the
-            subject of this chapter. This chapter is organized as follows. First
-            we will look at some of the principles of I/O hardware, and then we
-            will look at I/O software in general. I/O software can be structured
-            in layers, with each layer having a well-defined task to perform. We
-            will look at these layers to see what they do and how they fit
-            together.<br><br> Following that introduction, we will look, at several I/O
-            devices in detail: disks, clocks, keyboards, and displays. For each
-            device we will look at its hardware and software. Finally, we will
-            consider power management.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="FILE SYSTEMS">
-        <details>
-          <summary>FILE SYSTEMS</summary>
-          <p>
-            All computer applications need to store and retrieve information.
-            While a process is running, it can store a limited amount of
-            information within its own address space. However the storage
-            capacity is restricted to the size of the virtual address space. For
-            some applications this size is adequate, but for others, such as
-            airline reservations, banking, or corporate record keeping, it is
-            far too small.<br><br> A second problem with keeping information within a
-            process’ address space is that when the process terminates, the
-            information is lost. For many applications, (e.g., for databases),
-            the information must be retained for weeks, months, or even forever.
-            Having it vanish when the process using it terminates is
-            unacceptable. Furthermore, it must not go away when a computer crash
-            kills the process.<br><br> A third problem is that it is frequently
-            necessary for multiple processes to access (parts of) the
-            information at the same time. If we have an online telephone
-            directory stored inside the address space of a single process, only
-            that process can access it. The way to solve this problem is to make
-            the information itself independent of any one process. Thus we have
-            three essential requirements for long-term information storage: 1.
-            It must be possible to store a very large amount of information. 2.
-            The information must survive the termination of the process using
-            it. 3. Multiple processes must be able to access the information
-            concurrently.<br><br> The usual solution to all these problems is to store
-            information on disks and other external media in units called files
-            . Processes can then read them and write new ones if need be.
-            Information stored in files must be persistent , that is, not be
-            affected by process creation and termination. A file should only
-            disappear when its owner explicitly removes it. Files are managed by
-            the operating system. How they are structured, named, accessed,
-            used, protected, and implemented are major topics in operating
-            system design. As a whole, that part of the operating system dealing
-            with files is known as the file system and is the subject of this
-            chapter. From the users’ standpoint, the most important aspect of a
-            file system is how it appears to them, that is, what constitutes a
-            file, how files are named and protected, what operations are allowed
-            on files, and so on. <br><br>The details of whether linked lists or bitmaps
-            are used to keep track of free storage and how many sectors there
-            are in a logical block are of less interest, although they are of
-            great importance to the designers of the file system. For this
-            reason, we have structured the chapter as several sections. The
-            first two are concerned with the user interface to files and
-            directories, respectively. Then comes a detailed discussion of how
-            the file system is implemented. Finally, we give some examples of
-            real file systems.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="MULTIMEDIA OPERATING SYSTEMS">
-        <details>
-          <summary>MULTIMEDIA OPERATING SYSTEMS</summary>
-          <p>
-            Digital movies, video clips, and music are becoming an increasingly
-            common way to present information and entertainment using a
-            computer. Audio and video files can be stored on a disk and played
-            back on demand. However, their characteristics are very different
-            from the traditional text files that current file systems were
-            designed for. As a consequence, new kinds of file systems are needed
-            to handle them. Stronger yet, storing and playing back audio and
-            video puts new demands on the scheduler and other parts of the
-            operating system as well.<br><br> In the sections that follow, we will study
-            many of these issues and their implications for operating systems
-            that are designed to handle multimedia. Usually, digital movies go
-            under the name multimedia, which literally means more than one
-            medium. Under this definition, this book is a multimedia work. After
-            all, it contains two media: text and images (the figures). However,
-            most people use the term “multimedia” to mean a document containing
-            two or more continuous media, that is media that must be played back
-            over some time interval. In this book, we will use the term
-            multimedia in this sense.<br><br> Another term that is somewhat ambiguous is
-            “video.” In a technical sense, it is just the image portion of a
-            movie (as opposed to the sound portion). In fact, camcorders and
-            televisions often have two connectors, one labeled “video” and one
-            labeled “audio,” since the signals are separate. However, the term
-            “digital video” normally refers to the complete product, with both
-            image and sound. Below we will use the term “movie” to refer to the
-            complete product.<br><br> Note that a movie in this sense need not be a
-            two-hour long film produced by a Hollywood studio at a cost
-            exceeding that of a Boeing 747. A 30-sec news clip downloaded from
-            CNN’s home page over the Internet is also a movie under our
-            definition. We will also call these “video clips” when we are
-            referring to very short movies.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="MULTIPLE PROCESSOR SYSTEMS">
-        <details>
-          <summary>MULTIPLE PROCESSOR SYSTEMS</summary>
-          <p>
-            Since its inception, the computer industry has been driven by an
-            endless quest for more and more computing power. The ENIAC could
-            perform 300 operations per second, easily 1000 times faster than any
-            calculator before it, yet people were not satisfied. We now have
-            machines a million times faster than the ENIAC and still there is a
-            demand for yet more horsepower. Astronomers are trying to make sense
-            of the universe, biologists are trying to understand the
-            implications of the human genome, and aeronautical engineers are
-            interested in building safer and more efficient aircraft, and all
-            want more CPU cycles. However much computing power there is, it is
-            never enough. In the past, the solution was always to make the clock
-            run faster.<br><br> Unfortunately, we are beginning to hit some fundamental
-            limits on clock speed. According to Einstein’s special theory of
-            relativity, no electrical signal can propagate faster than the speed
-            of light, which is about 30 cm/nsec in vacuum and about 20 cm/nsec
-            in copper wire or optical fiber. This means that in a computer with
-            a 10-GHz clock, the signals cannot travel more than 2 cm in total.
-            For a 100-GHz computer the total path length is at most 2 mm. A
-            1-THz (1000 GHz) computer will have to be smaller than 100 microns,
-            just to let the signal get from one end to the other and back once
-            with a single clock cycle. Making computers this small may be
-            possible, but then we hit another fundamental problem: heat
-            dissipation. The faster runs the computer, the more heat it
-            generates, and the smaller the computer, the harder it is to get rid
-            of this heat. Already on high-end Pentium systems, the CPU cooler is
-            bigger than the CPU itself.<br><br> All in all, going from 1 MHz to 1 GHz
-            simply required incrementally better engineering of the chip
-            manufacturing process. Going from 1 GHz to 1 THz is going to require
-            a radically different approach. One approach to greater speed is
-            through massively parallel computers. These machines consist of many
-            CPUs, each of which runs at “normal” speed (whatever that may mean
-            in a given year), but which collectively have far more computing
-            power than a single CPU. Systems with 1000 CPUs are now commercially
-            available. Systems with 1 million CPUs are likely to be built in the
-            coming decade. While there are other potential approaches to greater
-            speed, such as biological computers, in this chapter we will focus
-            on systems with multiple conventional CPUs. Highly parallel
-            computers are often used for heavy number crunching. Problems such
-            as predicting the weather, modeling airflow around an aircraft wing,
-            simulating the world economy, or understanding drug-receptor
-            interactions in the brain are all computationally intensive. Their
-            solutions require long runs on many CPUs at once. The multiple
-            processor systems discussed in this chapter are widely-used for
-            these and similar problems in science and engineering, among other
-            areas.<br><br> Another relevant development is the incredibly rapid growth
-            of the Internet. It was originally designed as a prototype for a
-            fault-tolerant military control system, then became popular among
-            academic computer scientists, and has recently acquired many new
-            uses. One of these is linking up thousands of computers all over the
-            world to work together on large scientific problems. In a sense, a
-            system consisting of 1000 computers spread all over the world is no
-            different than one consisting of 1000 computers in a single room,
-            although the delay and other technical characteristics are
-            different. We will also consider these systems in this chapter.
-            Putting 1 million unrelated computers in a room is easy to do
-            provided that you have enough money and a sufficiently large room.
-            Spreading 1 million unrelated computers around the world is even
-            easier since it finesses the second problem. <br><br>The trouble comes in
-            when you want them to communicate with one another to work together
-            on a single problem. As a consequence, a great deal of work has been
-            done on the interconnection technology, and different interconnect
-            technologies have led to qualitatively different kinds of systems
-            and different software organizations. All communication between
-            electronic (or optical) components ultimately comes down to sending
-            messages—well-defined bit strings—between them. The differences are
-            in the time scale, distance scale, and logical organization
-            involved. At one extreme are the sharedmemory multiprocessors,
-            systems in which somewhere between two and about 1000 CPUs
-            communicate via a shared memory. In this model, every CPU has equal
-            access to the entire physical memory, and can read and write
-            individual words using LOAD and STORE instructions. Accessing a
-            memory word usually takes 10-50 nsec. While this model, illustrated
-            in Fig. 8-1(a), sounds simple, actually implementing it is far from
-            simple and usually involves considerable message passing under the
-            covers, as we will explain shortly.</p>
-
-          <figure>
-            <img src="../Resources/Modern Operating Systems figure 8-1.png" />
-            <figcaption>
-              Figure 8-1. (a) A shared-memory multiprocessor. (b) A
-              message-passing multicomputer. (c) A -wide area distributed
-              system.
-            </figcaption>
-          </figure>
-          <p>
-            Next comes the system of Fig. 8-1(b) in which a number of CPU-memory
-            pairs are connected by some kind of high-speed interconnect. This
-            kind of system is called a messagepassing multicomputer. Each memory
-            is local to a single CPU and can be accessed only by that CPU. The
-            machines communicate by sending multiword messages over the
-            interconnect. With a good interconnect, a short message can be sent
-            in 10–50 sec, but still far longer than the memory access time of
-            Fig. 8-1 (a). There is no shared global memory in this design.
-            Multicomputers (i.e., message-passing systems) are much easier to
-            build than (shared-memory) multiprocessors but they are harder to
-            program. Thus each genre has its fans. <br><br>The third model, illustrated
-            in Fig. 8-1(c), connects complete computer systems over a wide area
-            network, such as the Internet, to form a distributed system . Each
-            of these has its own memory, of course, and the systems communicate
-            by message passing. <br><br>The only real difference between Fig. 8-1(c) and
-            Fig. 8-1(b) is that in the former, complete computers are used and
-            message times are often 10-50 msec. This long delay forces these
-            loosely-coupled systems to be used in different ways than the
-            tightly-coupled systems of Fig. 8-1(b).<br><br> The three types of systems
-            differ in their delays by something like three orders of magnitude.
-            That is the difference between a day and three years. This chapter
-            has three major sections, corresponding to the three models of Fig.
-            8-1. In each one, we start out with a brief introduction to the
-            relevant hardware. Then we move on to the software, especially the
-            operating system issues for that type of system. As we will see, in
-            each case different issues are present.
-          </p>
-
-          <a href="#TTable-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="SECURITY">
-        <details>
-          <summary>SECURITY</summary>
-          <p>
-            Many companies possess valuable information that they guard closely.
-            This information can be technical (e.g., a new chip design or
-            software), commercial (e.g., studies of the competition or marketing
-            plans), financial (e.g., plans for a stock offering), legal (e.g.,
-            documents about a potential merger or takeover), among many other
-            possibilities. Frequently this information is protected by having a
-            uniformed guard at the building entrance who checks to see that all
-            people entering the building are wearing a proper badge.<br><br> In
-            addition, many offices may be locked and some file cabinets may be
-            locked as well to ensure that only authorized people have access to
-            the information. <br><br>As more and more of this information is stored in
-            computer systems, the need to protect it is becoming increasingly
-            important Protecting this information against unauthorized usage is
-            therefore a major concern of all operating systems.<br><br> Unfortunately,
-            it is also becoming increasingly difficult due to the widespread
-            acceptance of system bloat as being a normal and acceptable
-            phenomenon. In the following sections we will look at a variety of
-            issues concerned with security and protection, some of which have
-            analogies to real-world protection of information on paper, but some
-            of which are unique to computer systems. In this chapter we will
-            examine computer security as it applies to operating systems.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="CASE STUDY 1: UNIX AND LINUX">
-        <details>
-          <summary>CASE STUDY 1: UNIX AND LINUX</summary>
-          <p>
-            In the previous chapters, we examined many operating system
-            principles, abstractions, algorithms, and techniques in general. Now
-            it is time to look at some concrete systems to see how these
-            principles are applied in the real world. <br><br>We will begin with UNIX
-            because it runs on a wider variety of computers than any other
-            operating system. It is the dominant operating system on high-end
-            workstations and servers, but it is also used on systems ranging
-            from notebook computers to supercomputers. It was carefully designed
-            with a clear goal in mind, and despite its age, is still modern and
-            elegant. Many important design principles are illustrated by UNIX.
-            Quite a few of these have been copied by other systems.<br><br> Our
-            discussion of UNIX will start with its history and evolution of the
-            system. Then we will provide an overview of the system, to give an
-            idea of how it is used. This overview will be of special value to
-            readers familiar only with Windows, since the latter hides virtually
-            all the details of the system from its users. Although graphical
-            interfaces may be easy for beginners, they provide little
-            flexibility and no insight into how the system works.<br><br> Next we come
-            to the heart of this chapter, an examination of processes, memory
-            management, I/O, the file system, and security in UNIX. For each
-            topic we will first discuss the fundamental concepts, then the
-            system calls, and finally the implementation. One problem that we
-            will encounter is that there are many versions and clones of UNIX,
-            including AIX, BSD, 1BSD, HP-UX, Linux, MINIX, OSF/1, SCO UNIX,
-            System V, Solaris, XENIX, and various others, and each of these has
-            gone through many versions. Fortunately, the fundamental principles
-            and system calls are pretty much the same for all of them (by
-            design).<br><br> Furthermore, the general implementation strategies,
-            algorithms, and data structures are similar, but there are some
-            differences. In this chapter we will draw upon several examples when
-            discussing implementation, primarily 4.4BSD (which forms the basis
-            for FreeBSD), System V Release 4, and Linux. Additional information
-            about various implementations can be found in (Beck et al., 1998;
-            Goodheart and Cox, 1994; Maxwell, 1999; McKusick et al., 1996; Pate,
-            1996; and Vahalia, 1996).
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="CASE STUDY 2: WINDOWS 2000">
-        <details>
-          <summary>CASE STUDY 2: WINDOWS 2000</summary>
-          <p>
-            Windows 2000 is a modern operating system that runs on high-end
-            desktop PCs and servers. In this examine various aspects of it,
-            starting with a brief history, then moving on to its architecture.
-            After this at processes, memory management, I/O, the file system,
-            and finally, security. One thing we will networking as that could
-            easily fill a chapter (or an entire book) all by itself.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="OPERATING SYSTEM DESIGN">
-        <details>
-          <summary>OPERATING SYSTEM DESIGN</summary>
-          <p>
-            In the past 11 chapters, we have covered a lot of ground and taken a
-            look at many concepts and examples relating to operating systems.
-            But studying existing operating systems is different from designing
-            a new one. In this chapter we are going to take a quick look at some
-            of the issues and trade-offs that operating systems designers have
-            to take into account when designing and implementing a new system.
-            There is a certain amount of folklore about what is good and what is
-            bad floating around in the operating systems community, but
-            surprisingly little has been written down. Probably the most
-            important book is Fred Brooks’ classic (1975) book The Mythical Man
-            Month in which he relates his experiences in designing and
-            implementing IBM’s OS/360.<br><br> The 20th anniversary edition revises some
-            of that material and adds four new chapters (Brooks, 1995). Probably
-            the only operating systems textbook dealing with design in a serious
-            way is Operating Systems: A Design-Oriented Approach (Crowley,
-            1997). Three classic papers on operating system design are “Hints
-            for Computer System Design” (Lampson, 1984), “On Building Systems
-            that Will Fail” (Corbat, 1991), and “End-to-End Arguments in System
-            Design” (Saltzer et al., 1984). Like Brooks’ book, all three papers
-            have survived the years extremely well; most of their insights are
-            still as valid now as when they were first published. This chapter
-            draws upon these sources, plus the author’s personal experience as
-            designer or co-designer of three systems: Amoeba (Tanenbaum et al.,
-            1990), MINIX (Tanenbaum and Woodhull, 1997), and Globe (Van Steen et
-            al., 1999a). Since no consensus exists among operating system
-            designers about the best way to design an operating system, this
-            chapter will thus be more personal, speculative, and undoubtedly
-            more controversial than the previous ones.
-          </p>
-          <a href="#Table-of-contents">Return to the table of contents</a>
-        </details>
-      </section>
-      <section id="READING LIST AND BIBLIOGRAPHY">
-        <details>
-          <summary>READING LIST AND BIBLIOGRAPHY</summary>
-          <p>
-            In the previous 12 chapters we have touched upon a variety of:
-            topics. This chapter is intended as an aid to readers interested in
-            pursuing their study of operating systems further. Section 13.1 is a
-            list of suggested readings. Section 13.2 is an alphabetical
-            bibliography of all books and articles cited in this book. <br><br>In
-            addition to the references given below, the Proceedings of the n-th
-            ACM Symposium on Operating Systems Principles (ACM) held every other
-            year and the Proceedings of the n-th International Conference on
-            Distributed Computing Systems (IEEE) held every year are good places
-            to look for recent papers on operating systems. So is the USENIX
-            Symposium on Operating Systems Design and Implementation.
-            Furthermore, ACM Transactions on Computer Systems and Operating
-            Systems Review are two journals that often have relevant articles.
-          </p>
-          <a href="#Table-of-contents">  Return to the table of contents</a>
-        </details>
-      </section>
-    </div>
+        <a href="#TTable-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="SECURITY">
+      <details>
+        <summary>SECURITY</summary>
+        <p>
+          Many companies possess valuable information that they guard closely.
+          This information can be technical (e.g., a new chip design or
+          software), commercial (e.g., studies of the competition or marketing
+          plans), financial (e.g., plans for a stock offering), legal (e.g.,
+          documents about a potential merger or takeover), among many other
+          possibilities. Frequently this information is protected by having a
+          uniformed guard at the building entrance who checks to see that all
+          people entering the building are wearing a proper badge.<br><br> In
+          addition, many offices may be locked and some file cabinets may be
+          locked as well to ensure that only authorized people have access to
+          the information. <br><br>As more and more of this information is stored in
+          computer systems, the need to protect it is becoming increasingly
+          important Protecting this information against unauthorized usage is
+          therefore a major concern of all operating systems.<br><br> Unfortunately,
+          it is also becoming increasingly difficult due to the widespread
+          acceptance of system bloat as being a normal and acceptable
+          phenomenon. In the following sections we will look at a variety of
+          issues concerned with security and protection, some of which have
+          analogies to real-world protection of information on paper, but some
+          of which are unique to computer systems. In this chapter we will
+          examine computer security as it applies to operating systems.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="CASE STUDY 1: UNIX AND LINUX">
+      <details>
+        <summary>CASE STUDY 1: UNIX AND LINUX</summary>
+        <p>
+          In the previous chapters, we examined many operating system
+          principles, abstractions, algorithms, and techniques in general. Now
+          it is time to look at some concrete systems to see how these
+          principles are applied in the real world. <br><br>We will begin with UNIX
+          because it runs on a wider variety of computers than any other
+          operating system. It is the dominant operating system on high-end
+          workstations and servers, but it is also used on systems ranging
+          from notebook computers to supercomputers. It was carefully designed
+          with a clear goal in mind, and despite its age, is still modern and
+          elegant. Many important design principles are illustrated by UNIX.
+          Quite a few of these have been copied by other systems.<br><br> Our
+          discussion of UNIX will start with its history and evolution of the
+          system. Then we will provide an overview of the system, to give an
+          idea of how it is used. This overview will be of special value to
+          readers familiar only with Windows, since the latter hides virtually
+          all the details of the system from its users. Although graphical
+          interfaces may be easy for beginners, they provide little
+          flexibility and no insight into how the system works.<br><br> Next we come
+          to the heart of this chapter, an examination of processes, memory
+          management, I/O, the file system, and security in UNIX. For each
+          topic we will first discuss the fundamental concepts, then the
+          system calls, and finally the implementation. One problem that we
+          will encounter is that there are many versions and clones of UNIX,
+          including AIX, BSD, 1BSD, HP-UX, Linux, MINIX, OSF/1, SCO UNIX,
+          System V, Solaris, XENIX, and various others, and each of these has
+          gone through many versions. Fortunately, the fundamental principles
+          and system calls are pretty much the same for all of them (by
+          design).<br><br> Furthermore, the general implementation strategies,
+          algorithms, and data structures are similar, but there are some
+          differences. In this chapter we will draw upon several examples when
+          discussing implementation, primarily 4.4BSD (which forms the basis
+          for FreeBSD), System V Release 4, and Linux. Additional information
+          about various implementations can be found in (Beck et al., 1998;
+          Goodheart and Cox, 1994; Maxwell, 1999; McKusick et al., 1996; Pate,
+          1996; and Vahalia, 1996).
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="CASE STUDY 2: WINDOWS 2000">
+      <details>
+        <summary>CASE STUDY 2: WINDOWS 2000</summary>
+        <p>
+          Windows 2000 is a modern operating system that runs on high-end
+          desktop PCs and servers. In this examine various aspects of it,
+          starting with a brief history, then moving on to its architecture.
+          After this at processes, memory management, I/O, the file system,
+          and finally, security. One thing we will networking as that could
+          easily fill a chapter (or an entire book) all by itself.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="OPERATING SYSTEM DESIGN">
+      <details>
+        <summary>OPERATING SYSTEM DESIGN</summary>
+        <p>
+          In the past 11 chapters, we have covered a lot of ground and taken a
+          look at many concepts and examples relating to operating systems.
+          But studying existing operating systems is different from designing
+          a new one. In this chapter we are going to take a quick look at some
+          of the issues and trade-offs that operating systems designers have
+          to take into account when designing and implementing a new system.
+          There is a certain amount of folklore about what is good and what is
+          bad floating around in the operating systems community, but
+          surprisingly little has been written down. Probably the most
+          important book is Fred Brooks’ classic (1975) book The Mythical Man
+          Month in which he relates his experiences in designing and
+          implementing IBM’s OS/360.<br><br> The 20th anniversary edition revises some
+          of that material and adds four new chapters (Brooks, 1995). Probably
+          the only operating systems textbook dealing with design in a serious
+          way is Operating Systems: A Design-Oriented Approach (Crowley,
+          1997). Three classic papers on operating system design are “Hints
+          for Computer System Design” (Lampson, 1984), “On Building Systems
+          that Will Fail” (Corbat, 1991), and “End-to-End Arguments in System
+          Design” (Saltzer et al., 1984). Like Brooks’ book, all three papers
+          have survived the years extremely well; most of their insights are
+          still as valid now as when they were first published. This chapter
+          draws upon these sources, plus the author’s personal experience as
+          designer or co-designer of three systems: Amoeba (Tanenbaum et al.,
+          1990), MINIX (Tanenbaum and Woodhull, 1997), and Globe (Van Steen et
+          al., 1999a). Since no consensus exists among operating system
+          designers about the best way to design an operating system, this
+          chapter will thus be more personal, speculative, and undoubtedly
+          more controversial than the previous ones.
+        </p>
+        <a href="#Table-of-contents">Return to the table of contents</a>
+      </details>
+    </section>
+    <section id="READING LIST AND BIBLIOGRAPHY">
+      <details>
+        <summary>READING LIST AND BIBLIOGRAPHY</summary>
+        <p>
+          In the previous 12 chapters we have touched upon a variety of:
+          topics. This chapter is intended as an aid to readers interested in
+          pursuing their study of operating systems further. Section 13.1 is a
+          list of suggested readings. Section 13.2 is an alphabetical
+          bibliography of all books and articles cited in this book. <br><br>In
+          addition to the references given below, the Proceedings of the n-th
+          ACM Symposium on Operating Systems Principles (ACM) held every other
+          year and the Proceedings of the n-th International Conference on
+          Distributed Computing Systems (IEEE) held every year are good places
+          to look for recent papers on operating systems. So is the USENIX
+          Symposium on Operating Systems Design and Implementation.
+          Furthermore, ACM Transactions on Computer Systems and Operating
+          Systems Review are two journals that often have relevant articles.
+        </p>
+        <a href="#Table-of-contents">  Return to the table of contents</a>
+      </details>
+    </section>
+  </section>
   </main>
     <nav id="contents-container">
       <h2>Table of contents</h2>
-
       <table id="Table-of-contents">
         <thead>
           <tr>
@@ -765,8 +780,8 @@
         </tr>
       </table>
     </nav>
-    
-    <aside id="side-books">
+  
+    <aside id="side-content">
       <header>
         <h1>
           See Also
@@ -775,7 +790,7 @@
       <ul>
         <li>
           <article class="book">
-            <img src="../Resources/Understanding the Linux Kernel.jpg" width="220" height="310" />
+            <img src="../Resources/Understanding-the-Linux-Kernel.jpg" width="220" height="310" />
             <header>
               <h1>
                 <a href="understanding the Linux Kernel.html"><cite>Bovet, D. P., Cesati, M. (2005). Understanding the
@@ -803,7 +818,7 @@
         </li>
         <li>
           <article class="book">
-            <img src="../Resources/The Design of the UNIX Operating Syastems.jpg" width="220" height="310" />
+            <img src="../Resources/The-Design-of-the-UNIX-Operating-Systems.jpg" width="220" height="310" />
             <header>
               <h1>
                 <a href="#"><cite>Bach, M. J. (1986). The Design of the UNIX Operating
@@ -830,7 +845,7 @@
         </li>
         <li>
           <article class="book">
-            <img src="../Resources/Operating Systems Internals and Design Principles.jpg" width="220" height="310" />
+            <img src="../Resources/Operating-Systems-Internals-and-Design-Principles.jpg" width="220" height="310" />
             <header>
               <h1>
                 <a href="#"><cite>Stallings, W. (2001). Operating Systems: Internals and Design
@@ -860,7 +875,6 @@
         </li>
       </ul>
     </aside>
-  
 
   <footer>
     <div id="left-footer">
@@ -915,5 +929,4 @@
     </div>
   </footer>
 </body>
-
 </html>
