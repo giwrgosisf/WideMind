@@ -206,15 +206,14 @@ main {
     position: relative;
     text-align: center;
     width: 100%;
-    user-select: none;
-    pointer-events: none;
+
 }
 
 
 .intro p {
     font-size: 1.5rem;
     color: #ffffff;
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: italic;
     text-align: center;
     margin-bottom: 1rem;
@@ -233,7 +232,7 @@ main {
 
 .category-card p {
     font-family: "Poppins", sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: #ffffff;
     padding-top: 2rem;
@@ -415,62 +414,61 @@ main {
 } */
 
 
-#operating-main .page-titles>h1, #operating-main .page-titles>h2 {
+#subcat-main .page-titles>h1, #subcat-main .page-titles>h2 {
     color: white;
     font-size: 5em;
     font-family: "Libre Franklin", sans-serif;
     font-style: italic;
-    margin-bottom: 0.3em;
-    margin-left: 0.7em;
+    margin-bottom: 0.1em;
+    margin-left: 0.3em;
 }
 
-#operating-main .page-titles>h2 {
+#subcat-main .page-titles>h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 
 
-#operating-main>p {
+#subcat-main>p {
     color: white;
     font-size: 1.5em;
     line-height: 2em;
     font-family: 'Poppins';
     text-align: left;
-    margin-left: 4rem;
+    margin-left: 0.6rem;
     margin-right: 4rem;
-    padding: 1em;
+    padding: 0.5em;
 
     margin-bottom: 5em;
 
 
 }
 
-#operating-main .emphasize {
-    font-size: 2em;
-    font-weight: 700;
+#subcat-main .emphasize {
+    font-size: 1.5em;
+    font-weight: 400;
     line-height: 3em;
 
 }
 
-#operating-main .emphasize-child {
+#subcat-main .emphasize-child {
     line-height: 1em;
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: 1.7em;
 
 
 }
 
 
-#operating-main .keywords {
+#subcat-main .keywords {
     border-bottom: 5px solid #F3F3E0;
     border-bottom-style: double;
     padding: 0.2em;
 
 }
 
-#operating-main>img {
+#subcat-main>img {
     width: 200px;
     height: 200px;
     padding-bottom: 2em;
@@ -515,19 +513,16 @@ main {
 
 .book, .lecture {
     box-sizing: border-box;
-    height: 720px;
+    height: fit-content;
     transition: box-shadow 0.2s ease;
     border: 1px solid transparent;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0);
-    padding: 10px;
+    padding: 20px;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
 
 }
 
-.lecture {
-    height: 1000px;
-    margin-bottom: 5em;
-
-}
 
 .book:hover, .lecture:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -556,8 +551,8 @@ main {
 
 .book>p {
     margin-top: 0.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
     text-align: left;
 }
 
@@ -648,10 +643,10 @@ main {
     font-size: 1em;
     text-align: left;
     padding-right: 5em;
-    height: 2em;
+    height: fit-content;
     margin-left: 1em;
     font-family: "Poppins";
-    font-weight: 200;
+    font-weight: 300;
 
 }
 
@@ -659,20 +654,16 @@ main {
 
 
 .filters, .key-terms {
-    width: 20%;
+    width: 25%;
     box-sizing: border-box;
     background-color: #ffffff;
     color: #333;
     border-radius: 2rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    padding-bottom: 1rem;
 }
 
-
-
-.key-terms{
-    width: 25%;
-    padding-bottom: 2rem;
-}
 
 
 .filters>details, .key-terms>details {
@@ -681,7 +672,7 @@ main {
     width: 100%;
 }
 
-.key-terms > details {
+.key-terms>details {
     font-size: 1rem;
     margin: 1rem auto;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -707,7 +698,7 @@ main {
 }
 
 
-.key-terms > details > summary {
+.key-terms>details>summary {
     padding: 1em;
     font-size: large;
     font-style: italic;
@@ -723,7 +714,7 @@ main {
 
 }
 
-.key-terms summary::after{
+.key-terms summary::after {
     font-weight: bold;
     font-style: normal;
 }
@@ -743,7 +734,7 @@ main {
 
 
 
-.key-terms > h3{
+.key-terms>h3 {
     text-align: center;
     padding-top: 1rem;
     font-style: italic;

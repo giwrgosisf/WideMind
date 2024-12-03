@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Machine Learning</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Machine Learning Subcategory Page">
+  <meta name="keywords"
+    content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses">
+  <meta name="author" content="WideMind Organization">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper-three-col">
+    <header>
+      <div class="header">
+        <a href="index.html"><img id="logo" src="../Resources/widemind-logo.png">
+        </a>
+        <div id="search-bar">
+          <input name="search-input" type="text" autocomplete="off" spellcheck="false"
+            placeholder="Search for books or recordings...">
+          <button class="search-button" type="button">
+            <img id="search-icon" src="../Resources/searchIcon.png">
+          </button>
+        </div>
+        <nav id="navBar">
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <aside class="filters">
+      <details open>
+        <summary>Type</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="book-type" name="type-filter" value="Book">
+            <label for="book-type">Book</label><br>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="lecture-type" name="type-filter" value="Lecture">
+            <label for="lecture-type">Recorded Lecture</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Price</summary>
+        <input type="range" min="0" max="200" class="price-range" id="price-range">
+        <div class="price-labels">
+          <span class="min-price-label">0€</span>
+          <span class="max-price-label">200€</span>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Rating</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="5star-rating" name="rating-filter" value="5Star">
+            <label for="5star-rating">5 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="4star-rating" name="rating-filter" value="4Star">
+            <label for="4star-rating">4 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="3star-rating" name="rating-filter" value="3Star">
+            <label for="3star-rating">3 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="2star-rating" name="rating-filter" value="2Star">
+            <label for="2star-rating">2 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="1star-rating" name="rating-filter" value="1Star">
+            <label for="1star-rating">1 Star</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Author / Instructor</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="bishop-filter" name="author-filter" value="bishop">
+            <label for="bishop-filter">Christopher M. Bishop</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="murphy-filter" name="author-filter" value="murphy">
+            <label for="murphy-filter">Kevin P. Murphy</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="forsyth-filter" name="author-filter" value="forsyth">
+            <label for="forsyth-filter">David Forsyth</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="burkov-filter" name="author-filter" value="burkov">
+            <label for="burkov-filter">Andriy Burkov</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="weinberger-filter" name="author-filter" value="weinberger">
+            <label for="weinberger-filter">Kilian Weinberger</label>
+          </div>
+
+
+          <div class="input-label-container">
+            <input type="checkbox" id="muller-filter" name="author-filter" value="muller">
+            <label for="muller-filter">Andreas C. Müller</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="leskovec-filter" name="author-filter" value="leskovec">
+            <label for="leskovec-filter">Jure Leskovec</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="eyolfson-filter" name="author-filter" value="Eyolfson">
+            <label for="eyolfson-filter">Jon Eyolfson</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="ng-filter" name="author-filter" value="ng">
+            <label for="ng-filter">Andrew Ng</label>
+          </div>
+        </div>
+      </details>
+
+
+      <details open>
+        <summary>Year of Publish</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="before-2000" name="year-filter" value="before-2000">
+            <label for="before-2000"> Before 2000</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="2000-2010" name="year-filter" value="2000-2010">
+            <label for="2000-2010">2000 - 2010</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="after-2010" name="year-filter" value="after-2010">
+            <label for="after-2010">After 2010</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Pages</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="0-500-pages" name="pages-filter" value="0-500-pages">
+            <label for="0-500-pages"> 0-500 Pages</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="501-1000-pages" name="pages-filter" value="501-1000-pages">
+            <label for="501-1000-pages">501-1000 Pages</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="1001-pages" name="pages-filter" value="1001-pages">
+            <label for="1001-pages">1000+ Pages</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Total Time</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="0-12-hours" name="time-filter" value="0-12-hours">
+            <label for="0-12-hours"> 0-12 Hours</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="13-24-hours" name="time-filter" value="13-24-hours">
+            <label for="13-24-hours">13-24 Hours</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="25-hours" name="time-filter" value="25-hours">
+            <label for="25-hours">24+ Hours</label>
+          </div>
+        </div>
+      </details>
+    </aside>
+
+    <section id="upper-page">
+
+      <h2>Machine Learning</h2>
+      <h3>Educational courses on Machine Learning</h3>
+
+
+      <img src="../Resources/ml-icon.png">
+
+
+      <p class="emphasize">Are you <span class="keywords">interested</span> in deepening your
+        knowledge of<span class="keywords">machine learning</span>?<br>
+        Curious to learn in depth
+        <span class="keywords">how algorithms make decisions</span> and learn to build intelligent systems?<br>
+      </p>
+      <!--<span class="emphasize">Then you're in the right place!</span><br ><span class="emphasize-child">-->
+      <p class="emphasize-child"> Below, we offer recommended books and educational lectures to help you
+        immerse yourself in the world of machine learning!</p>
+
+    </section>
+
+    <!--Page description -->
+    <main id="subcat-main">
+      <!--Section books -->
+
+      <section id="book-section">
+        <h2>Books</h2>
+
+        <article class="book">
+          <img src="../Resources/Pattern-Recognition-and-Machine-Learning.png">
+          <header>
+            <h1>
+              <a href="#"><cite>Pattern Recognition and Machine Learning. (Springer,February 2006)</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Author: Christopher M. Bishop</p>
+          <p class="pages">Pages: 738</p>
+          <p>
+            This is the first textbook on pattern recognition to present the
+            Bayesian viewpoint. The book presents approximate inference
+            algorithms that permit fast approximate answers in situations where
+            exact answers are not feasible. It uses graphical models to describe
+            probability distributions when no other books apply graphical models
+            to machine learning. No previous knowledge of pattern recognition or
+            machine learning concepts is assumed. Familiarity with multivariate
+            calculus and basic linear algebra is required, and some experience
+            in the use of probabilities would be helpful though not essential as
+            the book includes a self-contained introduction to basic probability
+            theory.
+          </p>
+          <p class="price">Price: €71.61</p>
+        </article>
+
+        <article class="book">
+          <img src="../Resources/proabilistic-machine-learning.png">
+          <header>
+            <h1>
+              <a href="#"><cite>Probabilistic Machine Learning, An Introduction. (The MIT Press, March 2022)</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Authors: Kevin P. Murphy</p>
+          <p class="pages">Pages: 864</p>
+          <p>
+            This book offers a detailed and up-to-date introduction to machine
+            learning (including deep learning) through the unifying lens of
+            probabilistic modeling and Bayesian decision theory. The book covers
+            mathematical background (including linear algebra and optimization),
+            basic supervised learning (including linear and logistic regression
+            and deep neural networks), as well as more advanced topics
+            (including transfer learning and unsupervised learning).
+            End-of-chapter exercises allow students to apply what they have
+            learned, and an appendix covers notation.
+          </p>
+          <p class="price">Price: €95.95</p>
+        </article>
+
+        <article class="book">
+          <img src="../Resources/applied-machine-learning.png">
+          <header>
+            <h1>
+              <a href="#"><cite>Applied Machine Learning. (Springer, July 2019)</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Author: David Forsyth</p>
+          <p class="pages">Pages: 515</p>
+          <p>
+            Machine learning methods are now an important tool for scientists,
+            researchers, engineers and students in a wide range of areas. This
+            book is written for people who want to adopt and use the main tools
+            of machine learning, but aren't necessarily going to want to be
+            machine learning researchers. Intended for students in final year
+            undergraduate or first year graduate computer science programs in
+            machine learning, this textbook is a machine learning toolkit.
+            Applied Machine Learning covers many topics for people who want to
+            use machine learning processes to get things done, with a strong
+            emphasis on using existing tools and packages, rather than writing
+            one's own code.
+          </p>
+          <p class="price">Price: €102.17</p>
+        </article>
+
+        <article class="book">
+          <img src="../Resources/machine-learning-engineering.png">
+          <header>
+            <h1>
+              <a href="#"><cite>Machine Learning Engineering. (True Positive Inc. , September 2020)</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Athour: Andriy Burkov</p>
+          <p class="pages">Pages: 310</p>
+          <p>
+            From the author of a world bestseller published in eleven languages,
+            The Hundred-Page Machine Learning Book, this new book by Andriy
+            Burkov is the most complete applied AI book out there. It is filled
+            with best practices and design patterns of building reliable machine
+            learning solutions that scale. Andriy Burkov has a Ph.D. in AI and
+            is the leader of a machine learning team at Gartner. This book is
+            based on Andriy's own 15 years of experience in solving problems
+            with AI as well as on the published experience of the industry
+            leaders.
+          </p>
+          <p class="price">Price: €39.49</p>
+        </article>
+      </section>
+
+      <section id="lecture-section">
+        <h2>Lectures</h2>
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>Machine Learning for Intelligent Systems, Fall 2018 </cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/ml-lecture1.png">
+          <p class="university">Department of Computer Science, Cornell University</p>
+          <p class="instructor">Instuctor: Kilian Weinberger</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 41</p>
+          <p class="duration">
+            Total Duration: 1 day, 7 hours, 15 minutes, 38 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            The goal of this course is to give an introduction to the field of
+            machine learning. The course will teach you basic skills to decide
+            which learning algorithm to use for what problem, code up your own
+            learning algorithm and evaluate and debug it. The field of machine
+            learning is concerned with the question of how to construct computer
+            programs that automatically improve with experience. Recently, many
+            successful machine learning applications have been developed,
+            ranging from data-mining programs that learn to detect fraudulent
+            credit card transactions, to information-filtering systems that
+            learn users' reading preferences, to autonomous vehicles that learn
+            to drive. There have also been important advances in the theory and
+            algorithms that form the foundation of this field. This course will
+            provide a broad introduction to the field of machine learning.
+          </p>
+        </article>
+
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>Applied Machine Learning, Spring 2020</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/ml-lecture2.png">
+          <p class="university">Department of Computer Science, Columbia University</p>
+          <p class="instructor">Instuctor: Andreas C. Müller</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 22</p>
+          <p class="duration">
+            Total Duration: 1 day, 2 hours, 35 minutes, 48 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            This class offers a hands-on approach to machine learning and data
+            science. The class discusses the application of machine learning
+            methods like SVMs, Random Forests, Gradient Boosting and neural
+            networks on real world dataset, including data preparation, model
+            selection and evaluation. This class complements COMS W4721 in that
+            it relies entirely on available open source implementations in
+            scikit-learn and tensor flow for all implementations. Apart from
+            applying models, we will also discuss software development tools and
+            practices relevant to productionizing machine learning models.
+          </p>
+        </article>
+
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>Stanford CS224W: Machine Learning with Graphs, Fall 2021</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/ml-lecture3.png">
+          <p class="university">Computer Science, Stanford University</p>
+          <p class="instructor">Instuctor: Jure Leskovec</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 60</p>
+          <p class="duration">
+            Total Duration: 22 hours, 23 minutes, 15 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            Complex data can be represented as a graph of relationships between
+            objects. Such networks are a fundamental tool for modeling social,
+            technological, and biological systems. This course focuses on the
+            computational, algorithmic, and modeling challenges specific to the
+            analysis of massive graphs. By means of studying the underlying
+            graph structure and its features, students are introduced to machine
+            learning techniques and data mining tools apt to reveal insights on
+            a variety of networks.
+          </p>
+        </article>
+
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>Stanford CS229: Machine Learning Full Course taught by Andrew
+                  Ng, Autumn 2018</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/ml-lecture4.png">
+          <p class="university">
+            Computer Science, Stanford University
+          </p>
+          <p class="instructor">Instuctor: Andrew Ng</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 20</p>
+          <p class="duration">
+            Total Duration: 22 hours, 23 minutes, 15 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            Led by Andrew Ng, this course provides a broad introduction to
+            machine learning and statistical pattern recognition. Topics
+            include: supervised learning (generative/discriminative learning,
+            parametric/non-parametric learning, neural networks, support vector
+            machines); unsupervised learning (clustering, dimensionality
+            reduction, kernel methods); learning theory (bias/variance
+            tradeoffs, practical advice); reinforcement learning and adaptive
+            control. The course will also discuss recent applications of machine
+            learning, such as to robotic control, data mining, autonomous
+            navigation, bioinformatics, speech recognition, and text and web
+            data processing.
+          </p>
+        </article>
+      </section>
+
+    </main>
+    <aside class="key-terms">
+      <h3>Key Terms</h3>
+
+      <details>
+        <summary>Machine Learning</summary>
+        <p>
+          Machine Learning (ML) is a branch of artificial intelligence (AI) that focuses on developing systems capable
+          of learning and improving from experience without being explicitly programmed. Instead of following hardcoded
+          rules, machine learning models identify patterns in data and make decisions or predictions based on that
+          knowledge.
+        </p>
+      </details>
+
+      <details>
+        <summary>Dataset</summary>
+        <p>
+          A collection of data used for training or testing a machine learning model. It typically consists of features
+          (input variables) and labels (output variables).
+        </p>
+      </details>
+
+      <details>
+        <summary>Supervised Learning</summary>
+        <p>
+          A type of machine learning where the model is trained on labeled data, meaning the input comes with
+          corresponding correct outputs (e.g., classification, regression).
+        </p>
+      </details>
+
+      <details>
+        <summary>Unsupervised Learning</summary>
+        <p>
+          A machine learning approach where the model is trained on data without explicit labels, aiming to find hidden
+          patterns or groupings (e.g., clustering, dimensionality reduction).
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Classification</summary>
+        <p>
+          Classification is concerned with building models that separate data into distinct classes. These models are
+          built by inputting a set of training data for which the classes are pre-labelled in order for the algorithm to
+          learn from. The model is then used by inputting a different dataset for which the classes are withheld,
+          allowing the model to predict their class membership based on what it has learned from the training set.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Regression</summary>
+        <p>
+          Regression is very closely related to classification. While classification is concerned with the prediction of
+          discrete classes, regression is applied when the "class" to be predicted is made up of continuous numerical
+          values. Linear regression is an example of a regression technique.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Clustering</summary>
+        <p>
+          Clustering is used for analyzing data which does not include pre-labeled classes, or even a class attribute at
+          all. Data instances are grouped together using the concept of "maximizing the intraclass similarity and
+          minimizing the interclass similarity," as concisely described by Han, Kamber and Pei. This translates to the
+          clustering algorithm identifying and grouping instances which are very similar, as opposed to ungrouped
+          instances which are much less-similar to one another.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Neural Networks</summary>
+        <p>
+          A smaller, faster memory component that stores frequently accessed data to speed up processing.
+        </p>
+      </details>
+
+      <details>
+        <summary>Gradient Descent</summary>
+        <p>
+          An optimization algorithm used to minimize a loss function by iteratively updating model parameters in the
+          direction of the steepest descent.
+        </p>
+      </details>
+
+    </aside>
+
+
+    <footer>
+      <div id="left-footer">
+        <h2>CONTACT</h2>
+        <ul class="menu">
+          <li>
+            <address>
+              Patision 76<br>
+              Zip-Code 104 34 Athens
+              <br><a
+                href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
+                in map</a>
+            </address>
+          </li>
+          <li>
+            Tel:
+            <a href="tel:+2108203315">210-8203315</a>,
+            <a href="tel:2108203316">316</a>
+          </li>
+
+          <li>
+            Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div id="middle-footer">
+        <h2>INFORMATION</h2>
+        <ul class="information">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Manage Cookies</a></li>
+        </ul>
+      </div>
+      <div id="right-footer">
+        <h2>CONNECT WITH US</h2>
+        <ul class="social-media">
+          <li>
+            <a href="https://www.github.com" class="fa-brands fa-github"></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
+          </li>
+          <li>
+            <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
+          </li>
+        </ul>
+      </div>
+      <div id="lower-footer">
+        <p>©Copyright 2024 WideMind Organization</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -323,12 +323,11 @@ main {
 
 
 
-/*--------------OPERATING SYSTEMS CSS-----------*/
+/*--------------OPERATING SYSTEMS AND MACHINE LEARNING CSS-----------*/
 .wrapper-three-col {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     row-gap: 4rem;
-    min-height: 100vh;
     column-gap: 4rem;
     grid-template-areas:
         'header header header'
@@ -363,7 +362,7 @@ footer{
 }
 
 
-  .upper-page>h1,  .upper-page>h2 {
+  #upper-page>h2,  #upper-page>h3 {
     color: white;
     font-size: 5em;
     font-style: italic;
@@ -371,18 +370,18 @@ footer{
     margin-left: 0.3em;
 }
 
-.upper-page>h2 {
+#upper-page>h3 {
     font-size: 2em;
     margin-bottom: 1em;
     margin-left: 1em;
 }
 
-.upper-page{
+#upper-page{
     margin-top:4rem;
     grid-area:upper-page;
 }
 
-.upper-page > p {
+#upper-page > p {
     color: white;
     line-height: 1.5em;
     text-align: left;
@@ -409,7 +408,7 @@ footer{
 
 
 
-.upper-page > img {
+#upper-page > img {
     width:250px;
     height: 250px;
     padding-bottom: 2em;
@@ -419,12 +418,9 @@ footer{
 
 } 
 
-#operating-main {
+#subcat-main {
     margin: 0;
     padding: 0;
-}
-
-.course {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -628,6 +624,7 @@ footer{
 
 .filters {
     margin-left: 0.5rem;
+    gap:14px
 }
 
 .key-terms {
@@ -670,8 +667,6 @@ footer{
     background: var(--primary-color);
     border-radius: 2rem;
     max-width: 90%;
-    display: flex;
-    flex-direction: column;
 }
 
 .filters>details:last-of-type, .key-terms>details {
@@ -696,6 +691,10 @@ footer{
     font-size: large;
     font-style: italic;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .filters summary::after, .key-terms summary::after {
@@ -741,6 +740,7 @@ footer{
     cursor: default;
     padding: 1em;
     font-weight: 300;
+    font-size: 1rem;
     line-height: 1.5;
     color: #232323;
 }
