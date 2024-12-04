@@ -528,7 +528,7 @@ footer {
 .book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
     font-size: 1em;
     text-align: left;
-    height: 2em;
+    padding-bottom: 0.5rem;
     font-weight: bold;
 }
 
@@ -903,8 +903,8 @@ footer {
 
 .product-stars-rating, .product-stars-end-rating, .product-stars-start-rating {
     text-align: left;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background: gold;
     clip-path: polygon(50% 0%,
             61% 35%,
@@ -951,7 +951,7 @@ footer {
 #content-analysis img{
     width:auto;
     max-width:97%;
-    height: 30rem;
+    height: 25rem;
 
 }
 
@@ -992,7 +992,7 @@ footer {
     padding-right: 1.5em;
     text-align: center;
     grid-area:nav;
-    width: 400px;
+    /* width: 400px; */
     margin-left:1rem;
    
 
@@ -1081,7 +1081,8 @@ details > figure> figcaption {
     grid-area:aside ;
     text-align: center;
     overflow-y: auto;
-    width: 400px;
+    overflow-x: hidden;
+    /* width: 400px; */
     margin-right:10px;
     height: 1400px;
     padding-bottom:2em;
@@ -1090,7 +1091,9 @@ details > figure> figcaption {
 
 #side-content ul {
     align-items: center;
-    width:90%;
+    /* width:90%; */
+    max-width: 95%;
+    margin:1rem auto;
    
 
 }
@@ -1098,16 +1101,17 @@ details > figure> figcaption {
 #side-content ul>li {
     display:flex;
     flex-direction: column;
-    padding-left: 1em;
+    /* padding-left: 1em; */
     align-items: center;
     list-style: none;
-    margin-top: 3em;
+    margin-top: 1em;
    
 
 }
 
 #side-content ul>li>.book>header>h1 {
     font-size: 0.9em;
+    width: fit-content;
 }
 
 #side-content ul>li>.book, #side-content ul>li>.lecture {
@@ -1117,6 +1121,7 @@ details > figure> figcaption {
    border-radius:2rem;
    align-items: center;
    height: fit-content;
+   width: 95%;
    
    
    
@@ -1131,14 +1136,23 @@ details > figure> figcaption {
 
 #side-content ul>li>.book > .author{
     line-height: 1em;
+    text-align: center;
  }
 
 
  #side-content ul>li>.book > img ,  #side-content ul>li>.lecture > img {
     float:none;
-    max-width:97%;
+    /* max-width:97%; */
+    /* width: auto; */
+    height: 15rem;
     
 }
+
+#side-content ul>li>.lecture > img{
+    width: auto;
+    height: 8rem;
+}
+
 #side-content ul>li>.book>.stars-rating {
     text-align: center;
 }
@@ -1192,6 +1206,9 @@ details > figure> figcaption {
     background: #f1f1f1;
 }
 
+#side-content .university, #side-content .instructor,#side-content .number-of-lectures, #side-content .duration{
+    text-align: center;
+}
 
 
 
