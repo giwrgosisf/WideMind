@@ -97,14 +97,14 @@ h1, h2, h3 {
     margin-right: 2rem;
 }
 
-/* #navBar>ul {
+#navBar>ul {
     list-style: none;
-    display: flex;
+    /* display: flex; */
     gap: 1rem;
     padding: 0;
     margin: 0;
 
-} */
+}
 
 #navBar li a {
     text-decoration: none;
@@ -1359,7 +1359,9 @@ ul .fa-brands {
     float: left;
 }
 
-
+.social-media>li{
+    list-style: none;
+}
 
 
 .btnImitation {
