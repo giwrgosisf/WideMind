@@ -792,6 +792,7 @@ footer {
     grid-template-areas:
     "header header header"
     "nav main aside"
+    "details details details"
     "footer footer footer";
 }
 
@@ -998,6 +999,8 @@ footer {
 }
 
 #details {
+    margin-top:-10em;
+    grid-area: details;
     width: 98%;
     margin-left: 1em;
     text-align: center;
