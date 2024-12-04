@@ -886,17 +886,7 @@ main {
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
 
-.book-lecture-main > a{
-    align-items: flex-start;
-    display:flex;
-    flex-direction: column;
-    gap:1em;
-    width: 318px;
-    text-decoration: none;
-    margin-bottom:1em;
-    margin-top: 4em;
-    margin-left:2em;
-}
+
 
 .back-button{
     padding: 14px 28px;

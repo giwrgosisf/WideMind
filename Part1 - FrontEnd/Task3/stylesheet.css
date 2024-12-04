@@ -817,16 +817,17 @@ footer {
     
 }
 
-.book-lecture-main > a{
+#content-analysis > a{
     align-items: flex-start;
     display:flex;
     flex-direction: column;
     gap:1em;
     width: 318px;
     text-decoration: none;
-    margin-bottom:1em;
-    margin-top: -4em;
+    margin-top:-3em;
+    margin-bottom:-1em;
     margin-left:2em;
+    margin-left:-3em;
 }
 
 .back-button{
@@ -876,11 +877,13 @@ footer {
 
 }
 
-.product-details {
-    float: right;
-    flex: 1;
-    width:fit-content;
+.product{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em;
 }
+
 
 
 
