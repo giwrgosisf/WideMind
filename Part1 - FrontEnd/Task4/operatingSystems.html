@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Operating Systems</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Operating systems subcategory page">
+  <meta name="keywords"
+    content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses">
+  <meta name="author" content="WideMind Organization">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper-three-col-subcourse">
+    <header class="header">
+      <a href="index.html"><img id="logo" src="../Resources/widemind-logo.png">
+      </a>
+      <div id="search-bar">
+        <input name="search-input" type="text" autocomplete="off" spellcheck="false"
+          placeholder="Search for books or recordings...">
+        <button class="search-button" type="button">
+          <img id="search-icon" src="../Resources/searchIcon.png">
+        </button>
+      </div>
+      <nav id="navBar">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="filters">
+      <details open>
+        <summary>Type</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="book-type" name="type-filter" value="Book">
+            <label for="book-type">Book</label><br>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="lecture-type" name="type-filter" value="Lecture">
+            <label for="lecture-type">Recorded Lecture</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Price</summary>
+        <input type="range" min="0" max="200" class="price-range" id="price-range">
+        <div class="price-labels">
+          <span class="min-price-label">0€</span>
+          <span class="max-price-label">200€</span>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Rating</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="5star-rating" name="rating-filter" value="5Star">
+            <label for="5star-rating">5 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="4star-rating" name="rating-filter" value="4Star">
+            <label for="4star-rating">4 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="3star-rating" name="rating-filter" value="3Star">
+            <label for="3star-rating">3 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="2star-rating" name="rating-filter" value="2Star">
+            <label for="2star-rating">2 Stars</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="1star-rating" name="rating-filter" value="1Star">
+            <label for="1star-rating">1 Star</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Author / Instructor</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="tanenbaum-filter" name="author-filter" value="Tanenbaum">
+            <label for="tanenbaum-filter">Andrew Tanenbaum</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="bovet-filter" name="author-filter" value="Bovet">
+            <label for="bovet-filter">Daniel P. Bovet</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="cesati-filter" name="author-filter" value="Cesati">
+            <label for="cesati-filter">Marco Cesati</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="bach-filter" name="author-filter" value="Bach">
+            <label for="bach-filter">Maurice J. Bach</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="stallings-filter" name="author-filter" value="Stallings">
+            <label for="stallings-filter">William Stallings</label>
+          </div>
+
+
+          <div class="input-label-container">
+            <input type="checkbox" id="mashtizadeh-filter" name="author-filter" value="Mashtizadeh">
+            <label for="mashtizadeh-filter">Ali Mashtizadeh</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="arpaci-dusseau-filter" name="author-filter" value="Arpaci-Dusseau">
+            <label for="arpaci-dusseau-filter">Andrea C. Arpaci-Dusseau</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="eyolfson-filter" name="author-filter" value="Eyolfson">
+            <label for="eyolfson-filter">Jon Eyolfson</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="barker-filter" name="author-filter" value="Barker">
+            <label for="barker-filter">Sean Barker</label>
+          </div>
+        </div>
+      </details>
+
+
+      <details open>
+        <summary>Year of Publish</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="before-2000" name="year-filter" value="before-2000">
+            <label for="before-2000"> Before 2000</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="2000-2010" name="year-filter" value="2000-2010">
+            <label for="2000-2010">2000 - 2010</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="after-2010" name="year-filter" value="after-2010">
+            <label for="after-2010">After 2010</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Pages</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="0-500-pages" name="pages-filter" value="0-500-pages">
+            <label for="0-500-pages"> 0-500 Pages</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="501-1000-pages" name="pages-filter" value="501-1000-pages">
+            <label for="501-1000-pages">501-1000 Pages</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="1001-pages" name="pages-filter" value="1001-pages">
+            <label for="1001-pages">1000+ Pages</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Total Time</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="0-12-hours" name="time-filter" value="0-12-hours">
+            <label for="0-12-hours"> 0-12 Hours</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="13-24-hours" name="time-filter" value="13-24-hours">
+            <label for="13-24-hours">13-24 Hours</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="25-hours" name="time-filter" value="25-hours">
+            <label for="25-hours">24+ Hours</label>
+          </div>
+        </div>
+      </details>
+    </aside>
+
+    <!-- <section id="upper-page">
+
+      <h2>Operating Systems</h2>
+      <h3>Educational courses on Operating Systems</h3>
+
+
+      <img src="../Resources/operating.png">
+
+
+      <p class="emphasize">Are you <span class="keywords">interested</span> in deepening your
+        knowledge of<span class="keywords">operating systems</span>?<br>
+        Curious to learn in depth
+        <span class="keywords">how computers work</span>?<br>
+      </p>
+      <p class="emphasize-child"> Below, we offer recommended books and educational lectures to help you
+        immerse yourself in the world of operating systems!</p>
+
+    </section> -->
+
+    <!--Page description -->
+    <main id="subcat-main">
+      <!--Section books -->
+
+      <section id="book-section">
+        <h2>Books</h2>
+
+        <article class="book">
+          <img src="../Resources/Modern-Operating-Systems.jpg">
+          <header>
+            <h1>
+              <a href="modernOperatingSystems.html"><cite>Tanenbaum, A. S. (2009). Modern Operating Systems. United
+                  Kingdom: Pearson Prentice Hall.</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Author: Andrew S. Tanenbaum</p>
+          <p class="pages">Pages: 1072</p>
+          <p>
+            This edition of the global bestseller integrates the latest developments in operating systems technologies,
+            including updated material on Linux, Windows, and real-time and multimedia systems.
+          </p>
+          <p class="price">Price: €87.74</p>
+        </article>
+
+        <article class="book">
+          <img src="../Resources/Understanding-the-Linux-Kernel.png">
+          <header>
+            <h1>
+              <a href="#"><cite>Bovet, D. P., Cesati, M. (2005).
+                Understanding the Linux Kernel. United States: O'Reilly
+                  Media.</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Authors: Daniel P. Bovet, Marco Cesati</p>
+          <p class="pages">Pages: 765</p>
+          <p>
+            The new edition of Understanding the Linux Kernel guides you through the most important data structures,
+            algorithms, and programming tricks used in the kernel. It offers invaluable insights for those wanting to
+            understand how computing systems really work.
+          </p>
+          <p class="price">Price: €38.79</p>
+        </article>
+
+        <article class="book">
+          <img src="../Resources/The-Design-of-the-UNIX-Operating-Systems.jpg">
+          <header>
+            <h1>
+              <a href="#"><cite>Bach, M. J. (1986). The Design of the UNIX Operating System. United
+                  Kingdom: Prentice-Hall.</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Author: Maurice J. Bach</p>
+          <p class="pages">Pages: 471</p>
+          <p>
+            This book describes the internal algorithms and structures of the UNIX® operating system and how they relate
+            to the programmer interface, based on UNIX System V Release 2 supported by AT&T, with features from Release
+            3.
+          </p>
+          <p class="price">Price: €59.11</p>
+        </article>
+
+        <article class="book">
+          <img src="../Resources/Operating-Systems-Internals-and-Design-Principles.jpg">
+          <header>
+            <h1>
+              <a href="#"><cite>Stallings, W. (2001). Operating Systems: Internals and Design
+                  Principles. India: Prentice Hall.</cite></a>
+            </h1>
+          </header>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="author">Athour: William Stallings</p>
+          <p class="pages">Pages: 779</p>
+          <p>
+            This book covers the concepts, structure, and mechanisms of operating systems. Stallings clearly and
+            comprehensively presents the nature and characteristics of modern operating systems, including important
+            programming projects and step-by-step online support with CD/Rom resources.
+          </p>
+          <p class="price">Price: €72.97</p>
+        </article>
+      </section>
+
+      <section id="lecture-section">
+        <h2>Lectures</h2>
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="osLecture.html"><cite>CS350: Operating Systems, Fall 2021</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/os-lecture2.png">
+          <p class="university">University of Waterloo, Canada</p>
+          <p class="instructor">Instuctor: Ali Mashtizadeh</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 12</p>
+          <p class="duration">
+            Total Duration: 9 hours, 17 minutes, 31 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>An introduction to the fundamentals of operating system function, design, and
+            implementation. Topics include concurrency, synchronization, processes, threads, scheduling, memory
+            management, file systems, device management, and security.
+          </p>
+        </article>
+
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>CS 537: Operating Systems, Fall 2019</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/os-lecture3.png">
+          <p class="university">University of Wisconsin-Madison</p>
+          <p class="instructor">Instuctor: Andrea C. Arpaci-Dusseau</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 26</p>
+          <p class="duration">
+            Total Duration: 28 hours, 17 minutes, 26 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            This course will introduce you to the the broad field of operating systems. Operating systems include a wide
+            variety of functionality. This is an introductory course and topics we will cover include basic operating
+            system structure, process and thread synchronization and concurrency, file systems and storage servers,
+            memory management techniques, process scheduling and resource management, and virtualization. The learning
+            outcomes for this course are that at the end of the course you will be able to: Explain the fundamental
+            types of operating system abstraction including processes, synchronization, virtual memory and persistence.
+            Design and implement system libraries and kernel calls, which are mechanisms provided to user to access and
+            develop new operating system functionality. Assess system performance and explain the impact of applying
+            various algorithms and data structures to the complex operation of an operating system.
+          </p>
+        </article>
+
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>Operating Systems, Fall 2024</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/os-lecture1.png">
+          <p class="university">University of Toronto</p>
+          <p class="instructor">Instuctor: Jon Eyolfson</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 22</p>
+          <p class="duration">
+            Total Duration: 18 hours, 12 minutes, 12 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            In this course are discussed the principles in the design and
+            implementation of operating systems software. Topics include:
+            Introduction to operating systems concepts, process management,
+            memory management, file systems for both hard drive and SSD, and
+            virtualization. The laboratory exercises will require implementing a
+            simple, but functional operating system from ground up.
+          </p>
+        </article>
+
+        <article class="lecture">
+          <header>
+            <h1>
+              <a href="#"><cite>Operating Systems, Spring 2014</cite></a>
+            </h1>
+          </header>
+
+          <img src="../Resources/os-lecture4.png">
+          <p class="university">
+            University of Massachusetts Amherst (UMass Amherst)
+          </p>
+          <p class="instructor">Instuctor: Sean Barker</p>
+          <div class="stars-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+          </div>
+          <p class="number-of-lectures">Number of lectures: 23</p>
+          <p class="duration">
+            Total Duration: 26 hours, 32 minutes, 31 seconds
+          </p>
+          <p class="mini-description">
+            Description: <br>
+            This course will provide an introduction to operating system design
+            and implementation. The operating system provides a well-known,
+            convenient, and efficient interface between user programs and the
+            bare hardware of the computer on which they run. The operating
+            system is responsible for allowing resources (e.g., disks, networks,
+            and processors) to be shared, providing common services needed by
+            many different programs (e.g., file service, the ability to start or
+            stop processes, and access to the printer), and protecting
+            individual programs from one another. Particular emphasis will be
+            given to three major OS subsystems: process management (processes,
+            threads, CPU scheduling, synchronization, and deadlock), memory
+            management (segmentation, paging, swapping), file systems, and
+            operating system support for distributed systems.
+          </p>
+        </article>
+      </section>
+
+    </main>
+    <aside class="key-terms">
+      <h3>Key Terms</h3>
+
+      <details>
+        <summary>Operating System</summary>
+        <p>
+          An Operating System (OS) is system software that manages computer hardware and software resources, providing
+          essential services for running applications. It serves as a bridge between users and hardware, ensuring
+          efficient execution of tasks such as process scheduling, memory management, file handling, and input/output
+          operations. Common examples include Windows, macOS, Linux, and Android.
+        </p>
+      </details>
+
+      <details>
+        <summary>Kernel</summary>
+        <p>
+          The core component of an operating system that manages system resources, such as the CPU, memory, and I/O
+          devices, and enables communication between hardware and software.
+        </p>
+      </details>
+
+      <details>
+        <summary>Process</summary>
+        <p>
+          A program in execution, including the code, data, and system resources allocated to it.
+        </p>
+      </details>
+
+      <details>
+        <summary>Threads</summary>
+        <p>
+          The smallest unit of a process that can be scheduled and executed independently and allows parallel tasks.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Multitasking</summary>
+        <p>
+          The ability of an operating system to run multiple processes simultaneously by sharing CPU time.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Deadlock</summary>
+        <p>
+          A situation where processes are stuck waiting for resources indefinitely.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Virtual Memory</summary>
+        <p>
+          A memory management technique that uses disk storage to simulate additional RAM, allowing systems to run
+          larger applications or multiple applications simultaneously.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>Cache</summary>
+        <p>
+          A smaller, faster memory component that stores frequently accessed data to speed up processing.
+        </p>
+      </details>
+
+      <details>
+        <summary>File System</summary>
+        <p>
+          A method and structure for storing, organizing, and retrieving files on storage devices.
+        </p>
+      </details>
+
+
+
+
+
+    </aside>
+
+    <footer>
+      <div id="left-footer">
+        <h2>CONTACT</h2>
+        <ul class="menu">
+          <li>
+            <address>
+              Patision 76<br>
+              Zip-Code 104 34 Athens
+              <br><a
+                href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
+                in map</a>
+            </address>
+          </li>
+          <li>
+            Tel:
+            <a href="tel:+2108203315">210-8203315</a>,
+            <a href="tel:2108203316">316</a>
+          </li>
+
+          <li>
+            Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div id="middle-footer">
+        <h2>INFORMATION</h2>
+        <ul class="information">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Manage Cookies</a></li>
+        </ul>
+      </div>
+      <div id="right-footer">
+        <h2>CONNECT WITH US</h2>
+        <ul class="social-media">
+          <li>
+            <a href="https://www.github.com" class="fa-brands fa-github"></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
+          </li>
+          <li>
+            <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
+          </li>
+        </ul>
+      </div>
+      <div id="lower-footer">
+        <p>©Copyright 2024 WideMind Organization</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
