@@ -1011,174 +1011,6 @@ footer {
 
 
 
-
-@media (max-width: 480px) {
-    body {
-        font-size: 0.9rem;
-        line-height: 1.4;
-        overflow-x: hidden;
-    }
-
-    header, footer {
-        flex-direction: column;
-        align-items: center;
-        /* text-align: center; */
-        padding: 10px;
-    }
-
-    #logo {
-        width: 60%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    #search-bar {
-        width: 100%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .wrapper-three-col-subcourse {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        grid-template-areas:
-            'header'
-            'filters'
-            'main'
-            'key-terms'
-            'footer';
-    }
-
-    #subcat-main, #book-section, #lecture-section {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .book, .lecture {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px;
-        margin: 10px 0;
-        max-width: 100%;
-    }
-
-    .book img, .lecture img {
-        max-width: 70%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
-    .book img{
-        width: 60%;
-    }
-
-    .filters, .key-terms {
-        overflow-x: auto;
-        padding: 10px;
-    }
-
-    .key-terms > details > summary{
-        font-size: 1rem;
-    }
-
-    .key-terms details p{
-        font-size: 0.9rem;
-    }
-
-    
-    #search-bar input {
-        flex-grow: 1; /* Ensures input takes up remaining space */
-        height: 2.5rem; 
-        margin-right: 0.5rem; /* Add spacing between input and button */
-        padding: 0.5rem 1rem; /* Padding for visual balance */
-    }
-    
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 480px) and (max-width: 992px)  {
-
-    .wrapper-three-col-subcourse {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 50px;
-        grid-template-areas:
-            'header header'
-            'upper-page upper-page'
-            'filters main'
-            'key-terms main'
-            'footer footer'
-    }
-
-    #subcat-main{
-        grid-area: main;
-    }
-
-
-
-    #upper-page>img {
-        height: 12rem;
-        margin: auto;
-    }
-
-    .book, .lecture {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    
-
-
-
-    
-
-
-
-}
-
-
-
-
-@media (min-width: 992px) {
-
-    .wrapper-three-col-subcourse {
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        row-gap: 1rem;
-        column-gap: 2rem;
-        grid-template-areas:
-            'header header header'
-            'upper-page upper-page upper-page'
-            'filters main key-terms'
-            'filters main key-terms'
-            'footer footer footer';
-    }
-
-    #subcat-main{
-        grid-area: main;
-    } 
-
-}
-
-
-
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
 .wrapper-three-col-book-lecture {
@@ -1930,5 +1762,164 @@ img {
 
 
 
+/* ================================= TASK 4 =============================== */
 
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        overflow-x: hidden;
+    }
+
+    header, footer {
+        flex-direction: column;
+        align-items: center;
+        /* text-align: center; */
+        padding: 10px;
+    }
+
+    #logo {
+        width: 60%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #search-bar {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .wrapper-three-col-subcourse {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-template-areas:
+            'header'
+            'filters'
+            'main'
+            'key-terms'
+            'footer';
+    }
+
+    #subcat-main, #book-section, #lecture-section {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .book, .lecture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    .book img, .lecture img {
+        max-width: 70%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .book img{
+        width: 60%;
+    }
+
+    .filters, .key-terms {
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .key-terms > details > summary{
+        font-size: 1rem;
+    }
+
+    .key-terms details p{
+        font-size: 0.9rem;
+    }
+
+    
+    #search-bar input {
+        flex-grow: 1; /* Ensures input takes up remaining space */
+        height: 2.5rem; 
+        margin-right: 0.5rem; /* Add spacing between input and button */
+        padding: 0.5rem 1rem; /* Padding for visual balance */
+    }
+    
+    
+    
+}
+
+
+
+
+
+@media (min-width: 480px) and (max-width: 992px)  {
+
+    .wrapper-three-col-subcourse {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 50px;
+        grid-template-areas:
+            'header header'
+            'upper-page upper-page'
+            'filters main'
+            'key-terms main'
+            'footer footer'
+    }
+
+    #subcat-main{
+        grid-area: main;
+    }
+
+
+
+    #upper-page>img {
+        height: 12rem;
+        margin: auto;
+    }
+
+    .book, .lecture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+
+
+
+    
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) {
+
+    .wrapper-three-col-subcourse {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        row-gap: 1rem;
+        column-gap: 2rem;
+        grid-template-areas:
+            'header header header'
+            'upper-page upper-page upper-page'
+            'filters main key-terms'
+            'filters main key-terms'
+            'footer footer footer';
+    }
+
+    #subcat-main{
+        grid-area: main;
+    } 
+
+}
 
