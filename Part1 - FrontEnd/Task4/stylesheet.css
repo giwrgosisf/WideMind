@@ -1021,7 +1021,6 @@ footer {
 .wrapper-three-col-book-lecture {
     display: grid;
     grid-gap: 2.5rem;
-    grid-row-gap: 11em;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
         "header header header"
@@ -1071,6 +1070,7 @@ footer {
     border-radius: 4rem;
     height: 2.5em;
     font-size: 1.5em;
+    border: 2px solid black;
 
 
 }
@@ -1186,9 +1186,9 @@ footer {
 
 
 #content-analysis img {
-    width: auto;
-    max-width: 97%;
-    height: 25rem;
+    width: 15rem;
+    max-width: 100%;
+    height: auto;
 
 }
 
@@ -1237,10 +1237,10 @@ footer {
 }
 
 #details {
-    margin-top: -10em;
     grid-area: details;
-    width: 98%;
+    max-width: 100%;
     margin-left: 1em;
+    margin-right: 1rem;
     text-align: center;
 }
 
@@ -1257,6 +1257,9 @@ footer {
     cursor: pointer;
 }
 
+#details  details{
+    margin-bottom: 1rem;
+}
 
 
 #details details[open] summary~* {
@@ -2016,6 +2019,53 @@ img {
     .profile-card{
         height: auto;
     }
+
+
+
+    .wrapper-three-col-book-lecture{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 0.5fr 1fr auto auto;
+        column-gap: 20px;
+        grid-template-areas:
+            'header header'
+            'nav main'
+            'aside main'
+            'details details'
+            'footer footer'
+    }
+
+
+    #side-content{
+        height: 800px;
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+
+
+    #content-analysis img{
+        max-width: 50%;
+    }
+
+    .book-lecture-main{
+        max-width: 90%;
+    }
+
+    #details section{
+        max-width: 100%;
+    }
+
+    #details details{
+        max-width: 100%;
+    }
+
+    #details{
+        max-width: 90%;
+    }
+
+    
+
+
 
 
 }
