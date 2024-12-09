@@ -6,33 +6,33 @@
 
 
 }
-
+ /* iframe dimensions  */
 iframe{
     width: 560px;
     height: 315px;
     margin-bottom:1em;
  }
-
+ /* changed scroll padding for correct link viewing */
 html {
     scroll-padding-top: 10rem;
   }
 
-
+ /* removed extra margins and paddings */
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
-
+ /* set the backround to be linear gradient a combination of light blue and cream colors */
 body {
     background: linear-gradient(145deg, var(--secondary-color) 30%, var(--primary-color) 80%);
 }
-
+ /* sets all text across the site to have font family Poppins   */
 p {
     font-family: "Poppins", sans-serif;
 }
-
+ /* sets all the headings across the site to be Libre Franklin */
 h1, h2, h3 {
 
     font-family: "Libre Franklin", sans-serif;
@@ -40,6 +40,8 @@ h1, h2, h3 {
 
 
 /* -------------------Header style ----------------------------------*/
+/* The header has position fixed, it covers the entire width of the screen and its displayed at the top of all elements with z-index*/
+/* its layout is flex container and the content is displayed with the space-between format */
 .header {
     background-color: var(--primary-color);
     position: fixed;
@@ -68,7 +70,7 @@ h1, h2, h3 {
     /* display: flex; */
     /* align-items: center; */
 }
-
+/*input styling for the seaarch bar , takes over all the availabe space, rounded corners of 0.5rem */
 #search-bar>input {
     width: 100%;
     height: auto;
@@ -78,7 +80,7 @@ h1, h2, h3 {
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     outline: none;
 }
-
+/*styling for search button */
 #search-bar>.search-button {
     background: none;
     border: none;
@@ -86,7 +88,7 @@ h1, h2, h3 {
     right: 0.5rem;
     cursor: pointer;
 }
-
+/* dimensions of the seach icon*/
 #search-icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -96,7 +98,7 @@ h1, h2, h3 {
 #navBar {
     margin-right: 2rem;
 }
-
+/*list type none is used for removing the dots */
 #navBar>ul {
     list-style: none;
     /* display: flex; */
@@ -105,7 +107,7 @@ h1, h2, h3 {
     margin: 0;
 
 }
-
+/* all the links in the navigation bar has no decoration    */
 #navBar li a {
     text-decoration: none;
     padding: 0.5rem;
@@ -116,7 +118,7 @@ h1, h2, h3 {
     transition: background-color 0.3s;
     float: left;
 }
-
+/* when hovered the link changes its color to white  */
 #navBar li a:hover {
     color: white;
 
@@ -126,13 +128,14 @@ h1, h2, h3 {
 
 
 /* ------------------INDEX MAIN CSS---------------------------- */
+/*  main content of the site margins an paddings */
 main {
     margin-top: 6rem;
     padding: 3rem 1.5rem;
 
 }
 
-/* Main section layout */
+/* Main section layout take all of the available width */
 #main-section {
     width: 100%;
     
@@ -144,7 +147,8 @@ main {
 
 }
 
-/* Welcome section styling */
+/* Styling of the 3 sections in the index page */
+/* Backround white , rounded corners of 4rem and a shadow effect is applied */
 #Welcome-section, #categories-section, #member-section {
     padding: 2.5rem;
     background-color: #ffffff;
@@ -156,21 +160,21 @@ main {
     margin-bottom: 2rem;
     overflow: hidden;
 }
-
+/* when hovered an effect of elevation is created */
 #Welcome-section:hover, #categories-section:hover, #member-section:hover {
     /* transform: translateZ(20px) scale(1.01); */
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-
+/* font style italic and font color white */
 #content>h2, #categories-section>h2 {
     font-size: 5em;
     margin-bottom: 1.5rem;
     color: #ffffff;
     font-style: italic;
 }
-
+/*line height 1.8,color white and a margin top of 1.5 em is used in the paragraphs*/
 #Welcome-section p, #categories-section p {
     font-size: 1.5em;
     line-height: 1.8;
@@ -178,20 +182,20 @@ main {
     margin-bottom: 5em;
 
 }
-
+/* blur effect for the images with auto adjustment of the the image height  */
 #image-container img, #categories-section img {
     float: left;
     width: 150px;
     height: auto;
     filter: drop-shadow(0 0 0.75rem rgb(124, 124, 124));
 }
-
+/* list type none */
 #image-container ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+/* list items with font calor white*/
 #Welcome-section ul>li {
     font-size: 1.5em;
     font-weight: 300;
@@ -199,24 +203,24 @@ main {
     color: #ffffff;
 
 }
-
+/*no text decoretion, created an ease hover effect for color*/
 #categories-section a {
     text-decoration: none;
     color: #b9b9b9;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-
+/* change color while hovering*/
 #categories-section a:hover {
     color: var(--secondary-color);
 }
 
-
+/*change color for member section backround  dark blue*/
 #member-section {
     background-color: #021526;
    
 }
-
+/*title size 5em*/
 #member-section>h2 {
     font-size: 5em;
     margin-bottom: 1.5rem;
@@ -224,7 +228,7 @@ main {
 
 
 }
-
+/*font size of 2em and push the text to the left*/
 #member-section p {
     font-size: 2em;
     color: #ffffff;
@@ -232,7 +236,7 @@ main {
     width: 17em;
     line-height: 1.5em;
 }
-
+/*styling of container of the button */
 #paragraph-button {
 
     float: left;
@@ -245,7 +249,8 @@ main {
 #paragraph-button {
     text-align: left;
 }
-
+/*styling of the actual button */
+/*it is displayed with 4 rem  white curved  border of 5 pixels and takes over the 70% of the available space */
 #paragraph-button .login-or-signup {
     padding: 14px 28px;
     font-size: 16px;
@@ -257,7 +262,7 @@ main {
     margin-left: 1.5em;
     font-size: 1.5em;
 }
-
+/*push the image to the right, make the image as square of 500x500*/
 #member-section>img {
     float: right;
     width: 500px;
@@ -267,7 +272,7 @@ main {
 
 }
 
-
+/*remove the  top padding  and hide the overflowed items its item is displayed above the video with the use of the z index*/
 #Welcome-section {
     padding-top: 0%;
     overflow: hidden;
@@ -275,7 +280,8 @@ main {
     position: relative;
     z-index: 1;
 }
-
+/*the backround video of the welcome section*/
+/*position absolute is used for centering the video and the cover attribute tells the video to take over the available space*/
 .back-video {
     position: absolute;
     left: 0;
@@ -286,21 +292,22 @@ main {
     z-index: -1;
 
 }
-
+/*margin top of 0.5em*/
 #content>h2 {
     margin-top: 0.5em;
 }
 
-
+/*the backround of the categories section */
 #categories-section {
-    
+
     background-image: url("../Resources/intersting-img.png");
 }
 
 
 /* ---------------- CATEGORIES CSS ----------------- */
 
-
+/*styling of the intro header */
+/*Transformed text to uppercase the text is aligned to the center and takes over all the available space */
 .intro h2 {
     font-size: 10rem;
     font-weight: 400;
@@ -312,7 +319,7 @@ main {
 
 }
 
-
+/*italic styled paragraph with white text */
 .intro p {
     font-size: 1.5rem;
     color: #ffffff;
@@ -322,7 +329,7 @@ main {
     max-width: 100%;
 }
 
-
+/*line height 1.1 font weight medium to bold */
 .category-card h2 {
     font-size: 2.25rem;
     font-weight: 500;
@@ -330,7 +337,8 @@ main {
     color: #ffffff;
     line-height: 1.1;
 }
-
+/*paragraph of the category card styling*/
+/*line height of 1.5 and font color white */
 .category-card p {
     font-size: 1rem;
     line-height: 1.5;
@@ -340,7 +348,8 @@ main {
 }
 
 
-
+/*styling of the category card*/
+/*created an effect of shadow , every item that overflows is hidden text color is white */
 .category-card {
     width: 26rem;
     height: 36rem;
@@ -352,7 +361,8 @@ main {
     margin-bottom: 1.5rem;
 }
 
-
+/*image styling of the category card*/
+/*it covers the entire container and creates an effect of ease in */
 .category-card img {
     position: absolute;
     object-fit: cover;
@@ -360,6 +370,10 @@ main {
     height: 100%;
     transition: transform 500ms ease-in;
 }
+/*Styling of the main card container */
+/*backround is a linear gradient and with combining its degrees and
+color precentages we create an effect like Vignette. 
+we use tranform in order to move the container vertically along the Y-axis by 70% with delay of 500ms */
 
 .category-card-container {
     height: 100%;
@@ -374,47 +388,50 @@ main {
 }
 
 
-
+/*header styling of the card container width and height are set to change automatically by the containers content*/
 .category-card-container h2 {
     position: relative;
     width: fit-content;
     height: fit-content;
 }
-
+/* Apply styles to the ::after pseudo-element of h2 inside .category-card-container */
 .category-card-container h2::after {
-    content: "";
-    position: absolute;
+    content: ""; /* Generate an empty content for the pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely within its parent (h2) */
     height: 0.4rem;
-    width: calc(100% + 1.25rem);
+    width: calc(100% + 1.25rem);/* Set the width to the full width of the h2, plus an extra 1.25rem */
     bottom: -0.75rem;
     left: 0;
     background-color: #8EACCD;
-    opacity: 0;
+    opacity: 0;/* Initially set the opacity to 0 (invisible) */
     transform: scaleX(0);
-    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition: opacity 1000ms ease-in, transform 500ms ease-out; /* Apply smooth transitions for opacity and transform */
     transition-delay: 500ms;
-    transform-origin: right;
+    transform-origin: right; /* Set the origin of the transform to the right side, so the scaling starts from the right */
 }
 
-
+/* Apply smooth transitions for both transform and opacity over 500ms */
 .category-card-container>p, .category-card-container>ul {
     opacity: 0;
     transition: transform 500ms ease-out, opacity 500ms ease-out;
 }
 
 
-
+/* Apply smooth transitions*/
 .category-card:hover .category-card-container {
     transform: translateY(0);
     transition: transform 500ms ease-in;
 }
 
 
+/* Enlarges the image inside a .category-card when the card is hovered */
 .category-card:hover img {
-    transform: scale(1.3);
+    transform: scale(1.3);  /* Scale the image to 1.3 times its original size */
 }
 
 
+
+/* Makes <p> and <ul> inside .category-card-container visible when .category-card is hovered */
 .category-card:hover .category-card-container>p,
 .category-card:hover .category-card-container>ul {
     opacity: 1;
@@ -422,7 +439,7 @@ main {
     transition-delay: 1000ms;
 }
 
-
+/* Animates the ::after pseudo-element of <h2> inside .category-card-container when .category-card is hovered */
 .category-card:hover h2::after {
     opacity: 1;
     transform: scaleX(1);
@@ -431,16 +448,18 @@ main {
     transition-delay: 500ms;
 }
 
-
+/* Adds left padding to <ul> inside .category-card-container */
 .category-card-container ul {
     padding-left: 2rem;
 }
 
+/* Styles <a> links inside <li> within .category-card-container */
 .category-card-container ul li a {
     color: #fcfcfc;
     text-decoration: none;
 }
 
+/* Styles <li> elements inside <ul> within .category-card-container */
 .category-card-container ul li {
     position: relative;
     left: 0;
@@ -451,10 +470,12 @@ main {
     cursor: pointer;
 }
 
+/* Moves <li> elements slightly to the right on hover */
 .category-card-container ul li:hover {
     left: 10px;
 }
 
+/* Styles <span> inside <li> within .category-card-container */
 .category-card-container ul li span {
     position: relative;
     padding: 8px;
@@ -464,10 +485,12 @@ main {
     transition: 0.5s;
 }
 
+/* Changes the color of <span> text on hover */
 .category-card-container ul li:hover span {
     color: #111;
 }
 
+/* Creates a background animation effect for <li> elements */
 .category-card-container ul li:before {
     content: "";
     position: absolute;
@@ -479,9 +502,11 @@ main {
     transition: 0.5s;
 }
 
+/* Expands the background effect of <li>:before on hover */
 .category-card-container ul li:hover:before {
     transform: scaleX(1);
 }
+
 
 
 
@@ -513,7 +538,8 @@ main {
     padding-bottom: 1em;
 } */
 
-
+/* styling of the page titles  */
+/* italic style and white font  */
 #subcat-main .page-titles>h1, #subcat-main .page-titles>h2 {
     color: white;
     font-size: 5em;
@@ -521,7 +547,7 @@ main {
     margin-bottom: 0.1em;
     margin-left: 0.3em;
 }
-
+/* add space  for title h2 form h1*/
 #subcat-main .page-titles>h2 {
     font-size: 2em;
     margin-bottom: 1em;
@@ -529,7 +555,7 @@ main {
 }
 
 
-
+/*paragraph styling for page description*/
 #subcat-main>p {
     color: white;
     font-size: 1.5em;
@@ -543,14 +569,14 @@ main {
 
 
 }
-
+/* styling for emphasize text*/
 #subcat-main .emphasize {
     font-size: 1.5em;
     font-weight: 400;
     line-height: 3em;
 
 }
-
+/* styling of */
 #subcat-main .emphasize-child {
     line-height: 1em;
     font-size: 1.7em;
@@ -558,14 +584,14 @@ main {
 
 }
 
-
+/* styling of text keyword  */
 #subcat-main .keywords {
     border-bottom: 5px solid #F3F3E0;
     border-bottom-style: double;
     padding: 0.2em;
 
 }
-
+/* styling of o page logo  margin top is negative in order to push the image up  */
 #subcat-main>img {
     width: 200px;
     height: 200px;
@@ -575,7 +601,8 @@ main {
     float: right;
 
 }
-
+/* styling of the two main section in the subcategory page  */
+/* white backround effect of elevation and shadow  , rounded corners of 4rem  */
 #book-section, #lecture-section {
     background-color: #ffffff;
     color: #333;
@@ -589,7 +616,7 @@ main {
     box-sizing: border-box;
 }
 
-
+/* when hovered an eleveation effect is created  */
 
 #book-section:hover, #lecture-section:hover, #page-description:hover {
     transform: translateY(-30px);
@@ -603,11 +630,17 @@ main {
 #book-section h2, #lecture-section h2 {
     text-align: center;
     font-size: 2em;
+    padding-top: 2em;
+    text-align: center;
+    font-size: 2em;
+    background-color: #ffffff;
+    border-radius: 4rem;
 
 }
 
 
-
+/* article styling for book and lecture  */
+/* height is adjusted with respect to th article comtent  */
 .book, .lecture {
     box-sizing: border-box;
     height: fit-content;
@@ -620,117 +653,109 @@ main {
 
 }
 
-
+/* when hovered shadow effect is applied  */
 .book:hover, .lecture:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 
 }
-
+/* book article  header style*/
 .book header>h1 {
     margin-bottom: 1em;
 }
-
+/* remove underline from the links */
 .book header>h1>a {
     text-decoration: none;
     color: black;
 
 }
-
+/* when the cite is hovered  underline it */
 .book cite:hover {
     text-decoration: underline;
     color: black;
 }
-
+/* added border to images*/
 .book img {
     margin-bottom: 1em;
     border: 3px solid black;
 }
-
+/* styling of book description   */
 .book>p {
     margin-top: 0.5em;
     font-weight: 300;
     text-align: left;
 }
+/* every book or lecture must have  a centern styling for its characteristics*/
 
-.book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
+/* Styles for various text elements such as author, price, pages, stars-rating, and lecture details */
+.book .author, .book .price, .book .pages, .book .stars-rating, 
+.lecture .university, .instructor, .number-of-lectures, .duration {
     font-size: 1em;
     text-align: left;
     height: 2em;
     font-weight: bold;
 }
 
-
+/* Adjusts margin for the author details within a book */
 .book.author {
     margin-top: 1em;
 }
 
+/* Styles for the price element within a book */
 .book .price {
     margin-top: 0.5em;
     text-align: end;
     display: block;
-
 }
 
-
-#lecture-section>h2, #book-section>h2 {
-    padding-top: 2em;
-    text-align: center;
-    font-size: 2em;
-    background-color: #ffffff;
-    border-radius: 4rem;
-
-}
-
-
-
+/* General styles for lecture section */
 .lecture {
     padding-top: 2em;
     background-color: #ffffff;
-
 }
 
-
-
+/* Styles for images within the lecture section */
 .lecture>img {
     width: 650px;
     height: 400px;
     margin-bottom: 3em;
-    border: solid black 3px
+    border: solid black 3px;
 }
 
+/* Styles for the header's main title in the lecture section */
 .lecture>header>h1 {
     margin-bottom: 3em;
     text-align: center;
-
-
 }
 
+/* Links inside the lecture header's main title */
 .lecture>header>h1>a {
     text-decoration: none;
     color: black;
 }
 
+/* Hover styles for links inside the lecture header */
 .lecture>header>h1>a:hover {
     text-decoration: underline;
     color: black;
-
 }
 
-.lecture .university, .lecture .instructor, .lecture .number-of-lectures, .lecture .duration, .stars-rating {
-
+/* Styles for university, instructor, number of lectures, duration, and stars-rating within the lecture */
+.lecture .university, .lecture .instructor, .lecture .number-of-lectures, 
+.lecture .duration, .stars-rating {
     margin-left: 1em;
-    ;
 }
 
+/* Adds margin to the instructor details */
 .lecture .instructor {
     margin-top: 1em;
 }
 
+/* Adjusts bottom margin for duration and stars-rating */
 .lecture .duration, .lecture .stars-rating {
     margin-bottom: 1em;
 }
 
-
+/* Styles for the mini description text within the lecture */
 .lecture .mini-description {
     font-size: 1em;
     text-align: left;
@@ -738,12 +763,9 @@ main {
     height: fit-content;
     margin-left: 1em;
     font-weight: 300;
-
 }
 
-
-
-
+/* Styles for filters and key terms sections */
 .filters, .key-terms {
     width: 25%;
     box-sizing: border-box;
@@ -755,40 +777,43 @@ main {
     padding-bottom: 1rem;
 }
 
-
-
+/* Styles for individual details elements within filters and key terms */
 .filters>details, .key-terms>details {
     border-bottom: 1px solid #e3e3e3;
     padding: 1rem 1rem 1rem 1.5rem;
     width: 100%;
 }
 
+/* Additional styles for key terms details */
 .key-terms>details {
     font-size: 1rem;
     margin: 1rem auto;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
     background: var(--primary-color);
     border-radius: 2rem;
     max-width: 90%;
 }
 
+/* Removes border for the last details element */
 .filters>details:last-of-type, .key-terms>details {
     border-bottom: 0px;
 }
 
-
-.filters>details>summary {
+/* Styles for summary elements inside filters and key terms */
+.filters>details>summary, .key-terms>details>summary {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
     cursor: pointer;
 }
 
+/* Removes default list style from summary elements */
 .filters summary, .key-terms summary {
     list-style-type: none;
 }
 
-
+/* Additional styles for key terms summary elements */
 .key-terms>details>summary {
     padding: 1em;
     font-size: large;
@@ -796,26 +821,28 @@ main {
     cursor: pointer;
 }
 
+/* Adds an icon after summary elements in filters and key terms */
 .filters summary::after, .key-terms summary::after {
     content: "\f078";
     font-family: "Font Awesome 6 Free";
     margin-left: 1rem;
     opacity: 0.7;
     cursor: pointer;
-
 }
 
+/* Adjusts styles for the icon in key terms summary */
 .key-terms summary::after {
     font-weight: bold;
     font-style: normal;
 }
 
-.filters summary:hover::after, .filters details[open]>summary:hover::after, .key-terms summary:hover::after, .key-terms details[open]>summary:hover::after {
-
+/* Hover effects for the summary icon */
+.filters summary:hover::after, .filters details[open]>summary:hover::after, 
+.key-terms summary:hover::after, .key-terms details[open]>summary:hover::after {
     opacity: 1;
 }
 
-
+/* Changes the icon when the details element is open */
 .filters>details[open]>summary::after, .key-terms>details[open]>summary::after {
     content: "\f077";
     font-family: "Font Awesome 6 Free";
@@ -823,8 +850,7 @@ main {
     opacity: 0.7;
 }
 
-
-
+/* Styles for the <h3> element in key terms */
 .key-terms>h3 {
     text-align: center;
     padding-top: 1rem;
@@ -833,6 +859,8 @@ main {
 }
 
 
+
+/* Style for paragraphs inside the <details> element within .key-terms */
 .key-terms details p {
     border-top: 1px solid #cfcfcf;
     cursor: default;
@@ -842,31 +870,30 @@ main {
     color: #232323;
 }
 
-
-
+/* Style for checkboxes inside <details> elements within .filters */
 .filters>details input[type="checkbox"] {
     accent-color: var(--secondary-color);
 }
 
+/* Style for labels inside <details> elements within .filters */
 .filters>details label {
     cursor: pointer;
-
     margin-left: 0.3rem;
 }
 
-
-
+/* Style for the price range slider */
 .price-range {
     width: 90%;
     accent-color: var(--secondary-color);
     opacity: 0.8;
 }
 
+/* Style for the price range slider when hovered */
 .price-range:hover {
     opacity: 1;
-
 }
 
+/* Style for the maximum price label */
 .max-price-label {
     position: relative;
     left: 11rem;
@@ -883,11 +910,12 @@ main {
 
 
 
+
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
 
 
 
-
+/*Styling of the back button that goes bach to Os/Ml*/
 .back-button{
     padding: 14px 28px;
     font-size: 10px;
@@ -895,11 +923,9 @@ main {
     border-radius:4rem;
     height:2.5em;
     font-size:1.5em;
-    
-
 }
 
-
+/*color change while hovering*/
 .back-button:hover{
     background-color: #608BC1;
     color: white;
@@ -908,7 +934,7 @@ main {
 
 
 
-
+/*Every section on this page has rounded corners  white backround and a shadow effect*/
 #content-analysis, #contents-container, #details, #side-content {
     border-radius: 4rem;
     background-color: #EEEEEE;
@@ -917,38 +943,38 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 }
-
+/*while hovering an effect of elevation is created*/
 #content-analysis:hover, #contents-container:hover, #details:hover, #side-content:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
-
+/*Set padding for the main book analysis*/
 #content-analysis {
     padding: 5em;
 }
-
+/*Set the width and the text alignment on the center for table of contents  */
 #contents-container {
     width: 450px;
     text-align: center;
 }
-
+/*every book or lecture has a font size of 1.2em on its characteristics*/
 .book-pages , .product-author , .product-year, .product-stars-rating, .lecture-uni, .total-lectures{
     font-size: 1.2em;
     margin-bottom: 1em;
 
 }
-
+/*styling of the ratings container flex is is used so that the stars will be inline*/
 .ratings {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+/*define the initial size*/
 .ratings>p {
     margin-top: 1em;
     flex-basis: 100%;
 }
-
+/*dispaly a polygon shape for the ratings  with left text alignment*/
 .product-stars-rating, .product-stars-end-rating, .product-stars-start-rating {
     text-align: left;
     width: 30px;
@@ -967,16 +993,16 @@ main {
     margin: 10px;
 
 }
-
+/*first star has no margin left */
 .product-stars-start-rating {
     margin-left: 0px;
 }
-
+/*effect of the semistar*/
 .product-stars-end-rating {
     background: linear-gradient(to right, gold 25%, white 30%);
 }
 
-
+/*price is placed a the bootom of the container at the right side with a bottom border of light blue*/
 .product-price {
     border-bottom: 10px solid #608BC1;
     text-align: right;
@@ -987,7 +1013,7 @@ main {
 
 
 }
-
+/*header  italic styling for the book/lecture name */
 #content-analysis .product-details>h1 {
     font-style: italic;
     font-size: 2.5em;
@@ -995,27 +1021,27 @@ main {
 }
 
 
-
+/*paragraph styling for the product description */
 #content-analysis .product-description p {
     font-size: 1.3em;
     font-family: 'Poppins';
 }
 
 
-
+/*align the text of the table of contents to the center and give for each elemnet a light blue bottom border*/
 #Table-of-contents th, td {
     text-align: center;
     border-bottom: 5px solid #8EACCD;
     height: 5em;
 }
 
-
+/*none text decoration fro the links of table*/
 #Table-of-contents a {
     text-decoration: none;
     color: black;
 
 }
-
+/*summary  styling of details , text is aligned left and the font style is italic */
 #details summary {
     margin-bottom: 2em;
     font-size: 1.5em;
@@ -1023,14 +1049,14 @@ main {
     font-style: italic;
     font-weight: 600;
 }
-
+/*when hovered the text decoration becomes underline and the cursor pointer*/
 #details summary:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
 
-
+/*when the details open an effect of sweep is displayed */
 #details details[open] summary~* {
     animation: sweep .5s ease-in-out forwards;
 }
@@ -1046,7 +1072,7 @@ main {
         margin-top: 0;
     }
 }
-
+/*styling of details text, is aligned left an the font is not too small*/
 #details>p {
     text-align: left;
     font-size: 1.3em;
@@ -1054,19 +1080,19 @@ main {
     padding-left: 15em;
     padding-right: 15em;
 }
-
+/*styling for the return link of the details its color is black and the decoration is none*/
 #details>a {
     text-decoration: none;
     font-style: italic;
     color: black;
 
 }
-
+/*when hovered text decoration becomes underline*/
 #details>a:hover {
     text-decoration: underline;
 }
 
-
+/*styling for the side books/lecture overflow auto enables scrolling */
 #side-content {
     width: 550px;
     text-align: center;
@@ -1075,29 +1101,29 @@ main {
     padding: 0%;
 
 }
-
+/*styling of the scrollable list items*/
 #side-content ul {
     align-items: center;
     padding-left: 4rem;
     padding-right: 4rem;
     padding-bottom: 4rem;
 }
-
+/*remove the dots for the list items and give its item a width of 400px*/
 #side-content ul>li {
     list-style: none;
     width: 400px;
     margin-top: 5em;
 
 }
-
+/*header of the book becomes 1em*/
 #side-content ul>li>.book>header>h1 {
     font-size: 1em;
 }
-
+/*align the stars at the center*/
 #side-content ul>li>.book>.stars-rating {
     text-align: center;
 }
-
+/*align the text of the header to be centered , stick its position to the top and display it above all the other elements*/
 #side-content>header {
     text-align: center;
     position: sticky;
@@ -1114,20 +1140,20 @@ main {
     z-index: 1;
 
 }
-
+/*remove the float of book lecture images for the side content*/
 #side-content ul>li>.book > img ,  #side-content ul>li>.lecture > img {
     float:none;
     max-width:97%;
     height: auto;
 }
-
+/*dispaly a custom scrollbar set the width and its height*/
 #side-content::-webkit-scrollbar {
 
     height: 12px;
     width: 10px;
 }
 
-
+/*give the scrollbar a white backround and a border radius of 10px*/
 #side-content::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
@@ -1135,19 +1161,19 @@ main {
     height: 20%;
 }
 
-
+/*the thumb is styled with gray color and ist height is 20%*/
 #side-content::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
     height: 20%;
 }
 
-
+/*when hovered change slightly the backround of the thumb*/
 #side-content::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
-
+/*targets the corners and gives them a white backround*/
 #side-content::-webkit-scrollbar-corner {
     background: #f1f1f1;
 }
@@ -1158,6 +1184,9 @@ main {
 
 /* ------------------------------FOOTER CSS----------------------------------------------------- */
 /* Footer CSS */
+/*styling of the main footer container  */
+/* backround color is set to grey */
+/* and text color to white */
 footer {
     background-color: var(--footer-color);
     color: #ffffff;
@@ -1168,40 +1197,40 @@ footer {
 }
 
 
-
+/* the footer heading has light grey text color , its width expands with respect to its content  */
 footer h2 {
     color: #ffffff8f;
     width: fit-content;
     padding: 2rem 0rem 0.5rem 0.0rem;
     font-size: 1.1rem;
 }
-
+/*remove the dots on its list*/
 footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-
+/* links in the footer has no text decoration and a white font color */
 #left-footer li a, #middle-footer li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     transition: color 0.2s ease;
 }
-
+/*give a bold effect*/
 #left-footer li a {
     font-weight: 700;
 }
-
+/* small font size for the address */
 #left-footer address a {
     font-size: smaller;
 }
 
-
+/* set the padding for the mid le footer list items */
 #middle-footer li {
     padding: 0rem 0.0rem 1.0rem 0.0rem;
 }
-
+/* when hovered change the font color to lilac */
 #left-footer a:hover, #middle-footer a:hover {
     color: #69699d;
 }
@@ -1213,7 +1242,8 @@ footer ul {
 }
 
 
-
+/*styling of web icons from the awesome font*/
+/*align all rhe icons  to the center give none text decoration and apply a light gray color backround with some border radius */
 ul .fa-brands {
     font-size: 1.5rem;
     width: 2.5rem;
@@ -1227,7 +1257,7 @@ ul .fa-brands {
     color: #4b4b4b;
 }
 
-
+/* When hovered give a faded siecle background effect */
 .fa-brands:hover {
     /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 45%, rgba(142, 142, 144, 1) 100%); */
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 35%, rgba(142, 142, 144, 1) 100%);
@@ -1246,7 +1276,9 @@ ul .fa-brands {
 
 
 /* -------------------------------------- ABOUT US ----------------------------------------- */
-
+/* styling of the profile card  */
+/* rounded corners, shadow effect and a transition of of 0.4sec and effect of eas in*/
+/* the overflowed items are hidden */
 .profile-card {
     height: 28rem;
     width: 20rem;
@@ -1258,7 +1290,8 @@ ul .fa-brands {
     transition: transform 0.4s ease-in;
     margin-bottom: 1.5rem;
 }
-
+/* styling of the front face of the profile card  */
+/*the content of the card maintains aspect ration and crops overflowed items*/
 .profile-card .front {
     position: absolute;
     object-fit: cover;
@@ -1267,7 +1300,8 @@ ul .fa-brands {
     transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-
+/* image styling for the front face of the card  */
+/* rounded coners of 2 rem and a transition applied to all items */
 .profile-card .front>img {
     width: 100%;
     height: 100%;
@@ -1275,7 +1309,7 @@ ul .fa-brands {
     transition: all 0.4s ease;
 
 }
-
+/* */
 .profile-card .front .info>h1 {
     position: absolute;
     bottom: 3rem;
@@ -1327,13 +1361,13 @@ ul .fa-brands {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
-
+/* font size for profile card title back side */
 .profile-card .back>h1 {
    
     font-size: 1.6rem;
     margin: 0;
 }
-
+/*profile card back side subtitle with grey color and font size of 1rem*/
 .profile-card .back>h2 {
    
     font-size: 1rem;
@@ -1341,7 +1375,7 @@ ul .fa-brands {
     color: #666;
     margin: 0.2rem 0;
 }
-
+/*styling of the paragraph of back side the profile card  font color dark grey*/
 .profile-card .back>p {
     padding-right: 2rem;
     font-size: 0.7rem;
@@ -1349,16 +1383,16 @@ ul .fa-brands {
     color: #444;
     
 }
-
+/*styling of the thematic break  */
 .profile-card .back>hr {
     width: 90%;
 }
 
-
+/*push the social icons to the left*/
 .follow .fa-brands {
     float: left;
 }
-
+/*remove the dots from list items*/
 .social-media>li{
     list-style: none;
 }
@@ -1367,7 +1401,8 @@ ul .fa-brands {
 .btnImitation {
     display: none;
 }
-
+/*styling of the card button in the back of the card*/
+/*backround black small font size and rounded corners  the cursor becomes pointer*/
 .profile-card .back .backBtn {
     padding: 0.5rem 2rem;
     background-color: black;
@@ -1379,20 +1414,23 @@ ul .fa-brands {
 }
 
 /* checkbox Label */
+/* styling of right arrow of the profile card  */
+/* layout used is inline flex  items are aligned at the center and backround color is white  */
 .arrowRight {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-    border: none;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;  /* Set the display type to inline-flex, making the element behave like an inline element but allowing flexbox layout for its children */
+    justify-content: center;  /* Horizontally center the content inside the flex container */
+    align-items: center;  /* Vertically center the content inside the flex container */
+    cursor: pointer;  /* Change the cursor to a pointer (hand icon) when the element is hovered, indicating it's clickable */
+    background-color: white;  /* Set the background color of the element to white */
+    color: black;  /* Set the text color inside the element to black */
+    border-radius: 50%;  /* Apply a border-radius of 50% to make the element circular (based on its width and height) */
+    height: 2rem;  /* Set the height of the element to 2rem (relative to the root font size) */
+    width: 2rem;  /* Set the width of the element to 2rem (relative to the root font size) */
+    border: none;  /* Remove any border around the element */
+    font-size: 1.2rem;  /* Set the font size of the text inside the element to 1.2rem (slightly larger than default text size) */
+    margin-left: 0.5rem;  /* Add a left margin of 0.5rem (spacing between this element and the element on its left) */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Set up smooth transitions for the background color and any transformations (like scaling) */
+    
 }
 
 .arrowRight:hover {

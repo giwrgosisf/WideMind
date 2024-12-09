@@ -1197,7 +1197,7 @@ footer {
 
 }
 
-#content-analysis, #contents-container, #details, #side-content {
+#content-analysis, #contents-container, #details, #side-content, .form-container {
     border-radius: 4rem;
     background-color: #ffffff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -1770,6 +1770,160 @@ details>figure>figcaption {
 
 /* ------------------------------FOOTER CSS----------------------------------------------------- */
 /* Footer CSS */
+.form-container{
+    background-color: white;
+    grid-column:2/3;
+    margin-top:5rem;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    place-self: center;
+}
+
+fieldset>details>.question-options{
+    margin-bottom:2em;
+}
+
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.textBox > textarea {
+    border-radius:1rem;
+    margin-top:3rem ;
+    margin-bottom:3rem;
+    height: 8rem;
+    width:auto;
+    padding: 1em;
+}
+
+.form-container>.button {
+     padding: 1rem;
+     align-self: center;
+     width:25rem;
+     border-radius:2rem;
+     text-align: center;
+     font-size:3em;
+     background: linear-gradient(90deg, var(--secondary-color) 10%, var(--primary-color) 100%);
+     margin-top:3em;
+     margin-bottom:2em; 
+}
+
+.form-container >.button> button{
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-style: italic;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 0.5em;
+    height: fit-content;
+    cursor: pointer;
+
+}
+
+
+.form-container>h1{
+    font-style: italic;
+    margin-bottom:1em;
+    font-size: 3em;
+}
+
+.form-container > img{
+    width:auto;
+    max-width:28rem;
+    height: 10rem;
+    align-self: flex-end;
+    margin-top: -2em;
+    margin-bottom:1em;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:2rem;
+    margin-bottom:1rem;
+    border-style:groove;
+    border-radius: 2rem;
+    padding-bottom:0%;
+    border: 10px solid #608BC1;
+    margin-bottom:5rem;
+
+
+}
+
+legend{
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom:1em;
+    padding:0.5em;
+    font-size: 1.7em;
+    font-family: "Libre Franklin", sans-serif; 
+    font-style: italic;
+    font-weight: 550;
+    border-radius:2rem;
+    border: 5px solid #608BC1;
+}
+
+label{
+    font-family: "Libre Franklin", sans-serif; 
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.input-box{
+    display:flex;
+    gap:0.5rem;
+    flex-direction:column;
+    margin-bottom:3.5rem;
+    text-align: left;
+    width:100%;
+    
+}
+
+.input-box > input,select,fieldset>details>input ,#other1>input,#other2>input{
+    padding-left: 1em;
+    height:3em;
+    border-radius:0.5rem;
+    width:100%;
+    text-align:left;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline-color: var(--secondary-color);
+}
+
+fieldset>details>input{
+    margin-bottom:3em;
+}
+select{
+    width:100%;
+}
+
+.stay-up-to-date{
+    margin-bottom: 5rem;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    flex-wrap: wrap;
+    align-content: left;
+    margin-left:3rem;
+    justify-content: space-between;
+    
+}
+
+.fa-brands , .fa-solid{
+   color: #608BC1;
+}
+
+
+/* ------------------------------FOOTER CSS----------------------------------------------------- */
+/* Footer CSS */
 footer {
     background-color: var(--footer-color);
     color: #ffffff;
@@ -1826,7 +1980,7 @@ footer ul {
 
 
 
-ul .fa-brands {
+ .fa-brands,.fa-solid {
     font-size: 1.5rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -1835,12 +1989,16 @@ ul .fa-brands {
     text-decoration: none;
     margin: 1rem 1rem 1rem 0.5rem;
     border-radius: 50%;
+    
+    
+}
+
+ul.fa-brands{
     background-color: #ffffff8f;
     color: #4b4b4b;
 }
 
-
-.fa-brands:hover {
+ul .fa-brands:hover {
     /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 45%, rgba(142, 142, 144, 1) 100%); */
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 35%, rgba(142, 142, 144, 1) 100%);
 }
@@ -1854,39 +2012,6 @@ ul .fa-brands {
     font-size: x-small;
     margin-top: 1.5rem;
 }
-
-
-
-
-
-
-
-/* Make all images fully responsive */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Specific for book and lecture images */
-.book img,
-.lecture img {
-    /* width: 100%; */
-    height: auto;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-}
-
-#navBar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0;
-    list-style: none;
-}
-
-
 
 /* ================================= TASK 4 =============================== */
 
