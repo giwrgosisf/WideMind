@@ -737,8 +737,8 @@ footer {
     border: 3px solid black;
     float: right;
     height: auto;
-    width:  auto;
-    max-width:  25%;
+    width: auto;
+    max-width: 25%;
 }
 
 .book>p {
@@ -897,7 +897,7 @@ footer {
     flex-direction: column;
 }
 
-.filters>details{
+.filters>details {
     flex: 1;
     max-width: 100%;
 }
@@ -1380,7 +1380,7 @@ details>figure>figcaption {
 
 #side-content ul>li>.book>img, #side-content ul>li>.lecture>img {
     float: none;
-    max-width:70%;
+    max-width: 70%;
     width: auto;
     height: auto;
 
@@ -1469,8 +1469,8 @@ details>figure>figcaption {
 }
 
 .profile-card {
-    height: 38rem;
-    width: 26rem;
+    height: 36rem;
+    width: 24rem;
     border-radius: 2rem;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -1527,6 +1527,7 @@ details>figure>figcaption {
     bottom: 1.0rem;
     left: 50%;
     color: #000000;
+    margin-left: 4rem;
 
 }
 
@@ -1545,7 +1546,7 @@ details>figure>figcaption {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .profile-card .back>h1 {
@@ -1598,6 +1599,7 @@ details>figure>figcaption {
     cursor: pointer;
     /* transition: background-color 0.3s ease; */
     width: fit-content;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -1756,6 +1758,7 @@ img {
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
+
 #navBar ul {
     display: flex;
     flex-wrap: wrap;
@@ -1826,7 +1829,7 @@ img {
         margin-bottom: 1rem;
     }
 
-    .book img{
+    .book img {
         width: 60%;
     }
 
@@ -1835,20 +1838,23 @@ img {
         padding: 10px;
     }
 
-    .key-terms > details > summary{
+    .key-terms>details>summary {
         font-size: 1rem;
     }
 
-    .key-terms details p{
+    .key-terms details p {
         font-size: 0.9rem;
     }
 
-    
+
     #search-bar input {
-        flex-grow: 1; /* Ensures input takes up remaining space */
-        height: 2.5rem; 
-        margin-right: 0.5rem; /* Add spacing between input and button */
-        padding: 0.5rem 1rem; /* Padding for visual balance */
+        flex-grow: 1;
+        /* Ensures input takes up remaining space */
+        height: 2.5rem;
+        margin-right: 0.5rem;
+        /* Add spacing between input and button */
+        padding: 0.5rem 1rem;
+        /* Padding for visual balance */
     }
 
 
@@ -1892,8 +1898,8 @@ img {
     }
 
 
-    
-    
+
+
 }
 
 
@@ -1901,7 +1907,7 @@ img {
 
 #subcat-main, #book-section, #lecture-section {
     padding: 0 10px;
-    max-width:  100%;
+    max-width: 100%;
 }
 
 .book, .lecture {
@@ -1916,16 +1922,18 @@ img {
 
 
 #search-bar input {
-    flex-grow: 1; /* Ensures input takes up remaining space */
-    height: 2.5rem; 
-    margin-right: 0.5rem; /* Add spacing between input and button */
+    flex-grow: 1;
+    /* Ensures input takes up remaining space */
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    /* Add spacing between input and button */
     padding: 0.5rem 2rem 0.5rem 0.5rem;
 }
 
 
 
 
-@media (min-width: 480px) and (max-width: 992px)  {
+@media (min-width: 480px) and (max-width: 992px) {
 
     .wrapper-three-col-subcourse {
         display: grid;
@@ -1940,7 +1948,7 @@ img {
             'footer footer'
     }
 
-    #subcat-main{
+    #subcat-main {
         grid-area: main;
     }
 
@@ -1952,8 +1960,8 @@ img {
     }
 
 
-    .book img{
-        max-width:  40%;
+    .book img {
+        max-width: 40%;
         width: auto;
     }
 
@@ -1961,7 +1969,7 @@ img {
 
     .wrapper-three-col-categories-aboutUs {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
         row-gap: 1rem;
         column-gap: 2rem;
         grid-template-areas:
@@ -2001,17 +2009,41 @@ img {
         font-size: 1.2rem;
     }
 
+    #aboutUs-main {
+        padding: 2rem;
+    }
+
+    .profile-card{
+        height: auto;
+    }
+
+
 }
 
+.profile-card {
+    max-width: 95%;
+    max-height: 100%;
+    /* max-width: 20rem; */
+    margin: 0 auto;
+}
 
-@media (min-width: 480px) and (max-width: 600px){
+#team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+    /* justify-content: center;
+    align-items: start; */
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
     .book, .lecture {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .book img{
+
+    .book img {
         max-width: 60%;
     }
 }
@@ -2034,9 +2066,8 @@ img {
             'footer footer footer';
     }
 
-    #subcat-main{
+    #subcat-main {
         grid-area: main;
-    } 
+    }
 
 }
-
