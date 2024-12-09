@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     if (!socialsisChecked) {
-      alert("Please select a way to sta updated !");
+      alert("Please select a way to stay updated !");
     } else if(!awnsersChecked &&(other1.value.trim() === '' && other2.value.trim() === '')){
       alert("You have unanswered questions!");
     } 

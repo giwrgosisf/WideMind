@@ -1,20 +1,24 @@
-<title>Signup</title>
-<meta charset="UTF-8" />
-<script src="validation.js"></script>
-<meta name="description" content="Free e-learning website for computer science" />
-<meta name="keywords"
-    content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses" />
-<meta name="author" content="WideMind Organization" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="stylesheet.css" />
-<link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-<!-- social media icons library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Signup</title>
+    <meta charset="UTF-8" />
+    <script src="validation.js"></script>
+    <meta name="description" content="Free e-learning website for computer science" />
+    <meta name="keywords"
+        content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses" />
+    <meta name="author" content="WideMind Organization" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="../Resources/website-icon.png" rel="shortcut icon" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- social media icons library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
@@ -40,7 +44,6 @@
             </div>
         </header>
 
-        <body>
             <div class="form-container">
                 <h1>Registration</h1>
                 <img src="../Resources/Signup.png">
@@ -50,28 +53,29 @@
                             <legend>Personal Information</legend>
                             <div class="input-box">
                                 <label for="Full-Name">Full name</label>
-                                <input type="text" id="Full-Name" placeholder="e.g: Christina Adams" 
+                                <input type="text" id="Full-Name" placeholder="e.g: Christina Adams"
                                     pattern="[A-Z][a-z]* [A-Z][a-z]*"
-                                    title="wrong format for name try somthing like: Christina Adams" autocomplete="name" required>
+                                    title="wrong format for name try somthing like: Christina Adams" autocomplete="name"
+                                    required>
 
                             </div>
                             <div class="input-box">
                                 <label for="Home-addres">Home address</label>
-                                <input type="text" id="Home-addres" pattern="([A-Z][a-z]* )+[0-9]+" placeholder="e.g: Evlabias 25" required>
+                                <input type="text" id="Home-addres" pattern="([A-Z][a-z]* )+[0-9]+"
+                                    placeholder="e.g: Evlabias 25" required>
                             </div>
                             <div class="input-box">
                                 <label for="Postal-Code">Postal Code</label>
-                                <input type="text" id="Postal-Code"  placeholder="e.g: 10001"
-                                    required>
+                                <input type="text" id="Postal-Code" placeholder="e.g: 10001" required>
                             </div>
                             <div class="input-box">
                                 <label for="Date-of-birth">Date of Birth</label>
-                                <input type="date" id="Date-of-birth" placeholder="Date of birth"  required>
+                                <input type="date" id="Date-of-birth" required>
                             </div>
                             <div class="input-box">
                                 <label for="region">Select your region:</label>
                                 <select id="region" name="region" required>
-                                    <option value="" disabled selected aria-required="true">-- Select a region --
+                                    <option value="" >-- Select a region --
                                     </option>
                                     <option value="north-america">North America</option>
                                     <option value="south-america">South America</option>
@@ -86,11 +90,13 @@
                             <legend>Contact Details</legend>
                             <div class="input-box">
                                 <label for="Email">Email</label>
-                                <input type="email" id="Email" placeholder="e.g: someone@example.com" autocomplete="email" required>
+                                <input type="email" id="Email" placeholder="e.g: someone@example.com"
+                                    autocomplete="email" required>
                             </div>
                             <div class="input-box">
                                 <label for="country-code">Country Code</label>
                                 <select id="country-code" name="country-code" required title="wrong format">
+                                    <option value="" disabled selected>Select your country code</option>
                                     <option value="+1">+1 (USA)</option>
                                     <option value="+7">+7 (Russia)</option>
                                     <option value="+20">+20 (Egypt)</option>
@@ -235,15 +241,20 @@
                             <legend>Account Information</legend>
                             <div class="input-box">
                                 <label for="Username">Username</label>
-                                <input type="text" id="Username" placeholder="Username"  pattern="[A-Za-z_0-9]+" title="you must enter a username that contains letters A-Z and a-z and digits 0-9 only underscores are allowed " required>
+                                <input type="text" id="Username" placeholder="Username" pattern="[A-Za-z_0-9]+"
+                                    title="you must enter a username that contains letters A-Z and a-z and digits 0-9 only underscores are allowed "
+                                    required>
                             </div>
                             <div class="input-box">
                                 <label for="Password">Password</label>
-                                <input type="password" id="Password" pattern="^.{5,15}$" placeholder="Password" maxlength="15" minlength="5" title="you must enter a password between 5 and 15 characters" required>
+                                <input type="password" id="Password" pattern="^.{5,15}$" placeholder="Password"
+                                    maxlength="15" minlength="5"
+                                    title="you must enter a password between 5 and 15 characters" required>
                             </div>
                             <div class="input-box">
                                 <label for="Confirm-password">ConfirmPassword</label>
-                                <input type="password" id="Confirm-password" pattern="^.{5,15}$" placeholder="Confirm password" required>
+                                <input type="password" id="Confirm-password" pattern="^.{5,15}$"
+                                    placeholder="Confirm password" required>
                             </div>
 
                         </fieldset>
@@ -251,27 +262,32 @@
                             <legend>Stay up to date with:</legend>
                             <div class="stay-up-to-date">
                                 <div class="category">
-                                    <label for="dot-1">
+                                    <label for="dot-1" class="option">
                                         <input type="radio" name="social" id="dot-1">
-                                        <span class="dot one"><a href="https://www.Viber.com"
-                                                class="fa-brands fa-viber"></a></span>
+                                        <span class="dot one">
+                                            <a href="https://www.Viber.com" class="fa-brands fa-viber"></a>
+                                        </span>
                                         <span class="social">Viber</span>
                                     </label>
-                                    <label for="dot-2">
+                                    <label for="dot-2" class="option">
                                         <input type="radio" name="social" id="dot-2">
-                                        <span class="dot two"><a href="https://www.WhatsApp.com"
-                                                class="fa-brands fa-whatsApp"></a></span></span>
+                                        <span class="dot two">
+                                            <a href="https://www.WhatsApp.com" class="fa-brands fa-whatsapp"></a>
+                                        </span>
                                         <span class="social">WhatsApp</span>
                                     </label>
-                                    <label for="dot-3">
+                                    <label for="dot-3" class="option">
                                         <input type="radio" name="social" id="dot-3">
-                                        <span class="dot three"><a href="#" class="fa-solid fa-comment-sms"></a> </span>
+                                        <span class="dot three">
+                                            <a href="#" class="fa-solid fa-comment-sms"></a>
+                                        </span>
                                         <span class="social">SMS</span>
                                     </label>
-                                    <label for="dot-4">
+                                    <label for="dot-4" class="option">
                                         <input type="radio" name="social" id="dot-4">
-                                        <span class="dot four"><a href="https://www.Gmail.com"
-                                                class="fa-solid fa-envelope"></a></span>
+                                        <span class="dot four">
+                                            <a href="https://www.Gmail.com" class="fa-solid fa-envelope"></a>
+                                        </span>
                                         <span class="social">Email</span>
                                     </label>
                                 </div>
@@ -364,7 +380,7 @@
                                     <label for="Doctorate-PhD">Doctorate PhD</label>
                                 </div>
                                 <div class="question-options" id="other2">
-                                    <input type="text" placeholder="Other" id="other2">
+                                    <input type="text" placeholder="Other">
                                 </div>
                             </details>
 
@@ -392,10 +408,11 @@
                             <details open>
                                 <summary>Work Profile</summary>
                                 <div class="textBox">
-                                    <label for="additional_interests">Tell us about your work experience or future
+                                    <label>Tell us about your work experience or future
                                         plans</label>
                                     <textarea id="work_profile" name="additionalInterests" maxlength="100" rows="4"
-                                        cols="50" required></textarea>
+                                    cols="50" required></textarea>
+                                    
                                 </div>
                             </details>
                         </fieldset>
@@ -405,62 +422,63 @@
                     <button type="submit" id="submit" form="register" value="Submit">Submit</button>
                 </div>
             </div>
-    </div>
-    </div>
 
-    <footer>
-        <div id="left-footer">
-            <h2>CONTACT</h2>
-            <ul class="menu">
-                <li>
-                    <address>
-                        Patision 76<br />
+            <footer>
+                <div id="left-footer">
+                  <h2>CONTACT</h2>
+                  <ul class="menu">
+                    <li>
+                      <address>
+                        Patision 76<br>
                         Zip-Code 104 34 Athens
-                        <br /><a
-                            href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
-                            in map</a>
-                    </address>
-                </li>
-                <li>
-                    Tel:
-                    <a href="tel:+2108203315">210-8203315,<a href="tel:2108203316">316</a></a>
-                </li>
-                <li>
-                    Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
-                </li>
-            </ul>
-        </div>
-        <div id="middle-footer">
-            <h2>INFORMATION</h2>
-            <ul class="information">
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Security</a></li>
-                <li><a href="#">Manage Cookies</a></li>
-            </ul>
-        </div>
-        <div id="right-footer">
-            <h2>CONNECT WITH US</h2>
-            <ul class="social-media">
-                <li>
-                    <a href="https://www.github.com" class="fa-brands fa-github"></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
-                </li>
-                <li>
-                    <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
-                </li>
-            </ul>
-        </div>
-        <div id="lower-footer">
-            <p>©Copyright 2024 WideMind Organization</p>
-        </div>
-    </footer>
+                        <br><a
+                          href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
+                          in map</a>
+                      </address>
+                    </li>
+                    <li>
+                      Tel:
+                      <a href="tel:+2108203315">210-8203315</a>,
+                      <a href="tel:2108203316">316</a>
+                    </li>
+          
+                    <li>
+                      Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="middle-footer">
+                  <h2>INFORMATION</h2>
+                  <ul class="information">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Manage Cookies</a></li>
+                  </ul>
+                </div>
+                <div id="right-footer">
+                  <h2>CONNECT WITH US</h2>
+                  <ul class="social-media">
+                    <li>
+                      <a href="https://www.github.com" class="fa-brands fa-github"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="lower-footer">
+                  <p>©Copyright 2024 WideMind Organization</p>
+                </div>
+              </footer>
     </div>
 </body>
+
 
 </html>
