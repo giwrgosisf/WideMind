@@ -3,6 +3,7 @@ const url = "https://learning-hub-1whk.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     initIndex();
+
 });
 
 
@@ -39,6 +40,14 @@ async function initIndex() {
 
         document.getElementById("categories").innerHTML = contentOfTemplate;
 
+        const loginButton = document.getElementById('login-button');
+
+        const loginFormContainer = document.querySelector('.lform-container');
+    
+        loginButton.addEventListener('click', () => {
+        
+            loginFormContainer.classList.toggle('active');
+    });
 
     } catch (error) {
         console.error("Error fetching categories or subcategories:", error);

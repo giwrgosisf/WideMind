@@ -120,7 +120,8 @@ h1, h2, h3 {
     margin: 0;
 }
 
-#navBar li a {
+
+#navBar li a , #login-button {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
@@ -128,7 +129,18 @@ h1, h2, h3 {
     transition: background-color 0.3s;
 }
 
-#navBar li a:hover {
+
+#login-button {
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    width: 5rem;
+    height: 2rem;
+    font-size: 1em;
+   margin-top: -1em;
+   
+}
+#navBar li a:hover , #login-button:hover {
     /* color: rgb(177, 177, 177); */
     color: var(--secondary-color);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -593,11 +605,6 @@ footer {
     margin-bottom: 0em;
 }
 
-#book-section h2, #lecture-section h2 {
-    text-align: center;
-    font-size: 2em;
-
-}
 
 
 
@@ -623,7 +630,7 @@ footer {
 
 .book header>h1 {
     margin-bottom: 1em;
-    text-align: center;
+    text-align: left;
 }
 
 .book header>h1>a {
@@ -646,19 +653,25 @@ footer {
     max-width: 25%;
 }
 
+
 .description {
     /* margin-top: 1rem; */
     font-weight: 300;
     text-align: left;
 }
 
-.book .author, .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
+.book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
     font-size: 1em;
     text-align: left;
     padding-bottom: 0.5rem;
     font-weight: bold;
 }
 
+.book>p {
+    /* margin-top: 1rem; */
+    font-weight: 300;
+    text-align: left;
+}
 .publisher, .publicationDate{
     font-weight:600;
 }
@@ -672,7 +685,7 @@ footer {
 }
 
 .price {
-    margin-top: 0.5em;
+    margin-top: 1em;
     display: block;
 
 }
@@ -888,6 +901,16 @@ footer {
 }
 
 
+
+
+.book .price {
+    margin-top: 0.5em;
+    text-align: end;
+    display: block;
+    font-size:1.5em;
+
+}
+
 .key-terms details p {
     border-top: 1px solid #cfcfcf;
     cursor: default;
@@ -924,7 +947,17 @@ footer {
 }
 
 
+.product-features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 
+}
+.product-features > table{
+    width: 35rem;
+    margin-bottom: 2rem;
+}
 
 
 /* ------------------------------MODERN OPERATING SYSTEMS CSS----------------------------------------------------- */
@@ -993,7 +1026,7 @@ footer {
 
 }
 
-#content-analysis, #contents-container, #details, #side-content, .form-container {
+#content-analysis, #contents-container, #details, #side-content, .form-container ,.lform-container {
     border-radius: 4rem;
     background-color: #ffffff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -1001,6 +1034,7 @@ footer {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 }
+
 
 #content-analysis:hover, #contents-container:hover, #details:hover, #side-content:hover {
     transform: translateY(-10px);
@@ -1032,7 +1066,7 @@ footer {
 
 
 
-.book-pages, .product-author, .product-year, .product-stars-rating, .lecture-uni, .total-lectures {
+.book-pages, .product-author, .product-year, .product-stars-rating, .lecture-uni, .total-lectures, .publisher, .publicationDate {
     font-size: 1.2em;
     margin-bottom: 1em;
 
@@ -1566,7 +1600,7 @@ details>figure>figcaption {
 
 /* ------------------------------FOOTER CSS----------------------------------------------------- */
 /* Footer CSS */
-.form-container {
+.form-container ,.lform-container {
     background-color: white;
     grid-column: 2/3;
     margin-top: 5rem;
@@ -1576,6 +1610,33 @@ details>figure>figcaption {
     width: fit-content;
     place-self: center;
 }
+
+.lform-container{
+    position: absolute;
+    width: 20%;
+    top: 5%;
+    right: 40%;
+    opacity: 0;
+    pointer-events: none; /* Prevent interactions while hidden */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
+    text-align: center;
+}
+
+
+
+
+.lform-container > p > a {
+    color: #608BC1;
+    text-decoration: none;
+}
+
+.lform-container.active {
+    
+    pointer-events: auto;
+    max-height: 100em; 
+    opacity: 1;
+  }
 
 fieldset>details>.question-options {
     margin-bottom: 2em;
@@ -1600,7 +1661,11 @@ fieldset>details>.question-options {
     padding: 1em;
 }
 
-.form-container>.button {
+.lform-container >.content > form > .input-box {
+    margin-bottom: 1rem;
+}
+
+.form-container>.button , .lform-container>.button {
 
     align-self: center;
     width: 25rem;
@@ -1615,7 +1680,7 @@ fieldset>details>.question-options {
     padding: 1.5rem;
 }
 
-.form-container>.button>button {
+.form-container>.button>button ,.lform-container>.button>button{
     background: none;
     outline: none;
     border: none;
@@ -1629,19 +1694,33 @@ fieldset>details>.question-options {
 }
 
 
-.form-container>h1 {
+
+.lform-container>.button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 60%;
+}
+
+.form-container>h1 , .lform-container>h1 {
     font-style: italic;
     margin-bottom: 1em;
     font-size: 3em;
 }
 
-.form-container>img {
+.form-container>img , .lform-container>img {
     width: auto;
     max-width: 28rem;
     height: 10rem;
     align-self: flex-end;
     margin-top: -2em;
     margin-bottom: 1em;
+}
+
+.lform-container>img{
+    max-width: 10rem;
+    height: 5rem;
+    margin-top: -7em;
 }
 
 fieldset {

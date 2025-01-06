@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WideMind</title>
+  <meta charset="UTF-8">
+  <script src="../public/scripts/subcategory.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script> 
+  <meta name="description" content="subcategory page">
+  <meta name="keywords"
+    content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses">
+  <meta name="author" content="WideMind Organization">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../public/Resources/widemind-logo.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="../public/css/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <script id="subcategory-template" type="text/x-handlebars-template">
+    <article class="book">
+        <header>
+            <h1>{{title}}</h1>
+        </header>
+        <img src="https://learning-hub-1whk.onrender.com/{{image}}" alt="{{title}}">
+       
+        <p class="author">{{author}}</p>
+        <p class="pages">{{pages}}</p>
+        <p class="publisher">{{publisher}}</p>
+        <p class="publicationDate">{{publicationDate}}</p>
+        <p>{{description}}</p>
+        <p class="price">{{cost}}€</p>
+
+        <section class="product-features">
+            <h2>Product Features</h2>
+            <table>
+              {{#each features}}
+              <tr>
+                  <td>{{this.feature}}</td>
+                  <td>{{this.value}}</td>
+              </tr>
+          {{/each}}
+            </table>
+        </section>
+    </article>
+</script>
+
+
+<script id="subcategory-filters-template" type="text/x-handlebars-template">
+      <div class="input-label-container">
+          <input type="checkbox" id="{{author}}" name="{{author}}" value={{author}}>
+          <label for="{{author}}">{{author}}</label>
+    </div>
+</script>
+
+<script id="key-terms-template" type="text/x-handlebars-template">
+  {{#each KeyTerms}}
+  <details>
+    <summary>{{term}}</summary>
+    <p>{{explanation}}</p>
+  </details>
+{{/each}}
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper-three-col-subcourse">
+    <header class="header">
+      <a href="index.html"><img id="logo" src="../public/Resources/widemind-logo.png">
+      </a>
+      <div id="search-bar">
+        <input name="search-input" type="text" autocomplete="off" spellcheck="false"
+          placeholder="Search for books or recordings...">
+        <button class="search-button" type="button">
+          <img id="search-icon" src="../public/Resources/searchIcon.png">
+        </button>
+      </div>
+      <nav id="navBar">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="filters">
+      <details open>
+        <summary>Type</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="book-type" name="type-filter" value="Book">
+            <label for="book-type">Book</label><br>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="lecture-type" name="type-filter" value="Lecture">
+            <label for="lecture-type">Recorded Lecture</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Price</summary>
+        <input type="range" min="0" max="200" class="price-range" id="price-range">
+        <div class="price-labels">
+          <span class="min-price-label">0€</span>
+          <span class="max-price-label">200€</span>
+        </div>
+      </details>
+
+      
+
+      <details open >
+        <summary>Author / Instructor</summary>
+        <div id="authorInstructor-group">
+
+        </div>
+      </details>
+
+      <details open>
+        <summary>Pages</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="0-500-pages" name="pages-filter" value="0-500-pages">
+            <label for="0-500-pages"> 0-500 Pages</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="501-1000-pages" name="pages-filter" value="501-1000-pages">
+            <label for="501-1000-pages">501-1000 Pages</label>
+          </div>
+
+          <div class="input-label-container">
+            <input type="checkbox" id="1001-pages" name="pages-filter" value="1001-pages">
+            <label for="1001-pages">1000+ Pages</label>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Total Time</summary>
+        <div class="checkbox-group">
+          <div class="input-label-container">
+            <input type="checkbox" id="0-12-hours" name="time-filter" value="0-12-hours">
+            <label for="0-12-hours"> 0-12 Hours</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="13-24-hours" name="time-filter" value="13-24-hours">
+            <label for="13-24-hours">13-24 Hours</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="25-hours" name="time-filter" value="25-hours">
+            <label for="25-hours">24+ Hours</label>
+          </div>
+        </div>
+      </details>
+    </aside>
+
+
+
+    <!--Page description -->
+    <main id="subcat-main">
+      <!--Section books -->
+
+      <section id="book-section">
+        <h2>Books</h2>
+
+       
+      </section>
+
+      <section id="lecture-section">
+        <h2>Lectures</h2>
+        
+      </section>
+
+    </main>
+    <aside class="key-terms">
+      <h3>Hot Topics in Computer Science</h3>
+      <details>
+        <summary>Artificial Intelligence (AI)</summary>
+        <p>The simulation of human intelligence in machines, enabling them to perform tasks such as decision-making, problem-solving, and language understanding.</p>
+      </details>
+      <details>
+        <summary>Machine Learning (ML)</summary>
+        <p>A subset of AI that focuses on developing algorithms that allow systems to learn and improve from experience without being explicitly programmed.</p>
+      </details>
+      <details>
+        <summary>Deep Learning</summary>
+        <p>A subset of machine learning that uses neural networks with multiple layers to analyze large amounts of data and perform complex tasks like image recognition and natural language processing.</p>
+      </details>
+      <details>
+        <summary>Blockchain</summary>
+        <p>A decentralized digital ledger technology that records transactions across multiple computers in a way that is secure, transparent, and immutable.</p>
+      </details>
+      <details>
+        <summary>Quantum Computing</summary>
+        <p>An advanced computing paradigm that uses quantum bits (qubits) to perform calculations much faster than traditional computers for certain types of problems.</p>
+      </details>
+      <details>
+        <summary>Cybersecurity</summary>
+        <p>The practice of protecting systems, networks, and programs from digital attacks, theft, or damage.</p>
+      </details>
+      <details>
+        <summary>Cloud Computing</summary>
+        <p>The delivery of computing services such as servers, storage, and databases over the internet, allowing for scalable and on-demand resources.</p>
+      </details>
+      <details>
+        <summary>Internet of Things (IoT)</summary>
+        <p>A network of interconnected devices that communicate and exchange data to automate and optimize various processes.</p>
+      </details>
+      <details>
+        <summary>Augmented Reality (AR) & Virtual Reality (VR)</summary>
+        <p>Technologies that provide immersive experiences by overlaying digital elements onto the real world (AR) or creating completely virtual environments (VR).</p>
+      </details>
+      <details>
+        <summary>Big Data</summary>
+        <p>The field that deals with analyzing and processing extremely large and complex data sets to uncover patterns, trends, and insights.</p>
+      </details>
+    </aside>
+
+    <footer>
+      <div id="left-footer">
+        <h2>CONTACT</h2>
+        <ul class="menu">
+          <li>
+            <address>
+              Patision 76<br>
+              Zip-Code 104 34 Athens
+              <br><a
+                href="https://www.google.com/maps/place/Patision+76,+Athina+104+34,+Greece/@37.9940825,23.7296364,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1a2cceabec261:0x6184d281c9138b4e!8m2!3d37.9940825!4d23.7322113?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Find
+                in map</a>
+            </address>
+          </li>
+          <li>
+            Tel:
+            <a href="tel:+2108203315">210-8203315</a>,
+            <a href="tel:2108203316">316</a>
+          </li>
+
+          <li>
+            Email: <a href="mailto:widemind@gmail.com">widemind@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div id="middle-footer">
+        <h2>INFORMATION</h2>
+        <ul class="information">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Manage Cookies</a></li>
+        </ul>
+      </div>
+      <div id="right-footer">
+        <h2>CONNECT WITH US</h2>
+        <ul class="social-media">
+          <li>
+            <a href="https://www.github.com" class="fa-brands fa-github"></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" class="fa-brands fa-linkedin-in"></a>
+          </li>
+          <li>
+            <a href="https://www.x.com" class="fa-brands fa-x-twitter"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" class="fa-brands fa-facebook-f"></a>
+          </li>
+        </ul>
+      </div>
+      <div id="lower-footer">
+        <p>©Copyright 2024 WideMind Organization</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

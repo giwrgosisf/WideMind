@@ -3,6 +3,12 @@ const url = "https://learning-hub-1whk.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     initCategory();
+    const loginButton = document.getElementById('login-button');
+    const loginFormContainer = document.querySelector('.lform-container');
+    
+    loginButton.addEventListener('click', () => {
+    loginFormContainer.classList.toggle('active');
+    });
 });
 
 
@@ -63,12 +69,15 @@ async function initCategory() {
         document.getElementById("upper-page").innerHTML = contentOfTemplateIntro;
 
 
+        
 
     } catch(error) {
         console.error("Error loading category page:", error);
         document.getElementById("upper-page").innerHTML =
           "<p>Failed to load the items for this category. Please try again later.</p>";
     }
+
+    
 
 }
 
