@@ -1613,9 +1613,10 @@ details>figure>figcaption {
 
 .lform-container{
     position: absolute;
-    width: 20%;
-    top: 5%;
-    right: 40%;
+    width: 30rem;
+    top: 4rem;
+    left: 0;
+    right: 0;
     opacity: 0;
     pointer-events: none; /* Prevent interactions while hidden */
     transition: max-height 0.3s ease, opacity 0.3s ease;
