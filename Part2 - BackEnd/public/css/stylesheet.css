@@ -1625,6 +1625,9 @@ details>figure>figcaption {
     text-align: center;
 }
 
+.lform-container > h1{
+    text-align: left;
+}
 
 .overlay {
     position: fixed;
