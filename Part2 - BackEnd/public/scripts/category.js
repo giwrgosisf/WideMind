@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginButton = document.getElementById('login-button');
     const loginFormContainer = document.querySelector('.lform-container');
     const overlay = document.getElementById('overlay');
+
+    const closeFormButton = document.getElementById('close-button');
+
+    closeFormButton.addEventListener('click', () => {
+        loginFormContainer.classList.toggle('active');
+        overlay.classList.toggle('active');
+    })
     
     loginButton.addEventListener('click', () => {
     loginFormContainer.classList.toggle('active');
