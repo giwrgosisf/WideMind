@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initCategory();
     const loginButton = document.getElementById('login-button');
     const loginFormContainer = document.querySelector('.lform-container');
+    const overlay = document.getElementById('overlay');
     
     loginButton.addEventListener('click', () => {
     loginFormContainer.classList.toggle('active');
+    overlay.classList.toggle('active');
     });
 });
 
