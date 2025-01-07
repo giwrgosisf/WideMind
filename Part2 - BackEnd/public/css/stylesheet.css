@@ -660,23 +660,21 @@ footer {
     text-align: left;
 }
 
-.book .author, .book .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
+.book .author, .price, .book .pages, .book .stars-rating, .lecture .university, .instructor, .number-of-lectures, .duration {
     font-size: 1em;
     text-align: left;
     padding-bottom: 0.5rem;
     font-weight: bold;
 }
 
-.book>p {
-    /* margin-top: 1rem; */
-    font-weight: 300;
-    text-align: left;
-}
-.publisher, .publicationDate{
+
+
+/* .publisher, .publicationDate{
     font-weight:600;
-}
+} */
 
 .publicationDate{
+    margin-top: 0.6rem;
     margin-bottom: 0.6rem;
 }
 
@@ -904,13 +902,13 @@ footer {
 
 
 
-.book .price {
+/* .book .price {
     margin-top: 0.5em;
     text-align: end;
     display: block;
     font-size:1.5em;
 
-}
+} */
 
 .key-terms details p {
     border-top: 1px solid #cfcfcf;
@@ -1067,11 +1065,11 @@ footer {
 
 
 
-.book-pages, .product-author, .product-year, .product-stars-rating, .lecture-uni, .total-lectures, .publisher, .publicationDate {
+/* .book-pages, .product-author, .product-year, .product-stars-rating, .lecture-uni, .total-lectures, .publisher, .publicationDate {
     font-size: 1.2em;
     margin-bottom: 1em;
 
-}
+} */
 
 .ratings {
     display: flex;
