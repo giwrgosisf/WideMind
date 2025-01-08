@@ -21,9 +21,25 @@ window.addEventListener('load', async function () {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const products = await response.json();
-        renderSubcateroryMaterial(products);
 
+        Handlebars.registerHelper('eq', function (a, b) {
+            return a === b;
+        });
+
+        Handlebars.registerHelper('notNull', function (value) {
+            return value != undefined; 
+        });
+        
+        
+        const products = await response.json();
+
+        response = await fetch(`https://learning-hub-1whk.onrender.com/subcategories`);
+        const subcategories = await response.json();
+    
+
+        renderSubcateroryMaterial(products , subcategories);
+        
+       
 
     } catch (error) {
         console.error('Error fetching subcategories:', error.message);
@@ -31,7 +47,7 @@ window.addEventListener('load', async function () {
 });
 
 
-  function renderSubcateroryMaterial(products){
+  function renderSubcateroryMaterial(products , subcategories) {
 
     let template = document.getElementById("subcategory-template").innerHTML;
     const subcategoryTemplate = Handlebars.compile(template);
@@ -41,13 +57,25 @@ window.addEventListener('load', async function () {
 
     template = document.getElementById("key-terms-template").innerHTML
     const  keyTermsTemplate = Handlebars.compile(template);
-    
 
+    const subCatTitle = subcategories.find(subcategory => subcategory.id == subCatID).title;
+    
+    template = document.getElementById("subcategory-title-template").innerHTML
+
+    const  titleTemplate = Handlebars.compile(template);
+
+    const titleSection = document.getElementById("upper-page");
+
+  
+    
+    titleSection.innerHTML = titleTemplate({ suBcategoryTitle: subCatTitle });
 
     const bookSection = document.getElementById("book-section");
+   
     const lecturesSection = document.getElementById("lecture-section");
 
-    
+    const books = new Array();
+    const lectures = new Array();  
 
     const authorInstructorFilter  = document.getElementById("authorInstructor-group");
      
@@ -64,32 +92,30 @@ window.addEventListener('load', async function () {
     })
 
     products.forEach(item => {
-        const renderedHTML = subcategoryTemplate(item);
+        const renderSubcateroryMaterial = subcategoryTemplate(item);
         const revealedAuthorInstructor = filterTemplate(item);
+    
         if (item.type === "Book") {
-            bookSection.innerHTML += renderedHTML;
-            authorInstructorFilter.innerHTML+= revealedAuthorInstructor;
+            books.push(item);
+            authorInstructorFilter.innerHTML += revealedAuthorInstructor;
         } else if (item.type === "Lecture") {
-            lecturesSection.innerHTML += renderedHTML;
+            lectures.push(item);
            
         }
-
-        
     });
 
-    
+    const bookData = { type: "Book", books: books };
+    bookSection.innerHTML += subcategoryTemplate(bookData);
 
-  
-       
-    
-        
-    
-    
+    // Render lectures
+    const lectureData = { type: "Lecture", lectures: lectures };
+    lecturesSection.innerHTML += subcategoryTemplate(lectureData);
 
 
-   
+
     
 }
+
 
 
 
