@@ -5,7 +5,7 @@
   <title>Subcategory</title>
   <meta charset="UTF-8">
   <script src="../public/scripts/subcategory.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
   <meta name="description" content="subcategory page">
   <meta name="keywords"
     content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses">
@@ -24,7 +24,7 @@
 
 
 
-  <script id = "subcategory-title-template" type="text/x-handlebars-template">
+  <script id="subcategory-title-template" type="text/x-handlebars-template">
    <h2>{{suBcategoryTitle}}</h2>
   </script>
   <script id="subcategory-template" type="text/x-handlebars-template">
@@ -37,12 +37,12 @@
         </header>
         <a href={{this.link}}><img src="https://learning-hub-1whk.onrender.com/{{this.image}}" alt="{{this.title}} cover"></a>
        
-        <p class="author">Author:{{author}}</p>
+        <p class="author">Author: {{author}}</p>
         <p class="pages">{{pages}}</p>
-        <p class="publisher">Publisher:{{publisher}}</p>
+        <p class="publisher">Publisher: {{publisher}}</p>
         <p class="publicationDate">Publication Date: {{publicationDate}}</p>
         <p>{{description}}</p>
-        <p class="price">Price:{{cost}}€</p>
+        <p class="price">Price: {{cost}}€</p>
 
         <section class="product-features">
             <h2>Product Features</h2>
@@ -93,14 +93,14 @@
 </script>
 
 
-<script id="subcategory-filters-template" type="text/x-handlebars-template">
+  <script id="subcategory-filters-template" type="text/x-handlebars-template">
       <div class="input-label-container">
           <input type="checkbox" id="{{author}}" name="{{author}}" value={{author}}>
           <label for="{{author}}">{{author}}</label>
     </div>
 </script>
 
-<script id="key-terms-template" type="text/x-handlebars-template">
+  <script id="key-terms-template" type="text/x-handlebars-template">
   {{#each KeyTerms}}
   <details>
     <summary>{{term}}</summary>
@@ -126,7 +126,7 @@
       <nav id="navBar">
         <ul id="menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="categories.html">Categories</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
           <li><a href="aboutUs.html">About Us</a></li>
         </ul>
       </nav>
@@ -160,58 +160,58 @@
       <details open>
         <summary>Rating</summary>
         <div class="checkbox-group">
-            <div class="input-label-container">
-                <input type="checkbox" id="5star-rating" name="rating-filter" value="5Star">
-                <label for="5star-rating">5 Stars</label>
-            </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="5star-rating" name="rating-filter" value="5Star">
+            <label for="5star-rating">5 Stars</label>
+          </div>
 
-            <div class="input-label-container">
-                <input type="checkbox" id="4star-rating" name="rating-filter" value="4Star">
-                <label for="4star-rating">4 Stars</label>
-            </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="4star-rating" name="rating-filter" value="4Star">
+            <label for="4star-rating">4 Stars</label>
+          </div>
 
-            <div class="input-label-container">
-                <input type="checkbox" id="3star-rating" name="rating-filter" value="3Star">
-                <label for="3star-rating">3 Stars</label>
-            </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="3star-rating" name="rating-filter" value="3Star">
+            <label for="3star-rating">3 Stars</label>
+          </div>
 
-            <div class="input-label-container">
-                <input type="checkbox" id="2star-rating" name="rating-filter" value="2Star">
-                <label for="2star-rating">2 Stars</label>
-            </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="2star-rating" name="rating-filter" value="2Star">
+            <label for="2star-rating">2 Stars</label>
+          </div>
 
-            <div class="input-label-container">
-                <input type="checkbox" id="1star-rating" name="rating-filter" value="1Star">
-                <label for="1star-rating">1 Star</label>
-            </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="1star-rating" name="rating-filter" value="1Star">
+            <label for="1star-rating">1 Star</label>
+          </div>
         </div>
-    </details>
+      </details>
 
-      <details open >
+      <details open>
         <summary>Author / Instructor</summary>
         <div id="authorInstructor-group">
 
         </div>
       </details>
 
-      
+
       <details open>
         <summary>Year of Publish</summary>
         <div class="checkbox-group">
-            <div class="input-label-container">
-                <input type="checkbox" id="before-2000" name="year-filter" value="before-2000">
-                <label for="before-2000"> Before 2000</label>
-            </div>
-            <div class="input-label-container">
-                <input type="checkbox" id="2000-2010" name="year-filter" value="2000-2010">
-                <label for="2000-2010">2000 - 2010</label>
-            </div>
-            <div class="input-label-container">
-                <input type="checkbox" id="after-2010" name="year-filter" value="after-2010">
-                <label for="after-2010">After 2010</label>
-            </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="before-2000" name="year-filter" value="before-2000">
+            <label for="before-2000"> Before 2000</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="2000-2010" name="year-filter" value="2000-2010">
+            <label for="2000-2010">2000 - 2010</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" id="after-2010" name="year-filter" value="after-2010">
+            <label for="after-2010">After 2010</label>
+          </div>
         </div>
-    </details>
+      </details>
 
       <details open>
         <summary>Pages</summary>
@@ -254,7 +254,7 @@
 
 
 
-    <section id = "upper-page"></section>
+    <section id="upper-page"></section>
     <!--Page description -->
     <main id="subcat-main">
       <!--Section books -->
@@ -262,12 +262,12 @@
       <div id="book-section">
         <h2>Books</h2>
 
-       
+
       </div>
 
       <div id="lecture-section">
         <h2>Lectures</h2>
-        
+
       </div>
 
     </main>
@@ -275,23 +275,28 @@
       <h3>Hot Topics in Computer Science</h3>
       <details>
         <summary>Artificial Intelligence (AI)</summary>
-        <p>The simulation of human intelligence in machines, enabling them to perform tasks such as decision-making, problem-solving, and language understanding.</p>
+        <p>The simulation of human intelligence in machines, enabling them to perform tasks such as decision-making,
+          problem-solving, and language understanding.</p>
       </details>
       <details>
         <summary>Machine Learning (ML)</summary>
-        <p>A subset of AI that focuses on developing algorithms that allow systems to learn and improve from experience without being explicitly programmed.</p>
+        <p>A subset of AI that focuses on developing algorithms that allow systems to learn and improve from experience
+          without being explicitly programmed.</p>
       </details>
       <details>
         <summary>Deep Learning</summary>
-        <p>A subset of machine learning that uses neural networks with multiple layers to analyze large amounts of data and perform complex tasks like image recognition and natural language processing.</p>
+        <p>A subset of machine learning that uses neural networks with multiple layers to analyze large amounts of data
+          and perform complex tasks like image recognition and natural language processing.</p>
       </details>
       <details>
         <summary>Blockchain</summary>
-        <p>A decentralized digital ledger technology that records transactions across multiple computers in a way that is secure, transparent, and immutable.</p>
+        <p>A decentralized digital ledger technology that records transactions across multiple computers in a way that
+          is secure, transparent, and immutable.</p>
       </details>
       <details>
         <summary>Quantum Computing</summary>
-        <p>An advanced computing paradigm that uses quantum bits (qubits) to perform calculations much faster than traditional computers for certain types of problems.</p>
+        <p>An advanced computing paradigm that uses quantum bits (qubits) to perform calculations much faster than
+          traditional computers for certain types of problems.</p>
       </details>
       <details>
         <summary>Cybersecurity</summary>
@@ -299,19 +304,23 @@
       </details>
       <details>
         <summary>Cloud Computing</summary>
-        <p>The delivery of computing services such as servers, storage, and databases over the internet, allowing for scalable and on-demand resources.</p>
+        <p>The delivery of computing services such as servers, storage, and databases over the internet, allowing for
+          scalable and on-demand resources.</p>
       </details>
       <details>
         <summary>Internet of Things (IoT)</summary>
-        <p>A network of interconnected devices that communicate and exchange data to automate and optimize various processes.</p>
+        <p>A network of interconnected devices that communicate and exchange data to automate and optimize various
+          processes.</p>
       </details>
       <details>
-        <summary>Augmented Reality (AR) & Virtual Reality (VR)</summary>
-        <p>Technologies that provide immersive experiences by overlaying digital elements onto the real world (AR) or creating completely virtual environments (VR).</p>
+        <summary>Augmented Reality (AR) &amp Virtual Reality (VR)</summary>
+        <p>Technologies that provide immersive experiences by overlaying digital elements onto the real world (AR) or
+          creating completely virtual environments (VR).</p>
       </details>
       <details>
         <summary>Big Data</summary>
-        <p>The field that deals with analyzing and processing extremely large and complex data sets to uncover patterns, trends, and insights.</p>
+        <p>The field that deals with analyzing and processing extremely large and complex data sets to uncover patterns,
+          trends, and insights.</p>
       </details>
     </aside>
 

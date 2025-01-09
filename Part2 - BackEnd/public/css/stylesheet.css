@@ -17,7 +17,8 @@ iframe {
 }
 
 html {
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 15rem;
+    scroll-behavior: smooth;
 }
 
 
