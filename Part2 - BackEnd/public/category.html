@@ -111,29 +111,27 @@
         </header>
         <div id="overlay" class="overlay"></div>
         <div class="lform-container">
-            <button id="close-button"  alt="closeButton"> <img src="../public/Resources/closeButton.png"></button>
+            <button id="close-button" alt="closeButton"> <img src="../public/Resources/closeButton.png"></button>
             <h1>Log in</h1>
             <img src="../public/Resources/LogIn.png" alt="Log in button">
             <div class="content">
-              <form action="# " id="Log-in" name="Log-in">
-                <div class="input-box">
-                  <label for="lUsername">Username</label>
-                  <input type="text" id="lUsername" placeholder="Username" pattern="[A-Za-z_0-9]+"
-                    title="you must enter a username that contains letters A-Z and a-z and digits 0-9 only underscores are allowed "
-                    required>
-                </div>
-                <div class="input-box">
-                  <label for="lPassword">Password</label>
-                  <input type="password" id="lPassword" pattern="^.{5,15}$" placeholder="Password" maxlength="15"
-                    minlength="5" title="you must enter a password between 5 and 15 characters" required>
-                </div>
-              </form>
+                <form action="# " id="Log-in" name="Log-in">
+                    <div class="input-box">
+                        <label for="lUsername">Username</label>
+                        <input type="text" id="lUsername" placeholder="Username" pattern="[A-Za-z_0-9]+"
+                            title="you must enter a username that contains letters A-Z and a-z and digits 0-9 only underscores are allowed "
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <label for="lPassword">Password</label>
+                        <input type="password" id="lPassword" pattern="^.{5,15}$" placeholder="Password" maxlength="15"
+                            minlength="5" title="you must enter a password between 5 and 15 characters" required>
+                    </div>
+                </form>
             </div>
-            <div class="button">
-              <button type="submit" id="lsubmit" form="Log-in" value="Submit">Log In</button>
-            </div>
+            <button type="submit" id="lsubmit" form="Log-in" value="Submit">Log In</button>
             <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-          </div>
+        </div>
         <aside class="filters">
             <details open>
                 <summary>Type</summary>
