@@ -126,7 +126,7 @@ async function handleLogin(event) {
             body: JSON.stringify(userData)
         }
 
-        const response = await fetch(url + "/login", init);
+        const response = await fetch("http://localhost:8080/login", init);
 
         if (!response.ok) {
             throw new Error(`Login failed with status ${response.status}`);

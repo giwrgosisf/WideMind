@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require("uuid");
 
-const DAOManager = require("../DAO/DAOManager");
-const daoManager = new DAOManager();
+const daoManager = require("../DAO/DAOManager");
+
 
 class Authentication {
 

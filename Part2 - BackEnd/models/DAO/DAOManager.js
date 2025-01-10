@@ -23,11 +23,13 @@ class DAOManager {
         ];
 
         for (const user of testUsers) {
-            this.userDAO.addUser(user).catch((error) => {
-                console.log(`Error saving user ${user.username}: ${error}`);
-            });
+            const result = this.userDAO.addUser(user);
+            if (!result) {
+                console.log(`Error saving user ${user.username}: User already exists.`);
+            }
         }
     }
 }
 
-module.exports = DAOManager;
+const daoManagerInstance = new DAOManager();
+module.exports = daoManagerInstance;

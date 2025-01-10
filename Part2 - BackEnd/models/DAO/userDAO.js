@@ -1,6 +1,6 @@
 const User = require("../entities/user")
 
-class usersDAO {
+class userDAO {
 
     constructor() {
         this.usersList = [];
@@ -40,4 +40,4 @@ class usersDAO {
     }
 }
 
-module.exports = new usersDAO();
+module.exports =  userDAO;
