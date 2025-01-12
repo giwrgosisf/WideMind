@@ -1,16 +1,21 @@
 
 const User = require("../entities/user");
 const userDAO = require("./userDAO");
+const cartDAO = require("./CartDAO");
 
 class DAOManager {
     constructor() {
         this.userDAO = new userDAO();
+        this.cartDAO = new cartDAO();
     }
 
     get getUserDAO() {
         return this.userDAO;
     }
 
+    get getCartDAO() {
+        return this.cartDAO;
+    }
     createTestUsers() {
         const testUsers = [
             new User("nikos_papadopoulos", "kaliMera2025"),

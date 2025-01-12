@@ -1703,7 +1703,7 @@ fieldset>details>.question-options {
     margin-bottom: 1rem;
 }
 
-.form-container>.button {
+.form-container>.button , .add-button{
 
     align-self: center;
     width: 25rem;
@@ -1718,7 +1718,7 @@ fieldset>details>.question-options {
     padding: 1.5rem;
 }
 
-.form-container>.button>button, .lform-container> button{
+.form-container>.button>button, .lform-container> button {
     background: none;
     outline: none;
     border: none;
@@ -1728,6 +1728,17 @@ fieldset>details>.question-options {
     font-size: 0.5em;
     height: fit-content;
     cursor: pointer;
+
+}
+
+
+.add-button{
+    cursor: pointer;
+    margin: 0;
+    width:10rem;
+    font-size:1em;
+    padding: 1em;
+    margin-top: 5em;
 
 }
 

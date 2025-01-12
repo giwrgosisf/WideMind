@@ -49,6 +49,7 @@
                 <p class="publicationDate">Publication Date: {{this.publicationDate}}</p>
                 <p class = "description">{{this.description}}</p>
                 <p class="price">Price: € {{this.cost}}</p>
+                <button class="add-button" data-id="{{id}}", data-type="{{this.type}}", data-title="{{this.title}}" , data-price="{{this.cost}}" >Add to Cart</button>
             </article>
             {{/each}}
         {{else}}
@@ -69,6 +70,7 @@
                     <a href={{this.link}}> <img src="https://learning-hub-1whk.onrender.com/{{this.image}}" alt="{{this.title}} cover"> </a>
                     <p class = "description">{{this.description}}</p>
                     <p class="price">Price: € {{this.cost}}</p>
+                    <button class="add-button" data-id="{{id}}", data-type="{{this.type}}", data-title="{{this.title}}" , data-price="{{this.cost}}" >Add to Cart</button>
                 </article>
                 {{/each}}
             {{else}}

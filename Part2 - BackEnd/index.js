@@ -5,10 +5,14 @@ const port = 8080
 
 const daoManager = require('./models/DAO/DAOManager');
 const Authentication = require('./models/services/Authentication');
+const CartItemService = require('./models/services/CartItemService');
+const cartItem = require('./models/entities/cartItem');
+const Cart = require('./models/entities/cart');
 
 daoManager.createTestUsers();
 
 const authentication = new Authentication();
+const cartItemService = new CartItemService();
 
 app.listen(port)
 
@@ -57,4 +61,30 @@ app.post('/login', async function (req, res) {
         console.error('Authentication error:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
+});
+
+app.post('/cart', async function (req, res) {
+
+    const data = req.body;
+    const sessionId = data.sessionId;
+    const username = data.username;
+    const type = data.type;
+    const title = data.title;
+    const price = data.price;
+    const id = data.id;
+
+
+    let  item = new cartItem(id, type, price, title);
+    try {        
+        if(cartItemService.addCartItem(item, sessionId, username) === 409){
+            res.status(409).json({ error: 'Item already in cart' });
+        }else{
+            res.status(200).json({ message: 'Item added to cart' });
+        }
+
+
+    }catch(error){
+        console.error('Cart error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }    
 });

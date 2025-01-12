@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const submitButton = document.getElementById('lsubmit');
     submitButton.addEventListener('click', handleLogin);
+   
 });
 
 
@@ -63,6 +64,7 @@ async function initCategory() {
             lectures: lectures,
         };
 
+        
 
         const contentOfTemplate = template(htmlData);
         document.getElementById("subcat-main").innerHTML = contentOfTemplate;
@@ -72,7 +74,7 @@ async function initCategory() {
         const templateSourceIntro = document.getElementById("category-title-template").textContent;
         const templateIntro = Handlebars.compile(templateSourceIntro);
 
-
+       
         const htmlDataIntro = {
             categoryTitle: category.title,
         };
@@ -81,9 +83,10 @@ async function initCategory() {
         const contentOfTemplateIntro = templateIntro(htmlDataIntro);
         document.getElementById("upper-page").innerHTML = contentOfTemplateIntro;
 
+       
+        
 
-
-
+       
     } catch (error) {
         console.error("Error loading category page:", error);
         document.getElementById("upper-page").innerHTML =
@@ -91,7 +94,10 @@ async function initCategory() {
     }
 
 
-
+    let addToCartButtons = document.querySelectorAll('.add-button');
+    addToCartButtons.forEach(button => {
+    button.addEventListener('click', addItemToCart);
+});
 }
 
 
@@ -119,6 +125,7 @@ async function handleLogin(event) {
     try {
         let headers = new Headers();
         headers.append("Content-Type", "application/json");
+        headers.append("http-session", "true");
 
         let init = {
             method: "POST",
@@ -150,5 +157,84 @@ async function handleLogin(event) {
         console.error("Login error:", error);
 
     }
+
+
+   
+
+}
+
+
+async function addItemToCart(event){
+
+    let user = null;
+
+    if (!sessionStorage.getItem("user")) {
+        alert("Παρακαλώ συνδεθείτε για αγορά του εκπαιδευτικού υλικού");
+        return;
+    }else{ 
+         user = JSON.parse(sessionStorage.getItem("user"));
+    }
+
+
+    const cartItemData = {
+        id: this.getAttribute("data-id"),
+        type: this.getAttribute("data-type"),
+        title: this.getAttribute("data-title"),
+        price: this.getAttribute("data-price"),
+        username: user.username,
+        sessionId: user.sessionId
+    };
+
+    try{
+        let headers = new Headers();
+        headers.append("Content-Type", "application/json");
+        headers.append("http-session", "true");
+
+        let init = {
+            method: "POST",
+            "headers": headers,
+            body: JSON.stringify(cartItemData)      
+        }
+
+        const response = await fetch("http://localhost:8080/cart", init);
+
+
+        if (!response.ok) {
+            if (response.status === 409) {
+                alert("Item already in cart.");
+            }
+            throw new Error(`Add to cart failed with status ${response.status}`);
+        }
+
+        
+        alert("Item added to cart successfully!");
+
+
+    } catch (error) {
+        console.error("Add to cart error:", error);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+   
 
 }
