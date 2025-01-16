@@ -4,15 +4,13 @@
 <head>
   <title>Subcategory</title>
   <meta charset="UTF-8">
-  <script src="../public/scripts/subcategory.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
   <meta name="description" content="subcategory page">
   <meta name="keywords"
     content="e-learning, computer science, machine learning, neural networks,operating systems, system organization, books, video courses">
   <meta name="author" content="WideMind Organization">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../public/Resources/website-icon.png" rel="shortcut icon" type="image/png">
-  <link rel="stylesheet" href="../public/css/stylesheet.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script type="text/javascript" src="scripts/subcategory.js"></script>
 
   <script id="subcategory-title-template" type="text/x-handlebars-template">
    <h2>{{suBcategoryTitle}}</h2>
@@ -114,13 +114,13 @@
 <body>
   <div class="wrapper-three-col-subcourse">
     <header class="header">
-      <a href="index.html"><img id="logo" src="../public/Resources/widemind-logo.png">
+      <a href="index.html"><img id="logo" src="Resources/widemind-logo.png">
       </a>
       <div id="search-bar">
         <input name="search-input" type="text" autocomplete="off" spellcheck="false"
           placeholder="Search for books or recordings...">
         <button class="search-button" type="button">
-          <img id="search-icon" src="../public/Resources/searchIcon.png">
+          <img id="search-icon" src="Resources/searchIcon.png">
         </button>
       </div>
       <nav id="navBar">

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const submitButton = document.getElementById('lsubmit');
     submitButton.addEventListener('click', handleLogin);
-   
+
 });
 
 
@@ -64,7 +64,7 @@ async function initCategory() {
             lectures: lectures,
         };
 
-        
+
 
         const contentOfTemplate = template(htmlData);
         document.getElementById("subcat-main").innerHTML = contentOfTemplate;
@@ -74,7 +74,7 @@ async function initCategory() {
         const templateSourceIntro = document.getElementById("category-title-template").textContent;
         const templateIntro = Handlebars.compile(templateSourceIntro);
 
-       
+
         const htmlDataIntro = {
             categoryTitle: category.title,
         };
@@ -83,10 +83,16 @@ async function initCategory() {
         const contentOfTemplateIntro = templateIntro(htmlDataIntro);
         document.getElementById("upper-page").innerHTML = contentOfTemplateIntro;
 
-       
-        
 
-       
+        let addToCartButtons = document.querySelectorAll('.add-button');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addItemToCart);
+        });
+
+
+
+
+
     } catch (error) {
         console.error("Error loading category page:", error);
         document.getElementById("upper-page").innerHTML =
@@ -94,10 +100,7 @@ async function initCategory() {
     }
 
 
-    let addToCartButtons = document.querySelectorAll('.add-button');
-    addToCartButtons.forEach(button => {
-    button.addEventListener('click', addItemToCart);
-});
+
 }
 
 
@@ -159,20 +162,19 @@ async function handleLogin(event) {
     }
 
 
-   
+
 
 }
 
 
-async function addItemToCart(event){
+async function addItemToCart(event) {
 
-    let user = null;
-
+    
     if (!sessionStorage.getItem("user")) {
-        alert("Παρακαλώ συνδεθείτε για αγορά του εκπαιδευτικού υλικού");
+        alert("Please log in to add items in cart !");
         return;
-    }else{ 
-         user = JSON.parse(sessionStorage.getItem("user"));
+    } else {
+        user = JSON.parse(sessionStorage.getItem("user"));
     }
 
 
@@ -185,7 +187,7 @@ async function addItemToCart(event){
         sessionId: user.sessionId
     };
 
-    try{
+    try {
         let headers = new Headers();
         headers.append("Content-Type", "application/json");
         headers.append("http-session", "true");
@@ -193,7 +195,7 @@ async function addItemToCart(event){
         let init = {
             method: "POST",
             "headers": headers,
-            body: JSON.stringify(cartItemData)      
+            body: JSON.stringify(cartItemData)
         }
 
         const response = await fetch("http://localhost:8080/cart", init);
@@ -206,7 +208,7 @@ async function addItemToCart(event){
             throw new Error(`Add to cart failed with status ${response.status}`);
         }
 
-        
+
         alert("Item added to cart successfully!");
 
 
@@ -231,10 +233,10 @@ async function addItemToCart(event){
 
 
 
-    
 
-    
 
-   
+
+
+
 
 }

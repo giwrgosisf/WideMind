@@ -14,6 +14,11 @@ class Authentication {
         if (foundUser === null){
             return null;
         }
+        
+        if (foundUser.sessionId) {
+            console.log("User already logged in with sessionId:", foundUser.sessionId);
+            return foundUser.sessionId; // Return the existing session ID
+        }
 
         foundUser.sessionId = sessionId;
         console.log("User authenticated");
