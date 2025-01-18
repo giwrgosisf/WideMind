@@ -64,12 +64,25 @@ async function initCategory() {
             lectures: lectures,
         };
 
+        const authorLanding = document.getElementById("category-author-group");
+        
+        const authorTemplate = document.getElementById("category-filters-template").innerHTML;
+
+        const authorCompiled = Handlebars.compile(authorTemplate)
+
+        items.forEach(item => {
+            if(item.type === "Book"){
+                const revealedAuthor = authorCompiled(item);
+                authorLanding.innerHTML += revealedAuthor;
+            }
+            
+        });
 
 
         const contentOfTemplate = template(htmlData);
         document.getElementById("subcat-main").innerHTML = contentOfTemplate;
 
-
+    
 
         const templateSourceIntro = document.getElementById("category-title-template").textContent;
         const templateIntro = Handlebars.compile(templateSourceIntro);

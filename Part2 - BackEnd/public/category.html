@@ -77,12 +77,14 @@
                 <p>No lectures are available in this category. Stay tuned for updates...</p>
             {{/if}}
         </div>
-
-
-    
     </script>
 
-
+    <script id="category-filters-template" type="text/x-handlebars-template">
+        <div class="input-label-container">
+            <input type="checkbox" id="{{author}}" name="{{author}}" value={{author}}>
+            <label for="{{author}}">{{author}}</label>
+      </div>
+  </script>
 
 
 
@@ -191,51 +193,8 @@
 
             <details open>
                 <summary>Author / Instructor</summary>
-                <div class="checkbox-group">
-                    <div class="input-label-container">
-                        <input type="checkbox" id="bishop-filter" name="author-filter" value="bishop">
-                        <label for="bishop-filter">Christopher M. Bishop</label>
-                    </div>
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="murphy-filter" name="author-filter" value="murphy">
-                        <label for="murphy-filter">Kevin P. Murphy</label>
-                    </div>
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="forsyth-filter" name="author-filter" value="forsyth">
-                        <label for="forsyth-filter">David Forsyth</label>
-                    </div>
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="burkov-filter" name="author-filter" value="burkov">
-                        <label for="burkov-filter">Andriy Burkov</label>
-                    </div>
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="weinberger-filter" name="author-filter" value="weinberger">
-                        <label for="weinberger-filter">Kilian Weinberger</label>
-                    </div>
-
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="muller-filter" name="author-filter" value="muller">
-                        <label for="muller-filter">Andreas C. Müller</label>
-                    </div>
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="leskovec-filter" name="author-filter" value="leskovec">
-                        <label for="leskovec-filter">Jure Leskovec</label>
-                    </div>
-
-                    <div class="input-label-container">
-                        <input type="checkbox" id="eyolfson-filter" name="author-filter" value="Eyolfson">
-                        <label for="eyolfson-filter">Jon Eyolfson</label>
-                    </div>
-                    <div class="input-label-container">
-                        <input type="checkbox" id="ng-filter" name="author-filter" value="ng">
-                        <label for="ng-filter">Andrew Ng</label>
-                    </div>
+                <div id="category-author-group">
+                    
                 </div>
             </details>
 
@@ -307,108 +266,57 @@
 
         </main>
         <aside class="key-terms">
-            <h3>Key Terms</h3>
-
+            <h3>Hot Topics in Computer Science</h3>
             <details>
-                <summary>Machine Learning</summary>
-                <p>
-                    Machine Learning (ML) is a branch of artificial intelligence (AI) that focuses on developing systems
-                    capable
-                    of learning and improving from experience without being explicitly programmed. Instead of following
-                    hardcoded
-                    rules, machine learning models identify patterns in data and make decisions or predictions based on
-                    that
-                    knowledge.
-                </p>
+              <summary>Artificial Intelligence (AI)</summary>
+              <p>The simulation of human intelligence in machines, enabling them to perform tasks such as decision-making,
+                problem-solving, and language understanding.</p>
             </details>
-
             <details>
-                <summary>Dataset</summary>
-                <p>
-                    A collection of data used for training or testing a machine learning model. It typically consists of
-                    features
-                    (input variables) and labels (output variables).
-                </p>
+              <summary>Machine Learning (ML)</summary>
+              <p>A subset of AI that focuses on developing algorithms that allow systems to learn and improve from experience
+                without being explicitly programmed.</p>
             </details>
-
             <details>
-                <summary>Supervised Learning</summary>
-                <p>
-                    A type of machine learning where the model is trained on labeled data, meaning the input comes with
-                    corresponding correct outputs (e.g., classification, regression).
-                </p>
+              <summary>Deep Learning</summary>
+              <p>A subset of machine learning that uses neural networks with multiple layers to analyze large amounts of data
+                and perform complex tasks like image recognition and natural language processing.</p>
             </details>
-
             <details>
-                <summary>Unsupervised Learning</summary>
-                <p>
-                    A machine learning approach where the model is trained on data without explicit labels, aiming to
-                    find hidden
-                    patterns or groupings (e.g., clustering, dimensionality reduction).
-                </p>
+              <summary>Blockchain</summary>
+              <p>A decentralized digital ledger technology that records transactions across multiple computers in a way that
+                is secure, transparent, and immutable.</p>
             </details>
-
-
             <details>
-                <summary>Classification</summary>
-                <p>
-                    Classification is concerned with building models that separate data into distinct classes. These
-                    models are
-                    built by inputting a set of training data for which the classes are pre-labelled in order for the
-                    algorithm to
-                    learn from. The model is then used by inputting a different dataset for which the classes are
-                    withheld,
-                    allowing the model to predict their class membership based on what it has learned from the training
-                    set.
-                </p>
+              <summary>Quantum Computing</summary>
+              <p>An advanced computing paradigm that uses quantum bits (qubits) to perform calculations much faster than
+                traditional computers for certain types of problems.</p>
             </details>
-
-
             <details>
-                <summary>Regression</summary>
-                <p>
-                    Regression is very closely related to classification. While classification is concerned with the
-                    prediction of
-                    discrete classes, regression is applied when the "class" to be predicted is made up of continuous
-                    numerical
-                    values. Linear regression is an example of a regression technique.
-                </p>
+              <summary>Cybersecurity</summary>
+              <p>The practice of protecting systems, networks, and programs from digital attacks, theft, or damage.</p>
             </details>
-
-
             <details>
-                <summary>Clustering</summary>
-                <p>
-                    Clustering is used for analyzing data which does not include pre-labeled classes, or even a class
-                    attribute at
-                    all. Data instances are grouped together using the concept of "maximizing the intraclass similarity
-                    and
-                    minimizing the interclass similarity," as concisely described by Han, Kamber and Pei. This
-                    translates to the
-                    clustering algorithm identifying and grouping instances which are very similar, as opposed to
-                    ungrouped
-                    instances which are much less-similar to one another.
-                </p>
+              <summary>Cloud Computing</summary>
+              <p>The delivery of computing services such as servers, storage, and databases over the internet, allowing for
+                scalable and on-demand resources.</p>
             </details>
-
-
             <details>
-                <summary>Neural Networks</summary>
-                <p>
-                    A smaller, faster memory component that stores frequently accessed data to speed up processing.
-                </p>
+              <summary>Internet of Things (IoT)</summary>
+              <p>A network of interconnected devices that communicate and exchange data to automate and optimize various
+                processes.</p>
             </details>
-
             <details>
-                <summary>Gradient Descent</summary>
-                <p>
-                    An optimization algorithm used to minimize a loss function by iteratively updating model parameters
-                    in the
-                    direction of the steepest descent.
-                </p>
+              <summary>Augmented Reality (AR) &amp Virtual Reality (VR)</summary>
+              <p>Technologies that provide immersive experiences by overlaying digital elements onto the real world (AR) or
+                creating completely virtual environments (VR).</p>
             </details>
-
-        </aside>
+            <details>
+              <summary>Big Data</summary>
+              <p>The field that deals with analyzing and processing extremely large and complex data sets to uncover patterns,
+                trends, and insights.</p>
+            </details>
+          </aside>
 
 
         <footer>
