@@ -63,28 +63,141 @@ app.post('/login', async function (req, res) {
     }
 });
 
-app.post('/cart', async function (req, res) {
+app.post('/cart/add', async function (req, res) {
 
     const data = req.body;
     const sessionId = data.sessionId;
     const username = data.username;
     const type = data.type;
     const title = data.title;
-    const price = data.price;
+    const price = parseFloat(data.price);
+    const img = data.img; 
     const id = data.id;
 
 
-    let  item = new cartItem(id, type, price, title);
-    try {        
-        if(cartItemService.addCartItem(item, sessionId, username) === 409){
+    let item = new cartItem(id, type, price, img, title);
+    try {
+        if (cartItemService.addCartItem(item, sessionId, username) === 409) {
             res.status(409).json({ error: 'Item already in cart' });
-        }else{
+        } else {
             res.status(200).json({ message: 'Item added to cart' });
         }
 
 
-    }catch(error){
-        console.error('Cart error:', error);
+    } catch (error) {
+        console.error('Cart add error:', error);
         res.status(500).json({ error: 'Internal Server Error' });
-    }    
+    }
+});
+
+
+
+app.get('/cart/retrieve', async function (req, res) {
+
+    const sessionId = req.query.sessionId;
+    const username = req.query.username;
+
+    if (!username || !sessionId) {
+        res.status(400).json({ error: 'Missing username or sessionId in query parameters.' });
+    }
+
+
+    try {
+        const cartData = cartItemService.getCartItems(username, sessionId);
+        if (typeof cartData === 'string') {
+            try {
+                const cartItems = JSON.parse(cartData);
+                res.status(200).json(cartItems);
+            } catch (error) {
+                console.error("Invalid JSON:", error);
+                res.status(400).json({ error: 'Invalid JSON format.' });
+            }
+        } else {
+            let errorMessage;
+            switch (cartData) {
+                case 401:
+                    errorMessage = 'Unauthorized: Invalid username or session.';
+                    break;
+                case 404:
+                    errorMessage = 'Not Found: Cart does not exist or is empty.';
+                    break;
+                case 500:
+                    errorMessage = 'Internal Server Error: Please try again later.';
+                    break;
+                default:
+                    errorMessage = 'An unexpected error occurred.';
+            }
+
+            res.status(cartData).json({ error: errorMessage });
+        }
+
+    } catch (error) {
+        console.error('Cart retrieve error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+
+
+});
+
+
+
+app.delete('/cart/item', async function (req, res) {
+
+    const data = req.body;
+    const sessionId = data.sessionId;
+    const username = data.username;
+    const itemId = data.id;
+
+    if (!username || !sessionId || !itemId) {
+        return res.status(400).json({ error: 'Missing username, sessionId, or item id in request body.' });
+    }
+
+    try {
+        const resultDelete = cartItemService.removeCartItem(itemId, sessionId, username);
+        if (typeof resultDelete === 'string') {
+            try {
+                const parsedResult = JSON.parse(resultDelete);
+                if (parsedResult.statusCode === 200) {
+                    res.status(200).json({
+                        message: 'Item successfully removed from the cart.',
+                        totalCost: parsedResult.totalCost
+                    });
+                } else {
+                    console.error("Error parsing JSON:", parsedResult);
+                    res.status(500).json({ error: 'Unexpected response from server.' });
+                }
+            } catch (error) {
+                console.error("Invalid JSON:", error);
+                res.status(400).json({ error: 'Invalid JSON format.' });
+            }
+
+        } else {
+            let errorMessage;
+
+            switch (resultDelete) {
+                case 401:
+                    errorMessage = 'Unauthorized: Invalid username or session.';
+                    break;
+                case 404:
+                    errorMessage = 'Not Found: Item does not exist.';
+                    break;
+                case 409:
+                    errorMessage = 'Conflict: Unable to update the cart.';
+                    break;
+                case 500:
+                    errorMessage = 'Internal Server Error: Please try again later.';
+                    break;
+                default:
+                    errorMessage = 'An unexpected error occurred.';
+            }
+
+            res.status(resultDelete).json({ error: errorMessage });
+
+        }
+    } catch (error) {
+        console.error('Error in deleting item', error);
+        res.status(500).json({ error: 'Internal Server Error.' });
+    }
+
+
 });

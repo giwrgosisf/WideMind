@@ -36,16 +36,30 @@ class Cart{
 
     removeCartItem(cartItem){  
         const index = this._cartItems.findIndex((item) => item.id === cartItem.id);
-        this._cartItems.splice(index, 1);
+        if (index !== -1) {
+            this._cartItems.splice(index, 1);
+        }
     }
 
-    findCartItemById(cartItem) {
-        
-    
+    findCartItem(cartItem) {
         const foundItem = this._cartItems.find(item => item.equals(cartItem));
     
         return foundItem === undefined ? undefined : foundItem;
     }
+
+
+    findCartItemById(id) {
+        let foundItem = this._cartItems.find(item => item.id === id);
+    
+        if (foundItem === undefined) {
+            foundItem = null;
+        }
+
+        return foundItem;
+
+    }
+
+    
 
     
     

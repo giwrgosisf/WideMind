@@ -49,6 +49,17 @@ class cartDAO {
         this.cartsList.splice(index, 1);
         return true;
     }
+
+
+
+    updateCart(updatedCart) {
+        const index = this.cartsList.findIndex(cart => cart.username === updatedCart.username && cart.sessionId === updatedCart.sessionId);
+        if (index !== -1) {
+            this.cartsList[index] = updatedCart;
+            return true;
+        }
+        return false;
+    }
 }
 
 module.exports =  cartDAO;

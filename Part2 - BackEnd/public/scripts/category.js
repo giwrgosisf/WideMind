@@ -23,6 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.getElementById('lsubmit');
     submitButton.addEventListener('click', handleLogin);
 
+    let viewCartButton = document.getElementById("view-cart-button");
+    viewCartButton.addEventListener('click', function () {
+        const user = JSON.parse(sessionStorage.getItem("user"));
+        if (user) {
+            window.location.href = `cart.html?username=${user.username}&sessionId=${user.sessionId}`;
+        } else {
+            alert("Please log in to view your cart.");
+        }
+    });
+
 });
 
 
@@ -195,7 +205,8 @@ async function addItemToCart(event) {
         id: this.getAttribute("data-id"),
         type: this.getAttribute("data-type"),
         title: this.getAttribute("data-title"),
-        price: this.getAttribute("data-price"),
+        img: this.getAttribute("data-img"),
+        price: parseFloat(this.getAttribute("data-price")),
         username: user.username,
         sessionId: user.sessionId
     };
@@ -211,7 +222,7 @@ async function addItemToCart(event) {
             body: JSON.stringify(cartItemData)
         }
 
-        const response = await fetch("http://localhost:8080/cart", init);
+        const response = await fetch("http://localhost:8080/cart/add", init);
 
 
         if (!response.ok) {

@@ -1,9 +1,10 @@
 class cartItem {
-   constructor(id , type, price , title){
+   constructor(id , type, price , img,  title){
          this._id = id;
          this._type = type;
          this._price = price;
          this._title = title;
+         this._img = img;
    }
 
     set id(id){
@@ -38,11 +39,20 @@ class cartItem {
         return this._title;
     }
 
+    set img(img){
+        this._img = img;
+    }
+
+    get img(){
+        return this._img;
+    }
+
     updateCartItem(cartItem){
         this._id = cartItem.id;
         this._type = cartItem.type;
         this._price = cartItem.price;
         this._title = cartItem.title;
+        this._img = cartItem.img;
     }
 
     equals(other) {
