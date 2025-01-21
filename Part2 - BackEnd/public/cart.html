@@ -278,7 +278,7 @@
                                     <CartItem key={item.id} item={item} onRemove={onRemoveItem} />
                                 ))}
                                 <div className="total-cost">
-                                    <strong>Total Cost: €{totalCost}</strong>
+                                    <strong>Total Cost: {totalCost}€</strong>
                                 </div>
                             </>
                         )}
@@ -288,18 +288,38 @@
         }
 
         function CartItem({ item, onRemove }) {
-            const articleClass = item.type === "Book" ? "book" : "lecture";
+            const articleClass = item.type === "Book" ? "bookCart" : "lectureCart";
             return (
                 <article className= {articleClass} >
+                    
+                    <img src={`https://learning-hub-1whk.onrender.com/${item.image}`} alt={`${item.title} cover`} />
+                    <table>
+                    <tbody>
+                    <tr>
+                    <td>
+                        <p className="publisher">Tittle:</p> 
+                    </td>
+                    <td>
                     <header>
                         <h1>
                             <cite>{item.title}</cite>
                         </h1>
                     </header>
-                    <img src={`https://learning-hub-1whk.onrender.com/${item.image}`} alt={`${item.title} cover`} />
-                    <p className="publisher">Type: {item.type}</p>
-                    <p className="price">Price: €{item.price}</p>
-                    <button className="add-button" onClick={() => onRemove(item.id)}>Remove from cart</button>
+                    </td>
+                    </tr>
+                    <tr>
+                       <td><p className="publisher">Type:</p></td>
+                       <td><p className="publisher">{item.type}</p></td>
+
+                    </tr>
+                    <tr>
+                        <td><p className="priceCart">Price:</p></td>
+                        <td><p className="priceCart">{item.price}€</p></td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+                    <button className="add-button" onClick={() => onRemove(item.id)}>Remove</button>
                 </article>
             );
         }

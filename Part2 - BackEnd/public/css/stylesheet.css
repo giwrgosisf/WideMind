@@ -613,7 +613,7 @@ footer {
 
 
 
-.book, .lecture {
+.book, .lecture ,.bookCart,.lectureCart {
     /* display: flex; */
     flex-direction: column;
     align-items: center;
@@ -627,13 +627,25 @@ footer {
 
 }
 
+.bookCart , .lectureCart{
+    width:50%;
+    margin-top:5rem;
+}
 
-.book:hover, .lecture:hover {
+.total-cost{
+    margin-bottom: 5rem;
+    font-size: 2.5em;
+}
+
+
+
+
+.book:hover, .lecture:hover,.bookCart:hover,.lectureCart:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 
 }
 
-.book header>h1 {
+.book header>h1 .bookCart header>h1 {
     margin-bottom: 1em;
     text-align: center;
 }
@@ -649,7 +661,7 @@ footer {
     color: black;
 }
 
-.book img {
+.book img , .bookCart img{
     margin: 1em;
     border: 3px solid black;
     float: right;
@@ -658,6 +670,9 @@ footer {
     max-width: 25%;
 }
 
+.bookCart img{
+    width: 50%;
+}
 
 .description {
     /* margin-top: 1rem; */
@@ -714,13 +729,17 @@ footer {
 
 
 
-.lecture img {
+.lecture img ,.lectureCart img {
     width: 20rem;
     height: auto;
     margin: 1rem;
     border: solid black 3px;
     float: right;
     max-width: inherit;
+}
+
+.lectureCart img{
+    width: 40%;
 }
 
 .lecture>header>h1 {
@@ -1155,6 +1174,12 @@ footer {
     text-align: center;
     border-bottom: 5px solid #8EACCD;
     height: 5em;
+}
+
+    
+
+.bookCart > table , .lectureCart table {
+    width:40%;
 }
 
 #Table-of-contents {
