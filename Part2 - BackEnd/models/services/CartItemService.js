@@ -1,6 +1,6 @@
 const daoManager = require("../DAO/DAOManager");
 const Cart = require("../entities/cart");
-const serviceMessage = require("../entities/serviceMessage");
+
 
 
 class CartItemService {
@@ -18,11 +18,11 @@ class CartItemService {
             }
 
             const cartDAO = daoManager.getCartDAO;
-            const cart = cartDAO.findCartById(username, sessionId);
+            let cart = cartDAO.findCartById(username, sessionId);
 
 
             if (cart === null) {
-                const cart = new Cart(username, sessionId);
+                cart = new Cart(username, sessionId);
                 cart.addCartItem(cartItem);
                 cartDAO.addCart(cart);
                 console.log(cart);
@@ -54,9 +54,9 @@ class CartItemService {
     }
 
 
-    removeCartItem(itemId, sessionId, username){
+    removeCartItem(itemId, sessionId, username) {
         let statusCode = 0;
-        try{
+        try {
             const userDAO = daoManager.getUserDAO;
             const users = userDAO.findUserById(username, sessionId);
 
@@ -99,10 +99,10 @@ class CartItemService {
                 statusCode: statusCode,
                 totalCost: totalCost
             };
-    
+
             return JSON.stringify(response);
 
-        }catch (error){
+        } catch (error) {
             console.error("Error in removeCartItem:", error);
             statusCode = 500;
             return statusCode;
@@ -124,22 +124,29 @@ class CartItemService {
             }
 
             const cartDAO = daoManager.getCartDAO;
-            const cart = cartDAO.findCartById(username, sessionId);
+            let cart = cartDAO.findCartById(username, sessionId);
+
+            statusCode = 200;
 
             if (cart === null) {
-                // Cart not found
-                statusCode = 404; // Not Found
-                return statusCode;
+                // Cart not found, so we create a new empty cart
+                cart = new Cart(username, sessionId);
+                cartDAO.addCart(cart);
+                console.log("New cart created:", cart);
+                return JSON.stringify({ cartItems: [], totalCost: 0 });
+            } else {
+                console.log("Cart already exists for user:", username);
             }
 
             const cartItems = cart.cartItems;
 
+
             if (cartItems.length === 0) {
                 // No items in the cart
-                JSON.stringify({ cartItems: [], totalCost: 0 });
+                return JSON.stringify({ cartItems: [], totalCost: 0 });
             }
 
-            statusCode = 200;
+
 
             const cartItemsData = cartItems.map(item => ({
                 id: item.id,
@@ -155,7 +162,7 @@ class CartItemService {
                 cartItems: cartItemsData,
                 totalCost: totalCost
             };
-    
+
             return JSON.stringify(response);
 
         } catch (error) {

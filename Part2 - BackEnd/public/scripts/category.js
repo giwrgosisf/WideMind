@@ -75,24 +75,24 @@ async function initCategory() {
         };
 
         const authorLanding = document.getElementById("category-author-group");
-        
+
         const authorTemplate = document.getElementById("category-filters-template").innerHTML;
 
         const authorCompiled = Handlebars.compile(authorTemplate)
 
         items.forEach(item => {
-            if(item.type === "Book"){
+            if (item.type === "Book") {
                 const revealedAuthor = authorCompiled(item);
                 authorLanding.innerHTML += revealedAuthor;
             }
-            
+
         });
 
 
         const contentOfTemplate = template(htmlData);
         document.getElementById("subcat-main").innerHTML = contentOfTemplate;
 
-    
+
 
         const templateSourceIntro = document.getElementById("category-title-template").textContent;
         const templateIntro = Handlebars.compile(templateSourceIntro);
@@ -143,6 +143,19 @@ async function fetchData(url, init) {
 async function handleLogin(event) {
     event.preventDefault();
 
+    const existingUser = sessionStorage.getItem("user");
+    if (existingUser) {
+        Toastify({
+            text: "User is already logged in",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#FF0000",
+            close: true
+        }).showToast();
+        return;
+    }
+
     const userData = {
         username: document.getElementById("lUsername").value,
         password: document.getElementById("lPassword").value
@@ -162,7 +175,16 @@ async function handleLogin(event) {
         const response = await fetch("http://localhost:8080/login", init);
 
         if (!response.ok) {
-            throw new Error(`Login failed with status ${response.status}`);
+            Toastify({
+                text: "Login failed. Please check your credentials.",
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "#FF0000", // Red color for errors
+                close: true
+            }).showToast();
+            throw new Error(`Login failed with status: ${response.status}`);
+
         }
 
         const sessionData = await response.json();
@@ -179,6 +201,16 @@ async function handleLogin(event) {
         document.querySelector(".lform-container").classList.remove("active");
         document.getElementById("overlay").classList.remove("active");
 
+
+        Toastify({
+            text: "Logged in successfully",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#4fa853",
+            close: true
+        }).showToast();
+
     } catch (error) {
         console.error("Login error:", error);
 
@@ -192,7 +224,7 @@ async function handleLogin(event) {
 
 async function addItemToCart(event) {
 
-    
+
     if (!sessionStorage.getItem("user")) {
         alert("Please log in to add items in cart !");
         return;
@@ -233,31 +265,19 @@ async function addItemToCart(event) {
         }
 
 
-        alert("Item added to cart successfully!");
+        Toastify({
+            text: "Item added in cart successfully",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#4fa853",
+            close: true
+        }).showToast();
 
 
     } catch (error) {
         console.error("Add to cart error:", error);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
