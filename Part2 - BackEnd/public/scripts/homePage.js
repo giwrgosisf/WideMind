@@ -40,26 +40,7 @@ async function initIndex() {
 
         document.getElementById("categories").innerHTML = contentOfTemplate;
 
-        const loginButton = document.getElementById('login-button');
-        
-        const loginFormContainer = document.querySelector('.lform-container');
-        
-        const overlay = document.getElementById('overlay');
 
-        const closeFormButton = document.getElementById('close-button');
-
-        closeFormButton.addEventListener('click', () => {
-            loginFormContainer.classList.toggle('active');
-            overlay.classList.toggle('active');
-        })
-
-    
-        loginButton.addEventListener('click', () => {
-        
-            loginFormContainer.classList.toggle('active');
-        
-            overlay.classList.toggle('active');
-    });
 
     } catch (error) {
         console.error("Error fetching categories or subcategories:", error);

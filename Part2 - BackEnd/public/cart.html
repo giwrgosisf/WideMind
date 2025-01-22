@@ -38,8 +38,8 @@
         function CartApp() {
             const [cartItems, setCartItems] = useState([]);
             const [totalCost, setTotalCost] = useState(0);
-            const [loading, setLoading] = useState(true);
-            const [error, setError] = useState(null);
+            const [loading, setLoading] = useState(true); // loading state intialized as true
+            const [error, setError] = useState(null);   // error sate
 
 
             const getQueryParams = () => {
@@ -56,7 +56,7 @@
             useEffect(() => {
                 if (!isLoggedIn) {
                     setError('Invalid access. Missing user credentials.');
-                    setLoading(false);
+                    setLoading(false); // user not logged in display error and set loading state to false 
                     return;
                 }
 
@@ -85,12 +85,12 @@
                     .then(data => {
                         setCartItems(data.cartItems);
                         setTotalCost(data.totalCost);
-                        setLoading(false);
+                        setLoading(false); // after adding cart items and getting total cost, set the loading state false and display results 
                     })
                     .catch(err => {
                         console.error("CRS Error:", err);
                         setError("Failed to load cart. Please try again.");
-                        setLoading(false);
+                        setLoading(false);     // error in CRS, update error state and loading state
                     });
             }
 
@@ -124,7 +124,7 @@
 
             }
 
-            if (loading) {
+            if (loading) {      //  if elements are not rendered yet, meaning we are in a loading state, display a message
                 return (
                     <>
                         <SiteHeader />
@@ -266,7 +266,7 @@
                     </div>
                     <div className="book-section" id="book-section">
                         {cartItems.length === 0 ? (
-                            <div id = "empty-cart-message">
+                            <div id="empty-cart-message">
                                 <h3>Your cart is empty.</h3>
                                 <a href="index.html#categories">
                                     Go to categories to add items.
@@ -290,33 +290,33 @@
         function CartItem({ item, onRemove }) {
             const articleClass = item.type === "Book" ? "bookCart" : "lectureCart";
             return (
-                <article className= {articleClass} >
-                    
+                <article className={articleClass} >
+
                     <img src={`https://learning-hub-1whk.onrender.com/${item.image}`} alt={`${item.title} cover`} />
                     <table>
-                    <tbody>
-                    <tr>
-                    <td>
-                        <p className="publisher">Tittle:</p> 
-                    </td>
-                    <td>
-                    <header>
-                        <h1>
-                            <cite>{item.title}</cite>
-                        </h1>
-                    </header>
-                    </td>
-                    </tr>
-                    <tr>
-                       <td><p className="publisher">Type:</p></td>
-                       <td><p className="publisher">{item.type}</p></td>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p className="publisher">Tittle:</p>
+                                </td>
+                                <td>
+                                    <header>
+                                        <h1>
+                                            <cite>{item.title}</cite>
+                                        </h1>
+                                    </header>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><p className="publisher">Type:</p></td>
+                                <td><p className="publisher">{item.type}</p></td>
 
-                    </tr>
-                    <tr>
-                        <td><p className="priceCart">Price:</p></td>
-                        <td><p className="priceCart">{item.price}€</p></td>
-                    </tr>
-                    </tbody>
+                            </tr>
+                            <tr>
+                                <td><p className="priceCart">Price:</p></td>
+                                <td><p className="priceCart">{item.price}€</p></td>
+                            </tr>
+                        </tbody>
                     </table>
 
                     <button className="add-button" onClick={() => onRemove(item.id)}>Remove</button>
