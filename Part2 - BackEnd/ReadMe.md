@@ -28,12 +28,6 @@ Part2 - BackEnd/
 ├── 📄 index.js  # Main Server File
 ├── 📄 package.json  # Dependencies & Scripts
 ├── 📄 package-lock.json  # Package Lock File
-
-
-
-
-
-
 ```
 
 
