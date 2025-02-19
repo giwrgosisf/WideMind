@@ -1587,6 +1587,26 @@ details>figure>figcaption {
     float: left;
 }
 
+
+.follow ul .fa-brands {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 1rem 1rem 0.5rem;
+    border-radius: 50%;
+    background-color: #ffffff8f;
+    color: #4b4b4b;
+}
+
+/* When hovered give a faded siecle background effect */
+.follow .fa-brands:hover {
+    /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 45%, rgba(142, 142, 144, 1) 100%); */
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 35%, rgba(142, 142, 144, 1) 100%);
+}
+
 .social-media>li {
     list-style: none;
 }
