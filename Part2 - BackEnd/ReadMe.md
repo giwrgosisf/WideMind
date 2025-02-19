@@ -162,3 +162,4 @@ http://localhost:8080/
 
 * vasilis_tzimas, Xairete!2025
 
+A short video demo of the website can be found [here](https://vimeo.com/1058349113/fbb2bf4a8c)
