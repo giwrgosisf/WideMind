@@ -20,3 +20,5 @@ The main purpose of the first phase was to create a static website for our e-lea
 ## 5. **HTML Form and Validation**
 - Lastly we had to develop an additional registration page featuring a comprehensive HTML form.  The form should collect personal details (name, email, address, birth date, phone), login credentials (username and password with confirmation), communication preferences, and responses to at least five survey questions.  
 -  We were directed to use appropriate HTML form elements (with fieldset, labels, and placeholders), style them with CSS for a modern look, and implement both built-in HTML validations and custom JavaScript validations (using the Constraint Validation API) for complex rules such as password matching and age restrictions.
+
+A short video demo of the website can be found [here](https://vimeo.com/1058375263/88f8b78843)
