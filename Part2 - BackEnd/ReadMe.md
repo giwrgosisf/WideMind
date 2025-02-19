@@ -140,7 +140,7 @@ nodemon index.js
 ```
 ### 4. Open your browser and type:
 ```bash
-http://localhost:8080
+http://localhost:8080/
 ```
 ### 5. In order to login and view your cart you must go to the categories page
 
